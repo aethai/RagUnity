@@ -23,10 +23,6 @@ These features are implemented in the client. An end-to-end playtest of the publ
 | Quest log | For hunt objectives that use the special monster-group ID (31999), the log displays the name sent by the server. It does not resolve the group into its monster types. [Quest labels](Unity/Assets/Ragnarok/Runtime/UI/RoClassicQuestData.cs) |
 | Chat | Megaphone broadcasts are decoded, but their block-list and message-filter behavior is unfinished. [Broadcast handling](Unity/Assets/Ragnarok/Runtime/UI/RoClassicBroadcast.cs) |
 
-### What needs testing next
-
-The first milestone is a Windows build from a fresh clone against a Hercules server using **PACKETVER 20240619**. Sign in, enter a map, change maps through a portal, fight a monster, pick up its drop, then reconnect and check the inventory. A second account makes it possible to check that both players see the same movement, trade result, and party position. Compatibility with other server and packet versions still needs separate testing.
-
 ## Run in the Unity Editor
 
 You need Windows, Unity **6000.3.14f1**, your own `data.grf`, and an account on a compatible Hercules server. The supplied server profile targets **PACKETVER 20240619**.
