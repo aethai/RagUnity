@@ -2,18 +2,6 @@
 
 RagUnity is a Unity client for Ragnarok Online on Windows. It reads maps, models, sprites, and effects from the game archives you already use, then connects to your Hercules server for login, character selection, and map play.
 
-## What you can do
-
-These features are implemented in the client. An end-to-end playtest of the public snapshot on a live Hercules server is still pending.
-
-| In game | What the client handles |
-| --- | --- |
-| Enter the world | Sign in, select a character, and connect to the map server. |
-| Explore a map | Load terrain and buildings from your GRFs, move across walkable cells, and see nearby players and monsters. Search for a map, NPC, or monster in the navigation window and follow route arrows on the ground. |
-| Fight and use skills | Display attack motions, hit reactions, damage numbers, and supported skill effects. Open the skill tree and assign actions to hotkeys. |
-| Manage items | Open inventory and equipment, move items into and out of storage, and buy or sell items through an NPC shop. |
-| Interact with other players | Chat, view party members and friends, and use the trade window to offer items or zeny. |
-
 ## Known gaps
 
 | Area | Current behavior |
