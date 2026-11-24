@@ -2,11 +2,30 @@
 
 RagUnity is a Unity client for Ragnarok Online on Windows. It reads maps, models, sprites, and effects from the game archives you already use, then connects to your Hercules server for login, character selection, and map play.
 
-## Inside the client
+## What you can do
 
-- **World rendering.** The map loader assembles terrain, places models, and reads walkable tiles from the original map files.
-- **Characters and combat.** The client combines sprite layers for actors and equipment, plays attack motions, and displays skill effects and damage.
-- **Classic interface.** The login and character screens lead into a map view with chat, inventory, a skill tree, hotkeys, and a minimap.
+These features are implemented in the client. An end-to-end playtest of the public snapshot on a live Hercules server is still pending.
+
+| In game | What the client handles |
+| --- | --- |
+| Enter the world | Sign in, select a character, and connect to the map server. |
+| Explore a map | Load terrain and buildings from your GRFs, move across walkable cells, and see nearby players and monsters. Search for a map, NPC, or monster in the navigation window and follow route arrows on the ground. |
+| Fight and use skills | Display attack motions, hit reactions, damage numbers, and supported skill effects. Open the skill tree and assign actions to hotkeys. |
+| Manage items | Open inventory and equipment, move items into and out of storage, and buy or sell items through an NPC shop. |
+| Interact with other players | Chat, view party members and friends, and use the trade window to offer items or zeny. |
+
+## Known gaps
+
+| Area | Current behavior |
+| --- | --- |
+| Skill visuals | Some third-job and later skill effects have no renderer. When the client encounters one of those effect IDs, it skips the visual. [Effect dispatcher](Unity/Assets/Ragnarok/Runtime/Effects/RoEffectManager.cs) |
+| Navigation | Search and route guidance are implemented. The external navigation-data button has no action, so it cannot load a custom navigation text file. [Navigation controls](Unity/Assets/Ragnarok/Runtime/UI/RoClassicNavigation.cs) |
+| Quest log | For hunt objectives that use the special monster-group ID (31999), the log displays the name sent by the server. It does not resolve the group into its monster types. [Quest labels](Unity/Assets/Ragnarok/Runtime/UI/RoClassicQuestData.cs) |
+| Chat | Megaphone broadcasts are decoded, but their block-list and message-filter behavior is unfinished. [Broadcast handling](Unity/Assets/Ragnarok/Runtime/UI/RoClassicBroadcast.cs) |
+
+### What needs testing next
+
+The first milestone is a Windows build from a fresh clone against a Hercules server using **PACKETVER 20240619**. Sign in, enter a map, change maps through a portal, fight a monster, pick up its drop, then reconnect and check the inventory. A second account makes it possible to check that both players see the same movement, trade result, and party position. Compatibility with other server and packet versions still needs separate testing.
 
 ## Run in the Unity Editor
 
