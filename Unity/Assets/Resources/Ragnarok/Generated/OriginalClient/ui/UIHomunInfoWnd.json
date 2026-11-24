@@ -1,0 +1,1277 @@
+{
+ "format": 1,
+ "class": "UIHomunInfoWnd",
+ "windowId": 113,
+ "state": "default",
+ "w": 280,
+ "h": 208,
+ "defaultPos": {
+  "x": 150,
+  "y": 100,
+  "screen": "1024x768",
+  "rule": "x = 150; y = 100"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f1": {
+   "face": "Arial",
+   "lfHeight": 14,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\gze_bg_left.bmp",
+  "유저인터페이스\\basic_interface\\gze_bg_mid.bmp",
+  "유저인터페이스\\basic_interface\\gze_bg_right.bmp",
+  "유저인터페이스\\basic_interface\\homuninfo_bg.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\btn_del.bmp",
+  "유저인터페이스\\btn_del_a.bmp",
+  "유저인터페이스\\btn_del_b.bmp",
+  "유저인터페이스\\btn_feed.bmp",
+  "유저인터페이스\\btn_feed_a.bmp",
+  "유저인터페이스\\btn_feed_b.bmp",
+  "유저인터페이스\\btn_rewrite.bmp",
+  "유저인터페이스\\btn_rewrite_a.bmp",
+  "유저인터페이스\\btn_rewrite_b.bmp",
+  "유저인터페이스\\btn_skill.bmp",
+  "유저인터페이스\\btn_skill_a.bmp",
+  "유저인터페이스\\btn_skill_b.bmp",
+  "유저인터페이스\\checkbox_0.bmp",
+  "유저인터페이스\\checkbox_1.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\homuninfo_bg.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 280,
+   "h": 180,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 169,
+   "w": 278,
+   "h": 38,
+   "color": "#ffffff"
+  },
+  {
+   "k": "roundbox",
+   "x": 0,
+   "y": 168,
+   "w": 280,
+   "h": 40,
+   "color": "#ffffff",
+   "rects": [
+    [
+     3,
+     168,
+     274,
+     1
+    ],
+    [
+     3,
+     207,
+     274,
+     1
+    ],
+    [
+     0,
+     171,
+     1,
+     34
+    ],
+    [
+     279,
+     171,
+     1,
+     34
+    ],
+    [
+     1,
+     169,
+     2,
+     1
+    ],
+    [
+     1,
+     206,
+     2,
+     1
+    ],
+    [
+     277,
+     169,
+     2,
+     1
+    ],
+    [
+     277,
+     206,
+     2,
+     1
+    ],
+    [
+     1,
+     170,
+     1,
+     1
+    ],
+    [
+     1,
+     205,
+     1,
+     1
+    ],
+    [
+     278,
+     170,
+     1,
+     1
+    ],
+    [
+     278,
+     205,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "text",
+   "x": 5,
+   "y": 2,
+   "t": "Homunculus Info",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 24,
+   "t": "Name",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 47,
+   "t": "Level",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 105,
+   "t": "EXP",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 131,
+   "t": "Hunger",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 159,
+   "t": "Intimacy",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 140,
+   "y": 159,
+   "t": ":",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 24,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 42,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 60,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 78,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 96,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 114,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 132,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 79,
+   "y": 150,
+   "t": "200",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 135,
+   "y": 47,
+   "t": "0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   },
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 205,
+   "y": 104,
+   "t": "0",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 200,
+   "y": 130,
+   "t": "0 / 100",
+   "helper": "TextOut_9b68d0",
+   "font": "f1",
+   "color": "#000000",
+   "align": "right",
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 150,
+   "y": 159,
+   "t": "Hate with a Passion",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 225,
+   "y": 136,
+   "t": "A",
+   "helper": "TextOut_9b6a70",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "runs": [
+    {
+     "x": 225,
+     "y": 136,
+     "t": "A",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 232,
+     "y": 136,
+     "t": "u",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 239,
+     "y": 136,
+     "t": "t",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 242,
+     "y": 136,
+     "t": "o",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 249,
+     "y": 136,
+     "t": " ",
+     "color": "#000000",
+     "font": "f0"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 225,
+   "y": 148,
+   "t": "F",
+   "helper": "TextOut_9b6a70",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "runs": [
+    {
+     "x": 225,
+     "y": 148,
+     "t": "F",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 232,
+     "y": 148,
+     "t": "e",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 239,
+     "y": 148,
+     "t": "e",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 246,
+     "y": 148,
+     "t": "d",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 253,
+     "y": 148,
+     "t": "i",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 256,
+     "y": 148,
+     "t": "n",
+     "color": "#000000",
+     "font": "f0"
+    },
+    {
+     "x": 263,
+     "y": 148,
+     "t": "g",
+     "color": "#000000",
+     "font": "f0"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 8,
+   "y": 180,
+   "t": "H",
+   "helper": "TextOut_9b6a70",
+   "font": "f0",
+   "color": "#ff0000",
+   "align": "left",
+   "runs": [
+    {
+     "x": 8,
+     "y": 180,
+     "t": "H",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 17,
+     "y": 180,
+     "t": "o",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 24,
+     "y": 180,
+     "t": "m",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 35,
+     "y": 180,
+     "t": "u",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 42,
+     "y": 180,
+     "t": "n",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 49,
+     "y": 180,
+     "t": "c",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 55,
+     "y": 180,
+     "t": "u",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 62,
+     "y": 180,
+     "t": "l",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 65,
+     "y": 180,
+     "t": "u",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 72,
+     "y": 180,
+     "t": "s",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 79,
+     "y": 180,
+     "t": " ",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 82,
+     "y": 180,
+     "t": "r",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 86,
+     "y": 180,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 93,
+     "y": 180,
+     "t": "c",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 99,
+     "y": 180,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 106,
+     "y": 180,
+     "t": "i",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 109,
+     "y": 180,
+     "t": "v",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 114,
+     "y": 180,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 121,
+     "y": 180,
+     "t": "s",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 128,
+     "y": 180,
+     "t": " ",
+     "color": "#ff0000",
+     "font": "f0"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 8,
+   "y": 192,
+   "t": "1",
+   "helper": "TextOut_9b6a70",
+   "font": "f0",
+   "color": "#ff0000",
+   "align": "left",
+   "runs": [
+    {
+     "x": 8,
+     "y": 192,
+     "t": "1",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 15,
+     "y": 192,
+     "t": "0",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 22,
+     "y": 192,
+     "t": "%",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 33,
+     "y": 192,
+     "t": " ",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 36,
+     "y": 192,
+     "t": "o",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 43,
+     "y": 192,
+     "t": "f",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 46,
+     "y": 192,
+     "t": " ",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 49,
+     "y": 192,
+     "t": "m",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 60,
+     "y": 192,
+     "t": "a",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 67,
+     "y": 192,
+     "t": "s",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 74,
+     "y": 192,
+     "t": "t",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 77,
+     "y": 192,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 84,
+     "y": 192,
+     "t": "r",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 88,
+     "y": 192,
+     "t": "'",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 90,
+     "y": 192,
+     "t": "s",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 97,
+     "y": 192,
+     "t": " ",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 100,
+     "y": 192,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 107,
+     "y": 192,
+     "t": "x",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 112,
+     "y": 192,
+     "t": "p",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 119,
+     "y": 192,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 126,
+     "y": 192,
+     "t": "r",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 130,
+     "y": 192,
+     "t": "i",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 133,
+     "y": 192,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 140,
+     "y": 192,
+     "t": "n",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 147,
+     "y": 192,
+     "t": "c",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 153,
+     "y": 192,
+     "t": "e",
+     "color": "#ff0000",
+     "font": "f0"
+    },
+    {
+     "x": 160,
+     "y": 192,
+     "t": ".",
+     "color": "#ff0000",
+     "font": "f0"
+    }
+   ],
+   "unseeded": 1
+  }
+ ],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIHomunInfoWnd/UIBitmapButton#0",
+   "x": 266,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrl2",
+   "id": 584,
+   "path": "UIHomunInfoWnd/UIEditCtrl2#1",
+   "x": 135,
+   "y": 22,
+   "w": 80,
+   "h": 16,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#e8e8e8"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#e8e8e8",
+     "whole": 1
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 287,
+   "path": "UIHomunInfoWnd/UIBitmapButton#2",
+   "x": 187,
+   "y": 44,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_del.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_del_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_del_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_del.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 285,
+   "path": "UIHomunInfoWnd/UIBitmapButton#3",
+   "x": 232,
+   "y": 44,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_skill.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_skill_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_skill_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_skill.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 286,
+   "path": "UIHomunInfoWnd/UIBitmapButton#4",
+   "x": 210,
+   "y": 105,
+   "w": 64,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_feed.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_feed_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_feed_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_feed.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 64,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIHomunInfoWnd/UIBitmapButton#5",
+   "x": 232,
+   "y": 21,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_rewrite.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_rewrite_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_rewrite_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_rewrite.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphHomun",
+   "id": 584,
+   "path": "UIHomunInfoWnd/UIBarGraphHomun#6",
+   "x": 117,
+   "y": 73,
+   "w": 157,
+   "h": 9,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "left": [
+      "유저인터페이스\\basic_interface\\gze_bg_left.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\basic_interface\\gze_bg_mid.bmp"
+     ],
+     "right": [
+      "유저인터페이스\\basic_interface\\gze_bg_right.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 2,
+     "h": 9,
+     "noTrans": 0
+    },
+    {
+     "k": "bmpRow",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_mid.bmp",
+     "x": 2,
+     "y": 0,
+     "w": 1,
+     "h": 9,
+     "n": 151,
+     "step": 1,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_right.bmp",
+     "x": 153,
+     "y": 0,
+     "w": 4,
+     "h": 9,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphHomun",
+   "id": 584,
+   "path": "UIHomunInfoWnd/UIBarGraphHomun#7",
+   "x": 117,
+   "y": 88,
+   "w": 157,
+   "h": 9,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "left": [
+      "유저인터페이스\\basic_interface\\gze_bg_left.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\basic_interface\\gze_bg_mid.bmp"
+     ],
+     "right": [
+      "유저인터페이스\\basic_interface\\gze_bg_right.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 2,
+     "h": 9,
+     "noTrans": 0
+    },
+    {
+     "k": "bmpRow",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_mid.bmp",
+     "x": 2,
+     "y": 0,
+     "w": 1,
+     "h": 9,
+     "n": 151,
+     "step": 1,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_right.bmp",
+     "x": 153,
+     "y": 0,
+     "w": 4,
+     "h": 9,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIINT64BarGraph",
+   "id": 584,
+   "path": "UIHomunInfoWnd/UIINT64BarGraph#8",
+   "x": 101,
+   "y": 119,
+   "w": 102,
+   "h": 6,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#afafaf",
+     "#ffffff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#afafaf",
+     "whole": 1
+    },
+    {
+     "k": "fill",
+     "x": 1,
+     "y": 1,
+     "w": 100,
+     "h": 4,
+     "color": "#ffffff"
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraph4",
+   "id": 584,
+   "path": "UIHomunInfoWnd/UIBarGraph4#9",
+   "x": 101,
+   "y": 145,
+   "w": 102,
+   "h": 6,
+   "ownerField": "+0xa8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#afafaf",
+     "#ffffff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#afafaf",
+     "whole": 1
+    },
+    {
+     "k": "fill",
+     "x": 1,
+     "y": 1,
+     "w": 100,
+     "h": 4,
+     "color": "#ffffff"
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 209,
+   "path": "UIHomunInfoWnd/UICheckBox#10",
+   "x": 210,
+   "y": 142,
+   "w": 10,
+   "h": 10,
+   "ownerField": "+0xb4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "checkbox_1": [
+      "유저인터페이스\\checkbox_1.bmp"
+     ],
+     "checkbox_0": [
+      "유저인터페이스\\checkbox_0.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\checkbox_0.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 10,
+     "h": 10,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/113_UIHomunInfoWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(113) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ },
+ "lossy": [
+  "static numbers (data the seeds do not cover)"
+ ]
+}

@@ -1,0 +1,911 @@
+{
+ "format": 1,
+ "class": "UIBasicInfoWnd",
+ "windowId": 0,
+ "state": "maximized",
+ "w": 220,
+ "h": 134,
+ "defaultPos": {
+  "x": 0,
+  "y": 0,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 0"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 14,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f1": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f2": {
+   "face": "Arial",
+   "lfHeight": 13,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\basewin_bg2.bmp",
+  "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+  "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+  "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+  "유저인터페이스\\basic_interface\\gzeblue_right.bmp",
+  "유저인터페이스\\basic_interface\\gzered_left.bmp",
+  "유저인터페이스\\basic_interface\\gzered_right.bmp",
+  "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_base_on.bmp",
+  "유저인터페이스\\basic_interface\\sys_mini_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_mini_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp"
+ ],
+ "slots": {
+  "JobName": [
+   "JobName"
+  ],
+  "BaseExp+BaseExpNext": [
+   "BaseExp",
+   "BaseExpNext"
+  ],
+  "JobExpNext+JobExp": [
+   "JobExpNext",
+   "JobExp"
+  ],
+  "HpPercent": [
+   "HpPercent"
+  ],
+  "SpPercent": [
+   "SpPercent"
+  ],
+  "BaseLevel": [
+   "BaseLevel"
+  ],
+  "JobLevel": [
+   "JobLevel"
+  ],
+  "Zeny": [
+   "Zeny"
+  ],
+  "MaxWeight+Weight": [
+   "MaxWeight",
+   "Weight"
+  ],
+  "UIBasicInfoWnd/UIStaticText#2": [
+   "Name"
+  ],
+  "UIBasicInfoWnd/UIBarGraphPlayer#3": [
+   "Hp",
+   "MaxHp"
+  ],
+  "UIBasicInfoWnd/UIBarGraphPlayer#4": [
+   "Sp",
+   "MaxSp"
+  ],
+  "UIBasicInfoWnd/UIINT64BarGraph#6": [
+   "BaseExp",
+   "BaseExpNext"
+  ],
+  "UIBasicInfoWnd/UIINT64BarGraph#7": [
+   "Job",
+   "Int"
+  ]
+ },
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\basewin_bg2.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 220,
+   "h": 135,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 208,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 17,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 9,
+   "y": 36,
+   "t": "Acolyte",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "JobName",
+   "fmt": "{JobName}",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "Acolyte"
+    },
+    {
+     "t": "Mage"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 17,
+   "y": 2,
+   "t": "Basic Info",
+   "font": "f1",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   },
+   "passes": [
+    {
+     "dx": 1,
+     "dy": 1,
+     "color": "#ffffff"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 17,
+   "y": 51,
+   "t": "HP",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   }
+  },
+  {
+   "k": "text",
+   "x": 17,
+   "y": 65,
+   "t": "SP",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   }
+  },
+  {
+   "k": "text",
+   "x": 86,
+   "y": 78,
+   "t": "123456 / 250000",
+   "font": "f2",
+   "color": "#0000ff",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 13
+   },
+   "slot": "BaseExp+BaseExpNext",
+   "fmt": "{BaseExp} / {BaseExpNext}",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "123456 / 250000"
+    },
+    {
+     "t": "7 / 99999999"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 86,
+   "y": 104,
+   "t": "4321 / 90000",
+   "font": "f2",
+   "color": "#0000ff",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 13
+   },
+   "slot": "JobExpNext+JobExp",
+   "fmt": "{JobExp} / {JobExpNext}",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "4321 / 90000"
+    },
+    {
+     "t": "1 / 1000000"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 173,
+   "y": 51,
+   "t": "52%",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "HpPercent",
+   "fmt": "{HpPercent}%",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "52%"
+    },
+    {
+     "t": "0%"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 173,
+   "y": 65,
+   "t": "75%",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "SpPercent",
+   "fmt": "{SpPercent}%",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "75%"
+    },
+    {
+     "t": "94%"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 17,
+   "y": 84,
+   "t": "Base Lv. 55",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "BaseLevel",
+   "fmt": "Base Lv. {BaseLevel}",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "Base Lv. 55"
+    },
+    {
+     "t": "Base Lv. 9"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 17,
+   "y": 96,
+   "t": "Job Lv. 32",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "JobLevel",
+   "fmt": "Job Lv. {JobLevel}",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "Job Lv. 32"
+    },
+    {
+     "t": "Job Lv. 5"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 215,
+   "y": 116,
+   "t": "Zeny : 1,234,567",
+   "helper": "TextOut_9b68d0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "right",
+   "slot": "Zeny",
+   "fmt": "Zeny : {Zeny:n0}",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "Zeny : 1,234,567"
+    },
+    {
+     "t": "Zeny : 5"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 128,
+   "y": 116,
+   "t": "Weight : 812 / 2400",
+   "helper": "TextOut_9b68d0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "right",
+   "slot": "MaxWeight+Weight",
+   "fmt": "Weight : {Weight,3} / {MaxWeight}",
+   "dyn": [
+    "x",
+    "t"
+   ],
+   "samples": [
+    {
+     "x": 128,
+     "t": "Weight : 812 / 2400"
+    },
+    {
+     "x": 170,
+     "t": "Weight :  10 / 800"
+    }
+   ]
+  }
+ ],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBitmapButton#0",
+   "x": 3,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_base_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_base_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_base_on.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 198,
+   "path": "UIBasicInfoWnd/UIBitmapButton#1",
+   "x": 206,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_mini_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_mini_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_mini_on.bmp"
+     ]
+    },
+    "strings": [
+     "Alt+V, Ctrl+V"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_mini_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIStaticText#2",
+   "x": 9,
+   "y": 22,
+   "w": 200,
+   "h": 15,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f1",
+    "strings": [
+     "Aethai"
+    ]
+   },
+   "samples": {
+    "seedA": {
+     "texts": [
+      "Aethai"
+     ]
+    },
+    "seedB": {
+     "texts": [
+      "Poring"
+     ]
+    }
+   },
+   "fields": [
+    "Name"
+   ],
+   "fmt": "{Name}",
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphPlayer",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBarGraphPlayer#3",
+   "x": 35,
+   "y": 53,
+   "w": 135,
+   "h": 9,
+   "ownerField": "+0xc8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg1": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp"
+     ],
+     "left": [
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzered_left.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp"
+     ],
+     "right": [
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp",
+      "유저인터페이스\\basic_interface\\gzered_right.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f2"
+   },
+   "samples": {
+    "seedA": {
+     "texts": [
+      "1234  /  2345"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "mid": 66,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 74
+     }
+    },
+    "seedB": {
+     "texts": [
+      "100  /  99999"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzered_left.bmp",
+      "유저인터페이스\\basic_interface\\gzered_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 8
+     }
+    }
+   },
+   "fields": [
+    "Hp",
+    "MaxHp"
+   ],
+   "fmt": "{Hp}  /  {MaxHp}",
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 135,
+     "h": 9,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphPlayer",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBarGraphPlayer#4",
+   "x": 35,
+   "y": 68,
+   "w": 135,
+   "h": 9,
+   "ownerField": "+0xcc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg1": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp"
+     ],
+     "left": [
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp"
+     ],
+     "right": [
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f2"
+   },
+   "samples": {
+    "seedA": {
+     "texts": [
+      "345  /  456"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "mid": 96,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 104
+     }
+    },
+    "seedB": {
+     "texts": [
+      "900  /  950"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "mid": 120,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 128
+     }
+    }
+   },
+   "fields": [
+    "Sp",
+    "MaxSp"
+   ],
+   "fmt": "{Sp}  /  {MaxSp}",
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 135,
+     "h": 9,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 4,
+     "h": 8,
+     "noTrans": 1
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphPlayerAP",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBarGraphPlayerAP#5",
+   "x": -100,
+   "y": -100,
+   "w": 135,
+   "h": 9,
+   "ownerField": "+0xdc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg1": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f2",
+    "text": "  0  /    0"
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 135,
+     "h": 9,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": -2,
+     "t": "  0  /    0",
+     "helper": "TextOut_9b4c50",
+     "font": "f2",
+     "color": "#000000",
+     "align": "center",
+     "boxW": 135,
+     "unseeded": 1
+    }
+   ]
+  },
+  {
+   "class": "UIINT64BarGraph",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIINT64BarGraph#6",
+   "x": 85,
+   "y": 89,
+   "w": 112,
+   "h": 6,
+   "ownerField": "+0xd0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#afafaf",
+     "#ffffff",
+     "#567fcf"
+    ]
+   },
+   "samples": {
+    "seedA": {
+     "fills": [
+      {
+       "x": 1,
+       "y": 1,
+       "w": 110,
+       "h": 4,
+       "color": "#ffffff"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "w": 54,
+       "h": 4,
+       "color": "#567fcf"
+      }
+     ]
+    },
+    "seedB": {
+     "drawn": 0
+    }
+   },
+   "fields": [
+    "BaseExp",
+    "BaseExpNext"
+   ],
+   "rule": "fill w = floor(BaseExp / BaseExpNext * 110)"
+  },
+  {
+   "class": "UIINT64BarGraph",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIINT64BarGraph#7",
+   "x": -200,
+   "y": 88,
+   "w": 112,
+   "h": 6,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#afafaf",
+     "#ffffff",
+     "#567fcf"
+    ]
+   },
+   "samples": {
+    "seedA": {
+     "fills": [
+      {
+       "x": 1,
+       "y": 1,
+       "w": 110,
+       "h": 4,
+       "color": "#ffffff"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "w": 5,
+       "h": 4,
+       "color": "#567fcf"
+      }
+     ]
+    },
+    "seedB": {
+     "fills": [
+      {
+       "x": 1,
+       "y": 1,
+       "w": 110,
+       "h": 4,
+       "color": "#ffffff"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "w": 0,
+       "h": 4,
+       "color": "#567fcf"
+      }
+     ]
+    }
+   },
+   "fields": [
+    "Job",
+    "Int"
+   ],
+   "rule": "fill w = floor(Job / Int * 110)",
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#afafaf",
+     "whole": 1
+    },
+    {
+     "k": "fill",
+     "x": 1,
+     "y": 1,
+     "w": 110,
+     "h": 4,
+     "color": "#ffffff"
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/UIBasicInfoWnd.maximized.json",
+  "createdBy": "UIWindowMgr::MakeWindow(0) stopped at 0x9c825e; state via SendMsg(6, 0xc6) / 0x8f99c0",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ },
+ "lossy": [
+  "static numbers (data the seeds do not cover)"
+ ]
+}

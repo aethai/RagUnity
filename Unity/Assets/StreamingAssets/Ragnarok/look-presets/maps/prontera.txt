@@ -1,0 +1,20 @@
+# Prontera (10-06): HD-2D day - neutral white sun, a neutral sky fill (the cool fill 0.6 0.79 1.28 and temp -4 made the town blue; user picked neutral),
+# a sun no higher than 50 degrees (long diagonal shadows all day), big soft cloud shadows, light tilt-shift
+preset base
+tonemap neutral
+exposure -0.3
+contrast 26
+saturation 10
+temp 0 0
+sun 1 0.97 0.9 1.2
+sky 0.82 0.88 1.0 0.85
+bloom 0.4 0.95 0.72
+vignette 0.28
+split 0.5 0.5 0.5 0.5 0.5 0.5 0
+dof 0.9 200
+sunmax 50
+clouds 0 0 0 0
+cloudstr 1
+ambient 0.5 0.5 0.5 0
+ssao intensity 1.6
+relief 4 3 0 0

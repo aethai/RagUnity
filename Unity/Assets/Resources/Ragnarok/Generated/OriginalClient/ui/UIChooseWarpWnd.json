@@ -1,0 +1,443 @@
+{
+ "format": 1,
+ "class": "UIChooseWarpWnd",
+ "windowId": 39,
+ "state": "default",
+ "w": 280,
+ "h": 120,
+ "defaultPos": {
+  "x": 392,
+  "y": 480,
+  "screen": "1024x768",
+  "rule": "x = W/2 - 120; y = H*5/8"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\btn_cancel.bmp",
+  "유저인터페이스\\btn_cancel_a.bmp",
+  "유저인터페이스\\btn_cancel_b.bmp",
+  "유저인터페이스\\btn_ok.bmp",
+  "유저인터페이스\\btn_ok_a.bmp",
+  "유저인터페이스\\btn_ok_b.bmp",
+  "유저인터페이스\\sysbox_ld.bmp",
+  "유저인터페이스\\sysbox_lm.bmp",
+  "유저인터페이스\\sysbox_lu.bmp",
+  "유저인터페이스\\sysbox_md.bmp",
+  "유저인터페이스\\sysbox_mu.bmp",
+  "유저인터페이스\\sysbox_rd.bmp",
+  "유저인터페이스\\sysbox_rm.bmp",
+  "유저인터페이스\\sysbox_ru.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\sysbox_mu.bmp",
+   "x": 14,
+   "y": 0,
+   "w": 14,
+   "h": 14,
+   "n": 18,
+   "step": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lu.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_ru.bmp",
+   "x": 266,
+   "y": 0,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 14,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 28,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 42,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 56,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 70,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 84,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 98,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 266,
+   "y": 14,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 266,
+   "y": 28,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 266,
+   "y": 42,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 266,
+   "y": 56,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 266,
+   "y": 70,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 266,
+   "y": 84,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 266,
+   "y": 98,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\sysbox_md.bmp",
+   "x": 14,
+   "y": 106,
+   "w": 14,
+   "h": 14,
+   "n": 18,
+   "step": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_ld.bmp",
+   "x": 0,
+   "y": 106,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rd.bmp",
+   "x": 266,
+   "y": 106,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 14,
+   "y": 14,
+   "w": 252,
+   "h": 92,
+   "color": "#ffffff"
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIChooseWarpWnd/UIStaticText#0",
+   "x": 12,
+   "y": 9,
+   "w": 250,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Select an Area to Warp",
+    "strings": [
+     "Select an Area to Warp"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Select an Area to Warp",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIListBox",
+   "id": 180,
+   "path": "UIChooseWarpWnd/UIListBox#1",
+   "x": 12,
+   "y": 26,
+   "w": 256,
+   "h": 65,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f0f0f0"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f0f0f0",
+     "whole": 1
+    }
+   ],
+   "children": [
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIChooseWarpWnd/UIListBox#1/UIScrollBar#0",
+     "x": 243,
+     "y": 0,
+     "w": 13,
+     "h": 65,
+     "ownerField": "+0xac",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 1,
+      "total": 0,
+      "visible": 0,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    },
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIChooseWarpWnd/UIListBox#1/UIScrollBar#1",
+     "x": 0,
+     "y": 52,
+     "w": 243,
+     "h": 13,
+     "ownerField": "+0xb0",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 0,
+      "total": 0,
+      "visible": 0,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIChooseWarpWnd/UIBitmapButton#2",
+   "x": 188,
+   "y": 96,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_ok.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_ok_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_ok_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_ok.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 181,
+   "path": "UIChooseWarpWnd/UIBitmapButton#3",
+   "x": 234,
+   "y": 96,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_cancel.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_cancel_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_cancel_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_cancel.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/039_UIChooseWarpWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(39) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

@@ -1,0 +1,1225 @@
+{
+ "format": 1,
+ "class": "UIBattleMsgOptionWnd",
+ "windowId": 132,
+ "state": "default",
+ "w": 280,
+ "h": 200,
+ "defaultPos": {
+  "x": 592,
+  "y": 320,
+  "screen": "1024x768",
+  "rule": "x = W/2 + 80; y = H*5/12"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right.bmp",
+  "유저인터페이스\\basic_interface\\grp_offline.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+  "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_base_on.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\checkbox_0.bmp",
+  "유저인터페이스\\checkbox_1.bmp",
+  "유저인터페이스\\scroll0bar_down.bmp",
+  "유저인터페이스\\scroll0bar_mid.bmp",
+  "유저인터페이스\\scroll0bar_up.bmp",
+  "유저인터페이스\\scroll0down.bmp",
+  "유저인터페이스\\scroll0mid.bmp",
+  "유저인터페이스\\scroll0up.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 18,
+   "y": 3,
+   "t": "Battle Message Window",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   },
+   "passes": [
+    {
+     "dx": 1,
+     "dy": 1,
+     "color": "#ffffff"
+    }
+   ]
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+   "x": 3,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "noTrans": 1
+  },
+  {
+   "k": "roundbox",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 183,
+   "color": "#c8c8c8",
+   "rects": [
+    [
+     3,
+     17,
+     274,
+     1
+    ],
+    [
+     3,
+     199,
+     274,
+     1
+    ],
+    [
+     0,
+     20,
+     1,
+     177
+    ],
+    [
+     279,
+     20,
+     1,
+     177
+    ],
+    [
+     1,
+     18,
+     2,
+     1
+    ],
+    [
+     1,
+     198,
+     2,
+     1
+    ],
+    [
+     277,
+     18,
+     2,
+     1
+    ],
+    [
+     277,
+     198,
+     2,
+     1
+    ],
+    [
+     1,
+     19,
+     1,
+     1
+    ],
+    [
+     1,
+     197,
+     1,
+     1
+    ],
+    [
+     278,
+     19,
+     1,
+     1
+    ],
+    [
+     278,
+     197,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 5,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 17,
+   "w": 278,
+   "h": 181,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 2,
+   "y": 198,
+   "w": 276,
+   "h": 1,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 19,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 27,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 35,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 43,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 51,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 59,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 67,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 75,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 83,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 91,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 99,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 107,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 115,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 123,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 131,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 139,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 147,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 155,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 163,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 171,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 105,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 113,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 121,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 129,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 137,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 145,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 153,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 161,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 169,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 177,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 18,
+   "y": 17,
+   "w": 1,
+   "h": 179,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left.bmp",
+   "x": 0,
+   "y": 179,
+   "w": 21,
+   "h": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right.bmp",
+   "x": 259,
+   "y": 179,
+   "w": 21,
+   "h": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid.bmp",
+   "x": 21,
+   "y": 179,
+   "w": 21,
+   "h": 21,
+   "n": 12,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 22,
+   "t": "Public",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 22,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 42,
+   "t": "Public Chat",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 42,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 62,
+   "t": "Whisper",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 62,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 82,
+   "t": "Party Chat",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 82,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 102,
+   "t": "Guild Chat",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 102,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 122,
+   "t": "Show Alliance Chat messages",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 122,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 142,
+   "t": "Item get/drop",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 142,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 50,
+   "y": 162,
+   "t": "Equipment on/off",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\grp_offline.bmp",
+   "x": 27,
+   "y": 162,
+   "w": 15,
+   "h": 15,
+   "noTrans": 1
+  }
+ ],
+ "children": [
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIBattleMsgOptionWnd/UIScrollBar#0",
+   "x": 265,
+   "y": 14,
+   "w": 13,
+   "h": 162,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "scroll0up": [
+      "유저인터페이스\\scroll0up.bmp"
+     ],
+     "scroll0mid": [
+      "유저인터페이스\\scroll0mid.bmp"
+     ],
+     "scroll0down": [
+      "유저인터페이스\\scroll0down.bmp"
+     ],
+     "up": [
+      "유저인터페이스\\scroll0bar_up.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\scroll0bar_mid.bmp"
+     ],
+     "down": [
+      "유저인터페이스\\scroll0bar_down.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 16,
+    "pos": 0,
+    "orientation": 1,
+    "total": 24,
+    "visible": 8,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0up.bmp",
+     "x": 0,
+     "y": 1,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 13,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 26,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 39,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 52,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 65,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 78,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 91,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 104,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 117,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 130,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 143,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0mid.bmp",
+     "x": 0,
+     "y": 136,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    },
+    {
+     "k": "fill",
+     "x": 0,
+     "y": 149,
+     "w": 13,
+     "h": 13,
+     "color": "#ff00ff",
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0down.bmp",
+     "x": 0,
+     "y": 148,
+     "w": 13,
+     "h": 13,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_up.bmp",
+     "x": 0,
+     "y": 13,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 17,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 21,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 25,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 29,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 33,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 37,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 41,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 45,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 49,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_mid.bmp",
+     "x": 0,
+     "y": 53,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\scroll0bar_down.bmp",
+     "x": 0,
+     "y": 54,
+     "w": 13,
+     "h": 4,
+     "noTrans": 1
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 584,
+   "path": "UIBattleMsgOptionWnd/UIBitmapButton#1",
+   "x": 3,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_base_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_base_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_base_on.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIBattleMsgOptionWnd/UIBitmapButton#2",
+   "x": 266,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    },
+    "strings": [
+     "ESC"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 209,
+   "path": "UIBattleMsgOptionWnd/UICheckBox#3",
+   "x": 20,
+   "y": 184,
+   "w": 46,
+   "h": 12,
+   "ownerField": "+0xf0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "checkbox_1": [
+      "유저인터페이스\\checkbox_1.bmp"
+     ],
+     "checkbox_0": [
+      "유저인터페이스\\checkbox_0.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f0",
+    "text": " all on",
+    "strings": [
+     " all on"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\checkbox_0.bmp",
+     "x": 0,
+     "y": 1,
+     "w": 10,
+     "h": 10,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 13,
+     "y": 0,
+     "t": " all on",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/132_UIBattleMsgOptionWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(132) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

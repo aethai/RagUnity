@@ -1,0 +1,356 @@
+{
+ "format": 1,
+ "class": "UIMerchantItemPurchaseMSGWnd",
+ "windowId": 230,
+ "state": "default",
+ "w": 300,
+ "h": 150,
+ "defaultPos": {
+  "x": 362,
+  "y": 309,
+  "screen": "1024x768",
+  "rule": "x = W/2 - 150; y = H/2 - 75"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_buy.bmp",
+  "유저인터페이스\\btn_buy_a.bmp",
+  "유저인터페이스\\btn_buy_b.bmp",
+  "유저인터페이스\\btn_cancel.bmp",
+  "유저인터페이스\\btn_cancel_a.bmp",
+  "유저인터페이스\\btn_cancel_b.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "color": "#ffffff",
+   "whole": 1,
+   "alpha": 255
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 288,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 23,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 121,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 279,
+   "y": 121,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 121,
+   "w": 21,
+   "h": 29,
+   "n": 13,
+   "step": 21,
+   "noTrans": 0
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIMerchantItemPurchaseMSGWnd/UIStaticText#0",
+   "x": 16,
+   "y": 2,
+   "w": 100,
+   "h": 15,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": [
+     "Confirm Deal",
+     "Confirm Deal"
+    ],
+    "strings": [
+     "Confirm Deal"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 1,
+     "t": "Confirm Deal",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Confirm Deal",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIMerchantItemPurchaseMSGWnd/UIBitmapButton#1",
+   "x": 194,
+   "y": 126,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_buy.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_buy_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_buy_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_buy.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 181,
+   "path": "UIMerchantItemPurchaseMSGWnd/UIBitmapButton#2",
+   "x": 239,
+   "y": 126,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0xa8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_cancel.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_cancel_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_cancel_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_cancel.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIMerchantItemPurchaseMSGWnd/UIStaticText#3",
+   "x": 10,
+   "y": 20,
+   "w": 200,
+   "h": 15,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Below is the total cost:",
+    "strings": [
+     "Below is the total cost:"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Below is the total cost:",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIMerchantItemPurchaseMSGWnd/UIStaticText#4",
+   "x": 10,
+   "y": 40,
+   "w": 200,
+   "h": 15,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIMerchantItemPurchaseMSGWnd/UIStaticText#5",
+   "x": 10,
+   "y": 60,
+   "w": 200,
+   "h": 15,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Press buy to confirm.",
+    "strings": [
+     "Press buy to confirm."
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Press buy to confirm.",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/230_UIMerchantItemPurchaseMSGWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(230) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

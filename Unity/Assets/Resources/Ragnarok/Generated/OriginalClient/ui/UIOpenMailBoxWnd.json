@@ -1,0 +1,66 @@
+{
+ "format": 1,
+ "class": "UIOpenMailBoxWnd",
+ "windowId": 262,
+ "state": "default",
+ "w": 43,
+ "h": 43,
+ "defaultPos": {
+  "x": 790,
+  "y": 16,
+  "screen": "1024x768",
+  "rule": "x = W - 234; y = 16"
+ },
+ "fonts": {},
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\rodexsystem\\renewal\\icon_noti_gotmail.bmp"
+ ],
+ "slots": {},
+ "ops": [],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 188,
+   "path": "UIOpenMailBoxWnd/UIBitmapButton#0",
+   "x": 0,
+   "y": 0,
+   "w": 43,
+   "h": 43,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\rodexsystem\\renewal\\icon_noti_gotmail.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\rodexsystem\\renewal\\icon_noti_gotmail.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\rodexsystem\\renewal\\icon_noti_gotmail.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\rodexsystem\\renewal\\icon_noti_gotmail.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 43,
+     "h": 43,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/262_UIOpenMailBoxWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(262) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

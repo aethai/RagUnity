@@ -1,0 +1,800 @@
+{
+ "format": 1,
+ "class": "UIBasicInfoWnd",
+ "windowId": 0,
+ "state": "minimized",
+ "w": 220,
+ "h": 55,
+ "defaultPos": {
+  "x": 0,
+  "y": 0,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 0"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 14,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f1": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f2": {
+   "face": "Arial",
+   "lfHeight": 13,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+  "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+  "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+  "유저인터페이스\\basic_interface\\gzeblue_right.bmp",
+  "유저인터페이스\\basic_interface\\gzered_left.bmp",
+  "유저인터페이스\\basic_interface\\gzered_right.bmp",
+  "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_base_on.bmp",
+  "유저인터페이스\\basic_interface\\sys_mini_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_mini_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp"
+ ],
+ "slots": {
+  "JobName+BaseExpPercent+BaseLevel+JobLevel": [
+   "JobName",
+   "BaseExpPercent",
+   "BaseLevel",
+   "JobLevel"
+  ],
+  "UIBasicInfoWnd/UIStaticText#2": [
+   "Name"
+  ],
+  "UIBasicInfoWnd/UIBarGraphPlayer#3": [
+   "Hp",
+   "MaxHp"
+  ],
+  "UIBasicInfoWnd/UIBarGraphPlayer#4": [
+   "Sp",
+   "MaxSp"
+  ],
+  "UIBasicInfoWnd/UIINT64BarGraph#6": [
+   "BaseExp",
+   "BaseExpNext"
+  ],
+  "UIBasicInfoWnd/UIINT64BarGraph#7": [
+   "Job",
+   "Int"
+  ]
+ },
+ "ops": [
+  {
+   "k": "roundbox",
+   "x": 0,
+   "y": 17,
+   "w": 220,
+   "h": 38,
+   "color": "#c8c8c8",
+   "rects": [
+    [
+     3,
+     17,
+     214,
+     1
+    ],
+    [
+     3,
+     54,
+     214,
+     1
+    ],
+    [
+     0,
+     20,
+     1,
+     32
+    ],
+    [
+     219,
+     20,
+     1,
+     32
+    ],
+    [
+     1,
+     18,
+     2,
+     1
+    ],
+    [
+     1,
+     53,
+     2,
+     1
+    ],
+    [
+     217,
+     18,
+     2,
+     1
+    ],
+    [
+     217,
+     53,
+     2,
+     1
+    ],
+    [
+     1,
+     19,
+     1,
+     1
+    ],
+    [
+     1,
+     52,
+     1,
+     1
+    ],
+    [
+     218,
+     19,
+     1,
+     1
+    ],
+    [
+     218,
+     52,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 220,
+   "h": 5,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 17,
+   "w": 218,
+   "h": 36,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 2,
+   "y": 53,
+   "w": 216,
+   "h": 1,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 208,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 17,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 9,
+   "y": 20,
+   "t": "Lv.55 / Acolyte / Lv.32 / Exp. 49.3 %",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "JobName+BaseExpPercent+BaseLevel+JobLevel",
+   "fmt": "Lv.{BaseLevel,2} / {JobName} / Lv.{JobLevel,2} / Exp. {BaseExpPercent:0.0} %",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "Lv.55 / Acolyte / Lv.32 / Exp. 49.3 %"
+    },
+    {
+     "t": "Lv. 9 / Mage / Lv. 5 / Exp. 0.0 %"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 9,
+   "y": 36,
+   "t": "HP. 1234 / 2345",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "Hp+MaxHp",
+   "fmt": "HP. {Hp} / {MaxHp}",
+   "dyn": [
+    "t",
+    "color"
+   ],
+   "samples": [
+    {
+     "t": "HP. 1234 / 2345",
+     "color": "#000000"
+    },
+    {
+     "t": "HP. 100 / 99999",
+     "color": "#ff0000"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 85,
+   "y": 36,
+   "t": " | ",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   }
+  },
+  {
+   "k": "text",
+   "x": 93,
+   "y": 36,
+   "t": "SP. 345 / 456",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 1,
+    "height": 14
+   },
+   "slot": "Sp+MaxSp",
+   "fmt": "SP. {Sp} / {MaxSp}",
+   "dyn": [
+    "t"
+   ],
+   "samples": [
+    {
+     "t": "SP. 345 / 456"
+    },
+    {
+     "t": "SP. 900 / 950"
+    }
+   ]
+  }
+ ],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBitmapButton#0",
+   "x": 3,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_base_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_base_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_base_on.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 198,
+   "path": "UIBasicInfoWnd/UIBitmapButton#1",
+   "x": 206,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_mini_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_mini_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_mini_on.bmp"
+     ]
+    },
+    "strings": [
+     "Alt+V, Ctrl+V"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_mini_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIStaticText#2",
+   "x": 17,
+   "y": 3,
+   "w": 190,
+   "h": 15,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f1",
+    "strings": [
+     "Aethai"
+    ]
+   },
+   "samples": {
+    "seedA": {
+     "texts": [
+      "Aethai"
+     ]
+    },
+    "seedB": {
+     "texts": [
+      "Poring"
+     ]
+    }
+   },
+   "fields": [
+    "Name"
+   ],
+   "fmt": "{Name}",
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphPlayer",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBarGraphPlayer#3",
+   "x": -100,
+   "y": -100,
+   "w": 135,
+   "h": 9,
+   "ownerField": "+0xc8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg1": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp"
+     ],
+     "left": [
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzered_left.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp"
+     ],
+     "right": [
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp",
+      "유저인터페이스\\basic_interface\\gzered_right.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f2"
+   },
+   "samples": {
+    "seedA": {
+     "texts": [
+      "1234  /  2345"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "mid": 66,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 74
+     }
+    },
+    "seedB": {
+     "texts": [
+      "100  /  99999"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzered_left.bmp",
+      "유저인터페이스\\basic_interface\\gzered_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 8
+     }
+    }
+   },
+   "fields": [
+    "Hp",
+    "MaxHp"
+   ],
+   "fmt": "{Hp}  /  {MaxHp}",
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 135,
+     "h": 9,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphPlayer",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBarGraphPlayer#4",
+   "x": -100,
+   "y": -100,
+   "w": 135,
+   "h": 9,
+   "ownerField": "+0xcc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg1": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp"
+     ],
+     "left": [
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp"
+     ],
+     "right": [
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f2"
+   },
+   "samples": {
+    "seedA": {
+     "texts": [
+      "345  /  456"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "mid": 96,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 104
+     }
+    },
+    "seedB": {
+     "texts": [
+      "900  /  950"
+     ],
+     "tiles": {
+      "bg1": 1,
+      "left": 1,
+      "mid": 120,
+      "right": 1
+     },
+     "bitmaps": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_mid.bmp",
+      "유저인터페이스\\basic_interface\\gzeblue_right.bmp"
+     ],
+     "extent": {
+      "x": 0,
+      "w": 128
+     }
+    }
+   },
+   "fields": [
+    "Sp",
+    "MaxSp"
+   ],
+   "fmt": "{Sp}  /  {MaxSp}",
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 135,
+     "h": 9,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gzeblue_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 4,
+     "h": 8,
+     "noTrans": 1
+    }
+   ]
+  },
+  {
+   "class": "UIBarGraphPlayerAP",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIBarGraphPlayerAP#5",
+   "x": -100,
+   "y": -100,
+   "w": 135,
+   "h": 9,
+   "ownerField": "+0xdc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg1": [
+      "유저인터페이스\\basic_interface\\gze_bg1.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f2",
+    "text": "  0  /    0"
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg1.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 135,
+     "h": 9,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": -2,
+     "t": "  0  /    0",
+     "helper": "TextOut_9b4c50",
+     "font": "f2",
+     "color": "#000000",
+     "align": "center",
+     "boxW": 135,
+     "unseeded": 1
+    }
+   ]
+  },
+  {
+   "class": "UIINT64BarGraph",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIINT64BarGraph#6",
+   "x": -100,
+   "y": -100,
+   "w": 112,
+   "h": 6,
+   "ownerField": "+0xd0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#afafaf",
+     "#ffffff",
+     "#567fcf"
+    ]
+   },
+   "samples": {
+    "seedA": {
+     "fills": [
+      {
+       "x": 1,
+       "y": 1,
+       "w": 110,
+       "h": 4,
+       "color": "#ffffff"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "w": 54,
+       "h": 4,
+       "color": "#567fcf"
+      }
+     ]
+    },
+    "seedB": {
+     "drawn": 0
+    }
+   },
+   "fields": [
+    "BaseExp",
+    "BaseExpNext"
+   ],
+   "rule": "fill w = floor(BaseExp / BaseExpNext * 110)"
+  },
+  {
+   "class": "UIINT64BarGraph",
+   "id": 584,
+   "path": "UIBasicInfoWnd/UIINT64BarGraph#7",
+   "x": -100,
+   "y": -100,
+   "w": 112,
+   "h": 6,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#afafaf",
+     "#ffffff",
+     "#567fcf"
+    ]
+   },
+   "samples": {
+    "seedA": {
+     "fills": [
+      {
+       "x": 1,
+       "y": 1,
+       "w": 110,
+       "h": 4,
+       "color": "#ffffff"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "w": 5,
+       "h": 4,
+       "color": "#567fcf"
+      }
+     ]
+    },
+    "seedB": {
+     "fills": [
+      {
+       "x": 1,
+       "y": 1,
+       "w": 110,
+       "h": 4,
+       "color": "#ffffff"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "w": 0,
+       "h": 4,
+       "color": "#567fcf"
+      }
+     ]
+    }
+   },
+   "fields": [
+    "Job",
+    "Int"
+   ],
+   "rule": "fill w = floor(Job / Int * 110)",
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#afafaf",
+     "whole": 1
+    },
+    {
+     "k": "fill",
+     "x": 1,
+     "y": 1,
+     "w": 110,
+     "h": 4,
+     "color": "#ffffff"
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/UIBasicInfoWnd.minimized.json",
+  "createdBy": "UIWindowMgr::MakeWindow(0) stopped at 0x9c825e; state via SendMsg(6, 0xc6) / 0x8f99c0",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ },
+ "lossy": [
+  "static numbers (data the seeds do not cover)"
+ ]
+}

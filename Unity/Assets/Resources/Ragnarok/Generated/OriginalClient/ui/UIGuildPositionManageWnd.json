@@ -1,0 +1,1737 @@
+{
+ "format": 1,
+ "class": "UIGuildPositionManageWnd",
+ "windowId": 62,
+ "state": "default",
+ "w": 400,
+ "h": 317,
+ "defaultPos": {
+  "x": 0,
+  "y": 34,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 34"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_ok.bmp",
+  "유저인터페이스\\btn_ok_a.bmp",
+  "유저인터페이스\\btn_ok_b.bmp",
+  "유저인터페이스\\btn_ok_dis.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 400,
+   "h": 24,
+   "color": "#b4b4b4"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 67,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 133,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 199,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 265,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 331,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 388,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 32,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 41,
+   "w": 400,
+   "h": 276,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 41,
+   "w": 398,
+   "h": 276,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 379,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "n": 18,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 4,
+   "y": 45,
+   "w": 378,
+   "h": 229,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 46,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 46,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 46,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 46,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 46,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 46,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 65,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 65,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 65,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 65,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 65,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 65,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 84,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 84,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 84,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 84,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 84,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 84,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 103,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 103,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 103,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 103,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 103,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 103,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 122,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 122,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 122,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 122,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 122,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 122,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 141,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 141,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 141,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 141,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 141,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 141,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 160,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 160,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 160,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 160,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 160,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 160,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 179,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 179,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 179,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 179,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 179,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 179,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 198,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 198,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 198,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 198,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 198,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 198,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 217,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 217,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 217,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 217,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 217,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 217,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 236,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 236,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 236,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 236,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 236,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 236,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 5,
+   "y": 255,
+   "w": 50,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 56,
+   "y": 255,
+   "w": 100,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 157,
+   "y": 255,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 218,
+   "y": 255,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 279,
+   "y": 255,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 340,
+   "y": 255,
+   "w": 60,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "text",
+   "x": 8,
+   "y": 49,
+   "t": "Rank",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 59,
+   "y": 49,
+   "t": "Position Title",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 160,
+   "y": 49,
+   "t": "Invite",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 221,
+   "y": 49,
+   "t": "Expel",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 282,
+   "y": 49,
+   "t": "Storage",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 343,
+   "y": 49,
+   "t": "Tax %",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#0",
+   "x": 3,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Guild Info",
+    "strings": [
+     "Guild Info"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Guild Info",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#1",
+   "x": 69,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Member",
+    "strings": [
+     "Member"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Member",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#2",
+   "x": 135,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Position",
+    "strings": [
+     "Position"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Position",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#3",
+   "x": 201,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Guild Skill",
+    "strings": [
+     "Guild Skill"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Guild Skill",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#4",
+   "x": 267,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Expel List",
+    "strings": [
+     "Expel List"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Expel List",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#5",
+   "x": 333,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xac",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Announc...",
+    "strings": [
+     "Announc...",
+     "Announcement"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Announc...",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIGuildPositionManageWnd/UIBitmapButton#6",
+   "x": 386,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    },
+    "strings": [
+     "Alt+G"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIScrollBar#7",
+   "x": 385,
+   "y": 41,
+   "w": 13,
+   "h": 247,
+   "ownerField": "+0x1e4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 11,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#8",
+   "x": 59,
+   "y": 66,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1b8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#9",
+   "x": 59,
+   "y": 85,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1bc",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#10",
+   "x": 59,
+   "y": 104,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1c0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#11",
+   "x": 59,
+   "y": 123,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1c4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#12",
+   "x": 59,
+   "y": 142,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1c8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#13",
+   "x": 59,
+   "y": 161,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1cc",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#14",
+   "x": 59,
+   "y": 180,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1d0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#15",
+   "x": 59,
+   "y": 199,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1d4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#16",
+   "x": 59,
+   "y": 218,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1d8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#17",
+   "x": 59,
+   "y": 237,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1dc",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#18",
+   "x": 59,
+   "y": 256,
+   "w": 96,
+   "h": 15,
+   "ownerField": "+0x1e0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#19",
+   "x": 282,
+   "y": 66,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x18c",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#20",
+   "x": 282,
+   "y": 85,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x190",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#21",
+   "x": 282,
+   "y": 104,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x194",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#22",
+   "x": 282,
+   "y": 123,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x198",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#23",
+   "x": 282,
+   "y": 142,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x19c",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#24",
+   "x": 282,
+   "y": 161,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x1a0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#25",
+   "x": 282,
+   "y": 180,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x1a4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#26",
+   "x": 282,
+   "y": 199,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x1a8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#27",
+   "x": 282,
+   "y": 218,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x1ac",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#28",
+   "x": 282,
+   "y": 237,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x1b0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildPositionManageWnd/UIStaticText#29",
+   "x": 282,
+   "y": 256,
+   "w": 26,
+   "h": 15,
+   "ownerField": "+0x1b4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIGuildPositionManageWnd/UIBitmapButton#30",
+   "x": -200,
+   "y": -200,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0x1e8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_ok.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_ok_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_ok_b.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\btn_ok_dis.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_ok.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/062_UIGuildPositionManageWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(62) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

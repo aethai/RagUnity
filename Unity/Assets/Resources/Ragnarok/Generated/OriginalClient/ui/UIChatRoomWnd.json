@@ -1,0 +1,525 @@
+{
+ "format": 1,
+ "class": "UIChatRoomWnd",
+ "windowId": 28,
+ "state": "default",
+ "w": 280,
+ "h": 120,
+ "defaultPos": {
+  "x": 500,
+  "y": 180,
+  "screen": "1024x768",
+  "rule": "x = 500; y = 180"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_resize.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "roundbox",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 103,
+   "color": "#c8c8c8",
+   "rects": [
+    [
+     3,
+     17,
+     274,
+     1
+    ],
+    [
+     3,
+     119,
+     274,
+     1
+    ],
+    [
+     0,
+     20,
+     1,
+     97
+    ],
+    [
+     279,
+     20,
+     1,
+     97
+    ],
+    [
+     1,
+     18,
+     2,
+     1
+    ],
+    [
+     1,
+     118,
+     2,
+     1
+    ],
+    [
+     277,
+     18,
+     2,
+     1
+    ],
+    [
+     277,
+     118,
+     2,
+     1
+    ],
+    [
+     1,
+     19,
+     1,
+     1
+    ],
+    [
+     1,
+     117,
+     1,
+     1
+    ],
+    [
+     278,
+     19,
+     1,
+     1
+    ],
+    [
+     278,
+     117,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 5,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 17,
+   "w": 278,
+   "h": 101,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 2,
+   "y": 118,
+   "w": 276,
+   "h": 1,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 222,
+   "y": 17,
+   "w": 1,
+   "h": 82,
+   "color": "#d4d4d4"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left.bmp",
+   "x": 0,
+   "y": 99,
+   "w": 21,
+   "h": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right.bmp",
+   "x": 259,
+   "y": 99,
+   "w": 21,
+   "h": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid.bmp",
+   "x": 21,
+   "y": 99,
+   "w": 21,
+   "h": 21,
+   "n": 12,
+   "step": 21,
+   "noTrans": 0
+  }
+ ],
+ "children": [
+  {
+   "class": "UIResizer",
+   "id": 584,
+   "path": "UIChatRoomWnd/UIResizer#0",
+   "x": 265,
+   "y": 105,
+   "w": 13,
+   "h": 13,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "btn_resize": [
+      "유저인터페이스\\btn_resize.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_resize.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIChatEditCtrl",
+   "id": 490,
+   "path": "UIChatRoomWnd/UIChatEditCtrl#1",
+   "x": 3,
+   "y": 102,
+   "w": 250,
+   "h": 16,
+   "ownerField": "+0xd8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f2f2f2",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "|"
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f2f2f2",
+     "whole": 1
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 2,
+     "t": "|",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIChatHisBox2",
+   "id": 180,
+   "path": "UIChatRoomWnd/UIChatHisBox2#2",
+   "x": 1,
+   "y": 17,
+   "w": 221,
+   "h": 82,
+   "ownerField": "+0xdc",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ffffff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ffffff",
+     "whole": 1
+    }
+   ],
+   "children": [
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIChatRoomWnd/UIChatHisBox2#2/UIScrollBar#0",
+     "x": 208,
+     "y": 0,
+     "w": 13,
+     "h": 82,
+     "ownerField": "+0xac",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 1,
+      "total": 0,
+      "visible": 0,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    },
+    {
+     "class": "UIScrollBar2",
+     "id": 584,
+     "path": "UIChatRoomWnd/UIChatHisBox2#2/UIScrollBar2#1",
+     "x": 0,
+     "y": 69,
+     "w": 208,
+     "h": 13,
+     "ownerField": "+0xb0",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 0,
+      "total": 0,
+      "visible": 0,
+      "arrow": 10,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "class": "UIMemberListBox",
+   "id": 180,
+   "path": "UIChatRoomWnd/UIMemberListBox#3",
+   "x": 223,
+   "y": 17,
+   "w": 56,
+   "h": 82,
+   "ownerField": "+0xe0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ffffff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ffffff",
+     "whole": 1
+    }
+   ],
+   "children": [
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIChatRoomWnd/UIMemberListBox#3/UIScrollBar#0",
+     "x": 43,
+     "y": 0,
+     "w": 13,
+     "h": 82,
+     "ownerField": "+0xac",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 1,
+      "total": 0,
+      "visible": 0,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    },
+    {
+     "class": "UIScrollBar2",
+     "id": 584,
+     "path": "UIChatRoomWnd/UIMemberListBox#3/UIScrollBar2#1",
+     "x": 0,
+     "y": 69,
+     "w": 43,
+     "h": 13,
+     "ownerField": "+0xb0",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 0,
+      "total": 0,
+      "visible": 0,
+      "arrow": 10,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIChatRoomWnd/UIBitmapButton#4",
+   "x": 266,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xe4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    },
+    "strings": [
+     "/q"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIChatRoomWnd/UIStaticText#5",
+   "x": 9,
+   "y": 2,
+   "w": 250,
+   "h": 15,
+   "ownerField": "+0xe8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/028_UIChatRoomWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(28) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

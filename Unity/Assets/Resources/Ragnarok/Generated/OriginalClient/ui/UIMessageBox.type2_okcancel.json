@@ -1,0 +1,400 @@
+{
+ "format": 1,
+ "class": "UIMessageBox",
+ "windowId": null,
+ "state": "type2_okcancel",
+ "w": 280,
+ "h": 120,
+ "defaultPos": {
+  "x": 377,
+  "y": 324,
+  "screen": "1024x768",
+  "rule": "x = W/2 - 135; y = H/2 - 60"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_cancel.bmp",
+  "유저인터페이스\\btn_cancel_a.bmp",
+  "유저인터페이스\\btn_cancel_b.bmp",
+  "유저인터페이스\\btn_ok.bmp",
+  "유저인터페이스\\btn_ok_a.bmp",
+  "유저인터페이스\\btn_ok_b.bmp"
+ ],
+ "slots": {
+  "UIMessageBox/UITextViewer#0": [
+   "Message"
+  ]
+ },
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 18,
+   "y": 3,
+   "t": "Message",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   },
+   "passes": [
+    {
+     "dx": 1,
+     "dy": 1,
+     "color": "#ffffff"
+    }
+   ]
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+   "x": 3,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "noTrans": 1
+  },
+  {
+   "k": "roundbox",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 103,
+   "color": "#c8c8c8",
+   "rects": [
+    [
+     3,
+     17,
+     274,
+     1
+    ],
+    [
+     3,
+     119,
+     274,
+     1
+    ],
+    [
+     0,
+     20,
+     1,
+     97
+    ],
+    [
+     279,
+     20,
+     1,
+     97
+    ],
+    [
+     1,
+     18,
+     2,
+     1
+    ],
+    [
+     1,
+     118,
+     2,
+     1
+    ],
+    [
+     277,
+     18,
+     2,
+     1
+    ],
+    [
+     277,
+     118,
+     2,
+     1
+    ],
+    [
+     1,
+     19,
+     1,
+     1
+    ],
+    [
+     1,
+     117,
+     1,
+     1
+    ],
+    [
+     278,
+     19,
+     1,
+     1
+    ],
+    [
+     278,
+     117,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 5,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 17,
+   "w": 278,
+   "h": 101,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 2,
+   "y": 118,
+   "w": 276,
+   "h": 1,
+   "color": "#ffffff"
+  }
+ ],
+ "children": [
+  {
+   "class": "UITextViewer",
+   "id": 584,
+   "path": "UIMessageBox/UITextViewer#0",
+   "x": 10,
+   "y": 22,
+   "w": 260,
+   "h": 65,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "lineHeight": 18,
+    "fieldA8": 0,
+    "scroll": 0,
+    "lines": [
+     "Do you want to save the changes?"
+    ],
+    "wrapBytes": 37,
+    "wrapSetBy": "0x808263"
+   },
+   "samples": {
+    "seedA": {
+     "texts": [
+      "Do you want to save the changes?"
+     ]
+    },
+    "seedB": {
+     "texts": [
+      "Short text."
+     ]
+    }
+   },
+   "fields": [
+    "Message"
+   ],
+   "fmt": "{Message}",
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ffffff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ],
+   "children": [
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIMessageBox/UITextViewer#0/UIScrollBar#0",
+     "x": 247,
+     "y": 0,
+     "w": 13,
+     "h": 65,
+     "ownerField": "+0xac",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 1,
+      "total": 1,
+      "visible": 3,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    },
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIMessageBox/UITextViewer#0/UIScrollBar#1",
+     "x": 0,
+     "y": 52,
+     "w": 247,
+     "h": 13,
+     "ownerField": "+0xb0",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 0,
+      "total": 0,
+      "visible": 0,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 183,
+   "path": "UIMessageBox/UIBitmapButton#1",
+   "x": 189,
+   "y": 96,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_ok.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_ok_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_ok_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_ok.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 184,
+   "path": "UIMessageBox/UIBitmapButton#2",
+   "x": 234,
+   "y": 96,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_cancel.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_cancel_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_cancel_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_cancel.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/UIMessageBox.type2_okcancel.json",
+  "createdBy": "UIWindowMgr 0x9d2b20(msg, 2, 1, 0, 0, \"Message\", 280, 120, 0)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

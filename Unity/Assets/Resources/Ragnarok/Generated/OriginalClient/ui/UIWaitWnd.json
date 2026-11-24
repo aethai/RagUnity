@@ -1,0 +1,197 @@
+{
+ "format": 1,
+ "class": "UIWaitWnd",
+ "windowId": 6,
+ "state": "default",
+ "w": 280,
+ "h": 120,
+ "defaultPos": {
+  "x": 377,
+  "y": 480,
+  "screen": "1024x768",
+  "rule": "x = W/2 - 135; y = H*5/8"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\btn_cancel.bmp",
+  "유저인터페이스\\btn_cancel_a.bmp",
+  "유저인터페이스\\btn_cancel_b.bmp",
+  "유저인터페이스\\win_msgbox.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\win_msgbox.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 280,
+   "h": 120,
+   "noTrans": 0
+  }
+ ],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 181,
+   "path": "UIWaitWnd/UIBitmapButton#0",
+   "x": 119,
+   "y": 50,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_cancel.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_cancel_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_cancel_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_cancel.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UITextViewer",
+   "id": 584,
+   "path": "UIWaitWnd/UITextViewer#1",
+   "x": 10,
+   "y": 22,
+   "w": 260,
+   "h": 65,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Please wait...",
+    "lineHeight": 18,
+    "fieldA8": 0,
+    "scroll": 0,
+    "lines": [
+     "Please wait..."
+    ],
+    "wrapBytes": 38,
+    "wrapSetBy": "0x849f64"
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ffffff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 3,
+     "y": 4,
+     "t": "Please wait...",
+     "helper": "TextOut_9b52c0",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left"
+    }
+   ],
+   "children": [
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIWaitWnd/UITextViewer#1/UIScrollBar#0",
+     "x": 247,
+     "y": 0,
+     "w": 13,
+     "h": 65,
+     "ownerField": "+0xac",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 1,
+      "total": 1,
+      "visible": 3,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    },
+    {
+     "class": "UIScrollBar",
+     "id": 584,
+     "path": "UIWaitWnd/UITextViewer#1/UIScrollBar#1",
+     "x": 0,
+     "y": 52,
+     "w": 247,
+     "h": 13,
+     "ownerField": "+0xb0",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 0,
+      "total": 0,
+      "visible": 0,
+      "arrow": 13,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/006_UIWaitWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(6) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

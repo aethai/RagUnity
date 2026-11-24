@@ -1,0 +1,659 @@
+{
+ "format": 1,
+ "class": "UIGuildNoticeWnd",
+ "windowId": 65,
+ "state": "default",
+ "w": 400,
+ "h": 317,
+ "defaultPos": {
+  "x": 0,
+  "y": 34,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 34"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_send.bmp",
+  "유저인터페이스\\btn_send_a.bmp",
+  "유저인터페이스\\btn_send_b.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 400,
+   "h": 24,
+   "color": "#b4b4b4"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 67,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 133,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 199,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 265,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 331,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 388,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 32,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 41,
+   "w": 400,
+   "h": 276,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 41,
+   "w": 398,
+   "h": 276,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 379,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "n": 18,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 5,
+   "y": 67,
+   "t": "Title:",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 5,
+   "y": 86,
+   "t": "Contents",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 393,
+   "y": 266,
+   "t": "[0/119]",
+   "helper": "TextOut_9b68d0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "right"
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildNoticeWnd/UIStaticText#0",
+   "x": 3,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Guild Info",
+    "strings": [
+     "Guild Info"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Guild Info",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildNoticeWnd/UIStaticText#1",
+   "x": 69,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Member",
+    "strings": [
+     "Member"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Member",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildNoticeWnd/UIStaticText#2",
+   "x": 135,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Position",
+    "strings": [
+     "Position"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Position",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildNoticeWnd/UIStaticText#3",
+   "x": 201,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Guild Skill",
+    "strings": [
+     "Guild Skill"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Guild Skill",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildNoticeWnd/UIStaticText#4",
+   "x": 267,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Expel List",
+    "strings": [
+     "Expel List"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Expel List",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildNoticeWnd/UIStaticText#5",
+   "x": 333,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xac",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Announc...",
+    "strings": [
+     "Announc...",
+     "Announcement"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Announc...",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIGuildNoticeWnd/UIBitmapButton#6",
+   "x": 386,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    },
+    "strings": [
+     "Alt+G"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrlVarId",
+   "id": 277,
+   "path": "UIGuildNoticeWnd/UIEditCtrlVarId#7",
+   "x": 50,
+   "y": 66,
+   "w": 340,
+   "h": 16,
+   "ownerField": "+0xb0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f2f2f2",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "|"
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f2f2f2",
+     "whole": 1
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 2,
+     "t": "|",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrl3",
+   "id": 584,
+   "path": "UIGuildNoticeWnd/UIEditCtrl3#8",
+   "x": 5,
+   "y": 104,
+   "w": 390,
+   "h": 156,
+   "ownerField": "+0xb4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f2f2f2",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "|"
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f2f2f2",
+     "whole": 1
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 0,
+     "t": "|",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ],
+   "children": [
+    {
+     "class": "UIScrollBar3",
+     "id": 584,
+     "path": "UIGuildNoticeWnd/UIEditCtrl3#8/UIScrollBar3#0",
+     "x": 380,
+     "y": 0,
+     "w": 13,
+     "h": 156,
+     "ownerField": "+0x12c",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff"
+      ],
+      "range": 0,
+      "pos": 0,
+      "orientation": 1,
+      "total": 0,
+      "visible": 0,
+      "arrow": 9,
+      "minThumb": 1
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 273,
+   "path": "UIGuildNoticeWnd/UIBitmapButton#9",
+   "x": 0,
+   "y": 0,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0xb8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_send.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_send_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_send_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_send.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/065_UIGuildNoticeWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(65) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

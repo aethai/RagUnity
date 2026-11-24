@@ -1,0 +1,488 @@
+{
+ "format": 1,
+ "class": "UIMerchantShopMakeWnd",
+ "windowId": 41,
+ "state": "default",
+ "w": 400,
+ "h": 260,
+ "defaultPos": {
+  "x": 0,
+  "y": 240,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 240"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\bt_shopinfo.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_cancel.bmp",
+  "유저인터페이스\\btn_cancel_a.bmp",
+  "유저인터페이스\\btn_cancel_b.bmp",
+  "유저인터페이스\\btn_ok.bmp",
+  "유저인터페이스\\btn_ok_a.bmp",
+  "유저인터페이스\\btn_ok_b.bmp",
+  "유저인터페이스\\checkbox_0.bmp",
+  "유저인터페이스\\checkbox_1.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "color": "#ff0000",
+   "whole": 1
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 388,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 32,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 400,
+   "h": 222,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 231,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 379,
+   "y": 231,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 231,
+   "w": 21,
+   "h": 29,
+   "n": 18,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 235,
+   "y": 57,
+   "t": "Price: ",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 3,
+   "y": 54,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 235,
+   "y": 99,
+   "t": "Price: ",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 3,
+   "y": 96,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 235,
+   "y": 141,
+   "t": "Price: ",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 3,
+   "y": 138,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 235,
+   "y": 183,
+   "t": "Price: ",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 3,
+   "y": 180,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 16,
+   "y": 3,
+   "t": "Opening a stall",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   },
+   "passes": [
+    {
+     "dx": 1,
+     "dy": 1,
+     "color": "#ffffff"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 2,
+   "y": 25,
+   "t": "Name",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 5,
+   "y": 217,
+   "t": "~ When selling items, total amount of zeny received ",
+   "font": "f0",
+   "color": "#ff0000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  }
+ ],
+ "children": [
+  {
+   "class": "UIEditCtrl",
+   "id": 584,
+   "path": "UIMerchantShopMakeWnd/UIEditCtrl#0",
+   "x": 41,
+   "y": 22,
+   "w": 334,
+   "h": 16,
+   "ownerField": "+0xac",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#e8e8e8",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "|"
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#e8e8e8",
+     "whole": 1
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 2,
+     "t": "|",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIMerchantShopMakeWnd/UIScrollBar#1",
+   "x": 385,
+   "y": 17,
+   "w": 13,
+   "h": 202,
+   "ownerField": "+0x114",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 0,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIMerchantShopMakeWnd/UIBitmapButton#2",
+   "x": 308,
+   "y": 236,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0x140",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_ok.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_ok_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_ok_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_ok.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 181,
+   "path": "UIMerchantShopMakeWnd/UIBitmapButton#3",
+   "x": 354,
+   "y": 236,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0x144",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_cancel.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_cancel_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_cancel_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_cancel.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 209,
+   "path": "UIMerchantShopMakeWnd/UICheckBox#4",
+   "x": 12,
+   "y": 240,
+   "w": 180,
+   "h": 12,
+   "ownerField": "+0xbc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "checkbox_1": [
+      "유저인터페이스\\checkbox_1.bmp"
+     ],
+     "checkbox_0": [
+      "유저인터페이스\\checkbox_0.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Safe check for over 10 mil zeny",
+    "strings": [
+     "Safe check for over 10 mil zeny"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\checkbox_0.bmp",
+     "x": 0,
+     "y": 1,
+     "w": 10,
+     "h": 10,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 13,
+     "y": 0,
+     "t": "Safe check for over 10 mil zeny",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 339,
+   "path": "UIMerchantShopMakeWnd/UIBitmapButton#5",
+   "x": 377,
+   "y": 20,
+   "w": 20,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\bt_shopinfo.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\bt_shopinfo.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\bt_shopinfo.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\bt_shopinfo.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 20,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/041_UIMerchantShopMakeWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(41) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

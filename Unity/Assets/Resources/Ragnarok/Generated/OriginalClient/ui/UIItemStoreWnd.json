@@ -1,0 +1,2177 @@
+{
+ "format": 1,
+ "class": "UIItemStoreWnd",
+ "windowId": 33,
+ "state": "default",
+ "w": 280,
+ "h": 458,
+ "defaultPos": {
+  "x": 360,
+  "y": 200,
+  "screen": "1024x768",
+  "rule": "x = 360; y = 200"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f1": {
+   "face": "Arial",
+   "lfHeight": 18,
+   "weight": 700,
+   "charset": 0,
+   "quality": 3
+  },
+  "f2": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 700,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\bg_setting.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_left3.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid3.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right3.bmp",
+  "유저인터페이스\\basic_interface\\combo_btn_a.bmp",
+  "유저인터페이스\\basic_interface\\combo_btn_b.bmp",
+  "유저인터페이스\\basic_interface\\combo_btn_c.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+  "유저인터페이스\\basic_interface\\notice_poring.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\tab_item_01.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\basic_interface\\기타-1.bmp",
+  "유저인터페이스\\basic_interface\\기타-2.bmp",
+  "유저인터페이스\\basic_interface\\무기-1.bmp",
+  "유저인터페이스\\basic_interface\\무기-2.bmp",
+  "유저인터페이스\\basic_interface\\방어구-1.bmp",
+  "유저인터페이스\\basic_interface\\방어구-2.bmp",
+  "유저인터페이스\\basic_interface\\소비-1.bmp",
+  "유저인터페이스\\basic_interface\\소비-2.bmp",
+  "유저인터페이스\\basic_interface\\의상-1.bmp",
+  "유저인터페이스\\basic_interface\\의상-2.bmp",
+  "유저인터페이스\\basic_interface\\카드-1.bmp",
+  "유저인터페이스\\basic_interface\\카드-2.bmp",
+  "유저인터페이스\\basic_interface\\캐시-1.bmp",
+  "유저인터페이스\\basic_interface\\캐시-2.bmp",
+  "유저인터페이스\\basic_interface\\투사체-1.bmp",
+  "유저인터페이스\\basic_interface\\투사체-2.bmp",
+  "유저인터페이스\\bg_search.bmp",
+  "유저인터페이스\\bt_search_normal.bmp",
+  "유저인터페이스\\bt_search_over.bmp",
+  "유저인터페이스\\bt_search_press.bmp",
+  "유저인터페이스\\btn_close.bmp",
+  "유저인터페이스\\btn_close_a.bmp",
+  "유저인터페이스\\btn_close_b.bmp",
+  "유저인터페이스\\btn_resize.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 105,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 113,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 121,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 129,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 137,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 145,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 153,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 161,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 169,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 177,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 185,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 193,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 201,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 209,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 217,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 225,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 233,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 241,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 249,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 257,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 265,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 273,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 281,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 289,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 297,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 305,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 313,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 321,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 329,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 337,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 345,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 353,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 361,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 369,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 377,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 385,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 393,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 401,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 409,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 417,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 425,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 433,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 105,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 113,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 121,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 129,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 137,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 145,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 153,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 161,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 169,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 177,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 185,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 193,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 201,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 209,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 217,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 225,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 233,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 241,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 249,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 257,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 265,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 273,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 281,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 289,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 297,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 305,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 313,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 321,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 329,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 337,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 345,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 353,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 361,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 369,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 377,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 385,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 393,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 401,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 409,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 417,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 425,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 433,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 17,
+   "w": 28,
+   "h": 420,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 433,
+   "w": 256,
+   "h": 4,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left3.bmp",
+   "x": 0,
+   "y": 401,
+   "w": 21,
+   "h": 57,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right3.bmp",
+   "x": 259,
+   "y": 401,
+   "w": 21,
+   "h": 57,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid3.bmp",
+   "x": 21,
+   "y": 401,
+   "w": 21,
+   "h": 57,
+   "n": 12,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 40,
+   "y": 17,
+   "w": 224,
+   "h": 384,
+   "color": "#ffffff"
+  },
+  {
+   "k": "roundbox",
+   "x": 55,
+   "y": 131,
+   "w": 187,
+   "h": 139,
+   "color": "#8494ce",
+   "rects": [
+    [
+     58,
+     131,
+     181,
+     1
+    ],
+    [
+     58,
+     269,
+     181,
+     1
+    ],
+    [
+     55,
+     134,
+     1,
+     133
+    ],
+    [
+     241,
+     134,
+     1,
+     133
+    ],
+    [
+     56,
+     132,
+     2,
+     1
+    ],
+    [
+     56,
+     268,
+     2,
+     1
+    ],
+    [
+     239,
+     132,
+     2,
+     1
+    ],
+    [
+     239,
+     268,
+     2,
+     1
+    ],
+    [
+     56,
+     133,
+     1,
+     1
+    ],
+    [
+     56,
+     267,
+     1,
+     1
+    ],
+    [
+     240,
+     133,
+     1,
+     1
+    ],
+    [
+     240,
+     267,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "fill",
+   "x": 57,
+   "y": 133,
+   "w": 183,
+   "h": 135,
+   "color": "#dee7ff"
+  },
+  {
+   "k": "roundbox",
+   "x": 56,
+   "y": 132,
+   "w": 185,
+   "h": 137,
+   "color": "#dee7ff",
+   "rects": [
+    [
+     59,
+     132,
+     179,
+     1
+    ],
+    [
+     59,
+     268,
+     179,
+     1
+    ],
+    [
+     56,
+     135,
+     1,
+     131
+    ],
+    [
+     240,
+     135,
+     1,
+     131
+    ],
+    [
+     57,
+     133,
+     2,
+     1
+    ],
+    [
+     57,
+     267,
+     2,
+     1
+    ],
+    [
+     238,
+     133,
+     2,
+     1
+    ],
+    [
+     238,
+     267,
+     2,
+     1
+    ],
+    [
+     57,
+     134,
+     1,
+     1
+    ],
+    [
+     57,
+     266,
+     1,
+     1
+    ],
+    [
+     239,
+     134,
+     1,
+     1
+    ],
+    [
+     239,
+     266,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "fill",
+   "x": 62,
+   "y": 138,
+   "w": 173,
+   "h": 125,
+   "color": "#ffffff"
+  },
+  {
+   "k": "roundbox",
+   "x": 61,
+   "y": 137,
+   "w": 175,
+   "h": 127,
+   "color": "#ffffff",
+   "rects": [
+    [
+     64,
+     137,
+     169,
+     1
+    ],
+    [
+     64,
+     263,
+     169,
+     1
+    ],
+    [
+     61,
+     140,
+     1,
+     121
+    ],
+    [
+     235,
+     140,
+     1,
+     121
+    ],
+    [
+     62,
+     138,
+     2,
+     1
+    ],
+    [
+     62,
+     262,
+     2,
+     1
+    ],
+    [
+     233,
+     138,
+     2,
+     1
+    ],
+    [
+     233,
+     262,
+     2,
+     1
+    ],
+    [
+     62,
+     139,
+     1,
+     1
+    ],
+    [
+     62,
+     261,
+     1,
+     1
+    ],
+    [
+     234,
+     139,
+     1,
+     1
+    ],
+    [
+     234,
+     261,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\notice_poring.bmp",
+   "x": 116,
+   "y": 151,
+   "w": 65,
+   "h": 49,
+   "noTrans": 1
+  },
+  {
+   "k": "text",
+   "x": 20,
+   "y": 210,
+   "t": "Loading Guild Storage.",
+   "helper": "TextOut_9b4c50",
+   "font": "f0",
+   "color": "#000000",
+   "align": "center",
+   "boxW": 257
+  },
+  {
+   "k": "text",
+   "x": 20,
+   "y": 236,
+   "t": "NOW LOADING..",
+   "helper": "TextOut_9b4c50",
+   "font": "f1",
+   "color": "#8294c8",
+   "align": "center",
+   "boxW": 257
+  },
+  {
+   "k": "text",
+   "x": 20,
+   "y": 272,
+   "t": "This window cannot be closed while loading.",
+   "helper": "TextOut_9b4c50",
+   "font": "f2",
+   "color": "#dc6464",
+   "align": "center",
+   "boxW": 257
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIItemStoreWnd/UIStaticText#0",
+   "x": 16,
+   "y": 2,
+   "w": 70,
+   "h": 15,
+   "ownerField": "+0x13c",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": [
+     "Storage",
+     "Storage"
+    ],
+    "strings": [
+     "Storage"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 1,
+     "t": "Storage",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Storage",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIResizer",
+   "id": 584,
+   "path": "UIItemStoreWnd/UIResizer#1",
+   "x": 265,
+   "y": 443,
+   "w": 13,
+   "h": 13,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "btn_resize": [
+      "유저인터페이스\\btn_resize.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_resize.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UITab",
+   "id": 584,
+   "path": "UIItemStoreWnd/UITab#2",
+   "x": 0,
+   "y": 18,
+   "w": 20,
+   "h": 235,
+   "ownerField": "+0x148",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "tab_item_01": [
+      "유저인터페이스\\basic_interface\\tab_item_01.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\tab_item_01.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 20,
+     "h": 235,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIItemStoreWnd/UIScrollBar#3",
+   "x": 265,
+   "y": 14,
+   "w": 13,
+   "h": 389,
+   "ownerField": "+0xa0",
+   "composed": 0,
+   "kind": "control",
+   "props": {
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 12,
+    "arrow": 13,
+    "minThumb": 1
+   }
+  },
+  {
+   "class": "UIBitmapEditCtrl",
+   "id": 584,
+   "path": "UIItemStoreWnd/UIBitmapEditCtrl#4",
+   "x": 65,
+   "y": 435,
+   "w": 121,
+   "h": 18,
+   "ownerField": "+0xd0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg_search": [
+      "유저인터페이스\\bg_search.bmp"
+     ]
+    },
+    "colors": [
+     "#ffffff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ffffff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\bg_search.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 121,
+     "h": 18,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIItemStoreWnd/UIBitmapButton#5",
+   "x": 220,
+   "y": 435,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_close.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_close_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_close_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_close.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 361,
+   "path": "UIItemStoreWnd/UIBitmapButton#6",
+   "x": 185,
+   "y": 435,
+   "w": 23,
+   "h": 18,
+   "ownerField": "+0xa8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\bt_search_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\bt_search_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\bt_search_press.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\bt_search_normal.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 18,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 146,
+   "path": "UIItemStoreWnd/UICheckBox#7",
+   "x": 5,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xe0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "소비-1": [
+      "유저인터페이스\\basic_interface\\소비-1.bmp"
+     ],
+     "소비-2": [
+      "유저인터페이스\\basic_interface\\소비-2.bmp"
+     ]
+    },
+    "strings": [
+     "Use"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\소비-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 147,
+   "path": "UIItemStoreWnd/UICheckBox#8",
+   "x": 31,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xe4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "캐시-1": [
+      "유저인터페이스\\basic_interface\\캐시-1.bmp"
+     ],
+     "캐시-2": [
+      "유저인터페이스\\basic_interface\\캐시-2.bmp"
+     ]
+    },
+    "strings": [
+     "Cash"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\캐시-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 148,
+   "path": "UIItemStoreWnd/UICheckBox#9",
+   "x": 57,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xe8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "방어구-1": [
+      "유저인터페이스\\basic_interface\\방어구-1.bmp"
+     ],
+     "방어구-2": [
+      "유저인터페이스\\basic_interface\\방어구-2.bmp"
+     ]
+    },
+    "strings": [
+     "Armors"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\방어구-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 149,
+   "path": "UIItemStoreWnd/UICheckBox#10",
+   "x": 83,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xec",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "무기-1": [
+      "유저인터페이스\\basic_interface\\무기-1.bmp"
+     ],
+     "무기-2": [
+      "유저인터페이스\\basic_interface\\무기-2.bmp"
+     ]
+    },
+    "strings": [
+     "Weapons"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\무기-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 150,
+   "path": "UIItemStoreWnd/UICheckBox#11",
+   "x": 109,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xf0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "의상-1": [
+      "유저인터페이스\\basic_interface\\의상-1.bmp"
+     ],
+     "의상-2": [
+      "유저인터페이스\\basic_interface\\의상-2.bmp"
+     ]
+    },
+    "strings": [
+     "Shoes"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\의상-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 151,
+   "path": "UIItemStoreWnd/UICheckBox#12",
+   "x": 135,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xf4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "투사체-1": [
+      "유저인터페이스\\basic_interface\\투사체-1.bmp"
+     ],
+     "투사체-2": [
+      "유저인터페이스\\basic_interface\\투사체-2.bmp"
+     ]
+    },
+    "strings": [
+     "Ammo"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\투사체-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 152,
+   "path": "UIItemStoreWnd/UICheckBox#13",
+   "x": 161,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xf8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "카드-1": [
+      "유저인터페이스\\basic_interface\\카드-1.bmp"
+     ],
+     "카드-2": [
+      "유저인터페이스\\basic_interface\\카드-2.bmp"
+     ]
+    },
+    "strings": [
+     "Card"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\카드-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 309,
+   "path": "UIItemStoreWnd/UICheckBox#14",
+   "x": 187,
+   "y": 406,
+   "w": 23,
+   "h": 23,
+   "ownerField": "+0xfc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "기타-1": [
+      "유저인터페이스\\basic_interface\\기타-1.bmp"
+     ],
+     "기타-2": [
+      "유저인터페이스\\basic_interface\\기타-2.bmp"
+     ]
+    },
+    "strings": [
+     "Etc"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\기타-2.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 23,
+     "h": 23,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIItemStoreWnd/UIBitmapButton#15",
+   "x": 266,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIItemStoreComboBoxWnd",
+   "id": 584,
+   "path": "UIItemStoreWnd/UIItemStoreComboBoxWnd#16",
+   "x": 214,
+   "y": 406,
+   "w": 62,
+   "h": 18,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "bg_setting": [
+      "유저인터페이스\\basic_interface\\bg_setting.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\bg_setting.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 44,
+     "h": 18,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIBitmapButton",
+     "id": 269,
+     "path": "UIItemStoreWnd/UIItemStoreComboBoxWnd#16/UIBitmapButton#0",
+     "x": 44,
+     "y": 0,
+     "w": 18,
+     "h": 18,
+     "ownerField": "+0x7c",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "normal": [
+        "유저인터페이스\\basic_interface\\combo_btn_a.bmp"
+       ],
+       "hover": [
+        "유저인터페이스\\basic_interface\\combo_btn_b.bmp"
+       ],
+       "pressed": [
+        "유저인터페이스\\basic_interface\\combo_btn_c.bmp"
+       ]
+      }
+     },
+     "ops": [
+      {
+       "k": "bmp",
+       "path": "유저인터페이스\\basic_interface\\combo_btn_a.bmp",
+       "x": 0,
+       "y": 0,
+       "w": 18,
+       "h": 18,
+       "noTrans": 0
+      }
+     ]
+    },
+    {
+     "class": "UIItemStoreComboBox",
+     "id": 584,
+     "path": "UIItemStoreWnd/UIItemStoreComboBoxWnd#16/UIItemStoreComboBox#1",
+     "x": 0,
+     "y": 0,
+     "w": 62,
+     "h": 45,
+     "show": 0,
+     "ownerField": "+0x80",
+     "kind": "control",
+     "children": [
+      {
+       "class": "UIScrollBar",
+       "id": 584,
+       "path": "UIItemStoreWnd/UIItemStoreComboBoxWnd#16/UIItemStoreComboBox#1/UIScrollBar#0",
+       "x": 49,
+       "y": 0,
+       "w": 13,
+       "h": 45,
+       "ownerField": "+0xa8",
+       "composed": 0,
+       "kind": "control",
+       "props": {
+        "range": 0,
+        "pos": 0,
+        "orientation": 1,
+        "total": 3,
+        "visible": 3,
+        "arrow": 13,
+        "minThumb": 1
+       }
+      },
+      {
+       "class": "UIScrollBar",
+       "id": 584,
+       "path": "UIItemStoreWnd/UIItemStoreComboBoxWnd#16/UIItemStoreComboBox#1/UIScrollBar#1",
+       "x": 0,
+       "y": 32,
+       "w": 49,
+       "h": 13,
+       "ownerField": "+0xac",
+       "composed": 0,
+       "kind": "control",
+       "props": {
+        "range": 0,
+        "pos": 0,
+        "orientation": 0,
+        "total": 0,
+        "visible": 0,
+        "arrow": 13,
+        "minThumb": 1
+       }
+      }
+     ]
+    },
+    {
+     "class": "UIStaticText",
+     "id": 584,
+     "path": "UIItemStoreWnd/UIItemStoreComboBoxWnd#16/UIStaticText#2",
+     "x": 2,
+     "y": 3,
+     "w": 44,
+     "h": 18,
+     "ownerField": "+0x84",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff",
+       "#ffffff",
+       "#000000"
+      ],
+      "font": "f0",
+      "text": [
+       "Base",
+       "Base"
+      ],
+      "strings": [
+       "Base"
+      ]
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      },
+      {
+       "k": "text",
+       "x": 1,
+       "y": 1,
+       "t": "Base",
+       "font": "f0",
+       "color": "#ffffff",
+       "align": "left",
+       "req": {
+        "fontType": 0,
+        "height": 12
+       }
+      },
+      {
+       "k": "text",
+       "x": 0,
+       "y": 0,
+       "t": "Base",
+       "font": "f0",
+       "color": "#000000",
+       "align": "left",
+       "req": {
+        "fontType": 0,
+        "height": 12
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/033_UIItemStoreWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(33) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

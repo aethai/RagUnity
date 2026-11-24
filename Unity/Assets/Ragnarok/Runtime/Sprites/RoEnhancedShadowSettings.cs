@@ -1,0 +1,84 @@
+using System;
+using UnityEngine;
+
+namespace Ragnarok.Sprites {
+    [Serializable]
+    public sealed class RoEnhancedShadowSettings {
+        public const float DefaultTerrainRealtimeShadowStrength = 0.85f;
+        public const float DefaultModelRealtimeShadowStrength = 0.75f;
+        public const float DefaultActorRealtimeShadowStrength = 0.65f;
+        public const float DefaultActorShadowCasterPullDistance = 0.45f;
+        public const float DefaultActorShadowCasterGroundClearance = 0.04f;
+        public const float DefaultActorShadowCasterLiftPullScale = 1f;
+        public const float DefaultModelTopLightStrength = 0.08f;
+        public const float DefaultActorDirectionalLightInfluence = 0.35f;
+        public const bool DefaultEnableRswPointLights = true;
+        public const int DefaultMaxRswPointLights = 24;
+        public const int DefaultAdditionalLightsPerObjectLimit = 8;
+        public const float DefaultRswPointLightRangeScale = 0.2f;
+        public const float DefaultMinimumRswPointLightRange = 2f;
+        public const float DefaultMaximumRswPointLightRange = 80f;
+        public const float DefaultRswPointLightIntensity = 1.25f;
+        public const bool DefaultRswPointLightShadows = true;
+        public const float DefaultRswPointLightShadowStrength = 0.65f;
+        public const bool DefaultEnableModelLampPointLights = true;
+        public const int DefaultMaxModelLampPointLights = 64;
+        public static readonly Color DefaultModelLampPointLightColor = new Color(1f, 0.68f, 0.35f, 1f);
+        public const float DefaultModelLampPointLightRange = 20f;
+        public const float DefaultModelLampPointLightIntensity = 10f;
+        public const float DefaultModelLampPointLightDayIntensityScale = 0f;
+        public const float DefaultModelLampPointLightNightIntensityScale = 1f;
+        public const float DefaultModelLampPointLightVerticalOffset = 0f;
+        public const bool DefaultModelLampPointLightShadows = true;
+        public const float DefaultModelLampPointLightShadowStrength = 0.18f;
+        public const float DefaultModelLampPointLightShadowBias = 0.12f;
+        public const float DefaultModelLampPointLightShadowNormalBias = 0.8f;
+        public const float DefaultModelLampPointLightShadowNearPlane = 0.25f;
+        public const bool DefaultModelLampGlassCastsShadows = false;
+        public const uint DefaultModelLampRenderingLayerMask = 1u << 1;
+        public const float DefaultMapEmissionLightInfluence = 0.65f;
+        public const float DefaultMinimumShadowDistance = 180f;
+        public const float DefaultMaximumShadowDistance = 256f;
+        public const int DefaultMainLightShadowmapResolution = 4096;
+        public const int DefaultShadowAtlasResolution = 4096;
+        public const int DefaultShadowCascadeCount = 1;
+
+        [Range(0f, 1f)] public float terrainRealtimeShadowStrength = DefaultTerrainRealtimeShadowStrength;
+        [Range(0f, 1f)] public float modelRealtimeShadowStrength = DefaultModelRealtimeShadowStrength;
+        [Range(0f, 1f)] public float actorRealtimeShadowStrength = DefaultActorRealtimeShadowStrength;
+        [Min(0f)] public float actorShadowCasterPullDistance = DefaultActorShadowCasterPullDistance;
+        [Min(0f)] public float actorShadowCasterGroundClearance = DefaultActorShadowCasterGroundClearance;
+        [Range(0f, 2f)] public float actorShadowCasterLiftPullScale = DefaultActorShadowCasterLiftPullScale;
+        [Range(0f, 1f)] public float modelTopLightStrength = DefaultModelTopLightStrength;
+        [Range(0f, 1f)] public float actorDirectionalLightInfluence = DefaultActorDirectionalLightInfluence;
+        public bool enableRswPointLights = DefaultEnableRswPointLights;
+        [Range(0, 64)] public int maxRswPointLights = DefaultMaxRswPointLights;
+        [Range(0, 32)] public int additionalLightsPerObjectLimit = DefaultAdditionalLightsPerObjectLimit;
+        [Min(0f)] public float rswPointLightRangeScale = DefaultRswPointLightRangeScale;
+        [Min(0f)] public float minimumRswPointLightRange = DefaultMinimumRswPointLightRange;
+        [Min(0f)] public float maximumRswPointLightRange = DefaultMaximumRswPointLightRange;
+        [Min(0f)] public float rswPointLightIntensity = DefaultRswPointLightIntensity;
+        public bool rswPointLightShadows = DefaultRswPointLightShadows;
+        [Range(0f, 1f)] public float rswPointLightShadowStrength = DefaultRswPointLightShadowStrength;
+        public bool enableModelLampPointLights = DefaultEnableModelLampPointLights;
+        [Range(0, 128)] public int maxModelLampPointLights = DefaultMaxModelLampPointLights;
+        public Color modelLampPointLightColor = DefaultModelLampPointLightColor;
+        [Min(0f)] public float modelLampPointLightRange = DefaultModelLampPointLightRange;
+        [Min(0f)] public float modelLampPointLightIntensity = DefaultModelLampPointLightIntensity;
+        [Min(0f)] public float modelLampPointLightDayIntensityScale = DefaultModelLampPointLightDayIntensityScale;
+        [Min(0f)] public float modelLampPointLightNightIntensityScale = DefaultModelLampPointLightNightIntensityScale;
+        public float modelLampPointLightVerticalOffset = DefaultModelLampPointLightVerticalOffset;
+        public bool modelLampPointLightShadows = DefaultModelLampPointLightShadows;
+        [Range(0f, 1f)] public float modelLampPointLightShadowStrength = DefaultModelLampPointLightShadowStrength;
+        [Min(0f)] public float modelLampPointLightShadowBias = DefaultModelLampPointLightShadowBias;
+        [Min(0f)] public float modelLampPointLightShadowNormalBias = DefaultModelLampPointLightShadowNormalBias;
+        [Min(0.01f)] public float modelLampPointLightShadowNearPlane = DefaultModelLampPointLightShadowNearPlane;
+        public bool modelLampGlassCastsShadows = DefaultModelLampGlassCastsShadows;
+        [Range(0f, 2f)] public float mapEmissionLightInfluence = DefaultMapEmissionLightInfluence;
+        [Min(0f)] public float minimumShadowDistance = DefaultMinimumShadowDistance;
+        [Min(0f)] public float maximumShadowDistance = DefaultMaximumShadowDistance;
+        [Min(1)] public int mainLightShadowmapResolution = DefaultMainLightShadowmapResolution;
+        [Min(1)] public int shadowAtlasResolution = DefaultShadowAtlasResolution;
+        [Min(1)] public int shadowCascadeCount = DefaultShadowCascadeCount;
+    }
+}

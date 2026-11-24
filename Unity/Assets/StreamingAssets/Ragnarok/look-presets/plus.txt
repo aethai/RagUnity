@@ -1,0 +1,9 @@
+# "original+": the original's palette and mood (the bake dominates, the olive texture subdued), modern light on top
+preset base
+indoor 2.4 1.6 0.55
+fire 0.55 2.6 1.1 0.18 2.4
+exposure -0.35
+contrast 12
+saturation 18
+bloom 0.35 1.0 0.7
+vignette 0.22

@@ -1,0 +1,1334 @@
+{
+ "format": 1,
+ "class": "UIGuildSkillWnd",
+ "windowId": 63,
+ "state": "default",
+ "w": 400,
+ "h": 317,
+ "defaultPos": {
+  "x": 0,
+  "y": 34,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 34"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\arw_left.bmp",
+  "유저인터페이스\\basic_interface\\arw_right.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+  "유저인터페이스\\basic_interface\\skill_up_b.bmp",
+  "유저인터페이스\\basic_interface\\skill_up_c.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_close.bmp",
+  "유저인터페이스\\btn_close_a.bmp",
+  "유저인터페이스\\btn_close_b.bmp",
+  "유저인터페이스\\btn_use.bmp",
+  "유저인터페이스\\btn_use_a.bmp",
+  "유저인터페이스\\btn_use_b.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 400,
+   "h": 24,
+   "color": "#b4b4b4"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 67,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 133,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 199,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 265,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 331,
+   "y": 18,
+   "w": 64,
+   "h": 23,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 388,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 32,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 41,
+   "w": 400,
+   "h": 276,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 41,
+   "w": 398,
+   "h": 276,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 379,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 288,
+   "w": 21,
+   "h": 29,
+   "n": 18,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 300,
+   "y": 297,
+   "t": "SkillPoint : 0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildSkillWnd/UIStaticText#0",
+   "x": 3,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Guild Info",
+    "strings": [
+     "Guild Info"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Guild Info",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildSkillWnd/UIStaticText#1",
+   "x": 69,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Member",
+    "strings": [
+     "Member"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Member",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildSkillWnd/UIStaticText#2",
+   "x": 135,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Position",
+    "strings": [
+     "Position"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Position",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildSkillWnd/UIStaticText#3",
+   "x": 201,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Guild Skill",
+    "strings": [
+     "Guild Skill"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Guild Skill",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildSkillWnd/UIStaticText#4",
+   "x": 267,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xa8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Expel List",
+    "strings": [
+     "Expel List"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Expel List",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIGuildSkillWnd/UIStaticText#5",
+   "x": 333,
+   "y": 22,
+   "w": 62,
+   "h": 15,
+   "ownerField": "+0xac",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Announc...",
+    "strings": [
+     "Announc...",
+     "Announcement"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Announc...",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIGuildSkillWnd/UIBitmapButton#6",
+   "x": 386,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    },
+    "strings": [
+     "Alt+G"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIGuildSkillWnd/UIScrollBar#7",
+   "x": 385,
+   "y": 41,
+   "w": 13,
+   "h": 247,
+   "ownerField": "+0xb4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 7,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 235,
+   "path": "UIGuildSkillWnd/UIBitmapButton#8",
+   "x": -200,
+   "y": 17,
+   "w": 24,
+   "h": 24,
+   "ownerField": "+0xf8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\skill_up_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\skill_up_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\skill_up_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 24,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 236,
+   "path": "UIGuildSkillWnd/UIBitmapButton#9",
+   "x": -200,
+   "y": 51,
+   "w": 24,
+   "h": 24,
+   "ownerField": "+0xfc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\skill_up_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\skill_up_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\skill_up_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 24,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 237,
+   "path": "UIGuildSkillWnd/UIBitmapButton#10",
+   "x": -200,
+   "y": 85,
+   "w": 24,
+   "h": 24,
+   "ownerField": "+0x100",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\skill_up_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\skill_up_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\skill_up_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 24,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 238,
+   "path": "UIGuildSkillWnd/UIBitmapButton#11",
+   "x": -200,
+   "y": 119,
+   "w": 24,
+   "h": 24,
+   "ownerField": "+0x104",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\skill_up_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\skill_up_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\skill_up_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 24,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 239,
+   "path": "UIGuildSkillWnd/UIBitmapButton#12",
+   "x": -200,
+   "y": 153,
+   "w": 24,
+   "h": 24,
+   "ownerField": "+0x108",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\skill_up_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\skill_up_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\skill_up_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 24,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 240,
+   "path": "UIGuildSkillWnd/UIBitmapButton#13",
+   "x": -200,
+   "y": 187,
+   "w": 24,
+   "h": 24,
+   "ownerField": "+0x10c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\skill_up_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\skill_up_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\skill_up_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 24,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 241,
+   "path": "UIGuildSkillWnd/UIBitmapButton#14",
+   "x": -200,
+   "y": 221,
+   "w": 24,
+   "h": 24,
+   "ownerField": "+0x110",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\skill_up_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\skill_up_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\skill_up_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\skill_up_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 24,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 249,
+   "path": "UIGuildSkillWnd/UIBitmapButton#15",
+   "x": -200,
+   "y": 34,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xdc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 250,
+   "path": "UIGuildSkillWnd/UIBitmapButton#16",
+   "x": -200,
+   "y": 68,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xe0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 251,
+   "path": "UIGuildSkillWnd/UIBitmapButton#17",
+   "x": -200,
+   "y": 102,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xe4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 252,
+   "path": "UIGuildSkillWnd/UIBitmapButton#18",
+   "x": -200,
+   "y": 136,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xe8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 253,
+   "path": "UIGuildSkillWnd/UIBitmapButton#19",
+   "x": -200,
+   "y": 170,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xec",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 254,
+   "path": "UIGuildSkillWnd/UIBitmapButton#20",
+   "x": -200,
+   "y": 204,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xf0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 255,
+   "path": "UIGuildSkillWnd/UIBitmapButton#21",
+   "x": -200,
+   "y": 238,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xf4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_left.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 256,
+   "path": "UIGuildSkillWnd/UIBitmapButton#22",
+   "x": -200,
+   "y": 34,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xc0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_right.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 257,
+   "path": "UIGuildSkillWnd/UIBitmapButton#23",
+   "x": -200,
+   "y": 68,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xc4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_right.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 258,
+   "path": "UIGuildSkillWnd/UIBitmapButton#24",
+   "x": -200,
+   "y": 102,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xc8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_right.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 259,
+   "path": "UIGuildSkillWnd/UIBitmapButton#25",
+   "x": -200,
+   "y": 136,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xcc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_right.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 260,
+   "path": "UIGuildSkillWnd/UIBitmapButton#26",
+   "x": -200,
+   "y": 170,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xd0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_right.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 261,
+   "path": "UIGuildSkillWnd/UIBitmapButton#27",
+   "x": -200,
+   "y": 204,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_right.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 262,
+   "path": "UIGuildSkillWnd/UIBitmapButton#28",
+   "x": -200,
+   "y": 238,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xd8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\arw_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\arw_right.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIGuildSkillWnd/UIBitmapButton#29",
+   "x": 46,
+   "y": 293,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0xb8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_use.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_use_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_use_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_use.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIGuildSkillWnd/UIBitmapButton#30",
+   "x": 92,
+   "y": 293,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0xbc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_close.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_close_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_close_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_close.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/063_UIGuildSkillWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(63) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

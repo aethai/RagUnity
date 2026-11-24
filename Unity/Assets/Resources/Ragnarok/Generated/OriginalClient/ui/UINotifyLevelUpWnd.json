@@ -1,0 +1,67 @@
+{
+ "format": 1,
+ "class": "UINotifyLevelUpWnd",
+ "windowId": 21,
+ "state": "default",
+ "w": 43,
+ "h": 43,
+ "defaultPos": {
+  "x": 981,
+  "y": 725,
+  "screen": "1024x768",
+  "rule": "x = W - 43; y = H - 43"
+ },
+ "fonts": {},
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\lv_up_off.bmp",
+  "유저인터페이스\\basic_interface\\lv_up_on.bmp"
+ ],
+ "slots": {},
+ "ops": [],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 188,
+   "path": "UINotifyLevelUpWnd/UIBitmapButton#0",
+   "x": 0,
+   "y": 0,
+   "w": 43,
+   "h": 43,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\lv_up_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\lv_up_off.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\lv_up_on.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\lv_up_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 43,
+     "h": 43,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/021_UINotifyLevelUpWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(21) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

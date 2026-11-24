@@ -1,0 +1,2242 @@
+{
+ "format": 1,
+ "class": "UINewSelectCharWnd",
+ "windowId": 277,
+ "state": "default",
+ "w": 997,
+ "h": 626,
+ "defaultPos": {
+  "x": 13,
+  "y": 71,
+  "screen": "1024x768",
+  "rule": "x = ? (13 at W=1024, -98 at W=800); y = H/2 - 313"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 14,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f1": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f2": {
+   "face": "Arial",
+   "lfHeight": 21,
+   "weight": 700,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\btn_del.bmp",
+  "유저인터페이스\\btn_del_a.bmp",
+  "유저인터페이스\\btn_del_b.bmp",
+  "유저인터페이스\\btn_make.bmp",
+  "유저인터페이스\\btn_make_a.bmp",
+  "유저인터페이스\\btn_make_b.bmp",
+  "유저인터페이스\\renewalparty\\icon_jobs_0.bmp",
+  "유저인터페이스\\select_character_ver3\\balloon.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_close2_normal.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_close2_over.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_close2_press.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_gameStart_off.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_gameStart_over.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_gameStart_press.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_gamestart_off.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_info_normal.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_info_over.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_info_press.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_left_off.bmp",
+  "유저인터페이스\\select_character_ver3\\bt_right_off.bmp",
+  "유저인터페이스\\select_character_ver3\\img_info.bmp",
+  "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+  "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp",
+  "유저인터페이스\\select_character_ver3\\img_slot_over.bmp",
+  "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "color": "#ff00ff",
+   "whole": 1,
+   "alpha": 255
+  }
+ ],
+ "children": [
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#0",
+   "x": 10,
+   "y": 21,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ],
+     "balloon": [
+      "유저인터페이스\\select_character_ver3\\balloon.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff",
+     "#ffffff"
+    ],
+    "font": "f0",
+    "text": [
+     "Click here to create ",
+     "a Character"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\balloon.bmp",
+     "x": 34,
+     "y": 26,
+     "w": 92,
+     "h": 46,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 33,
+     "y": 34,
+     "t": "Click here to create ",
+     "helper": "TextOut_9b4c50",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "center",
+     "boxW": 92
+    },
+    {
+     "k": "text",
+     "x": 33,
+     "y": 47,
+     "t": "a Character",
+     "helper": "TextOut_9b4c50",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "center",
+     "boxW": 92
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#0/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#1",
+   "x": 167,
+   "y": 21,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#1/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#2",
+   "x": 324,
+   "y": 21,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#2/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#3",
+   "x": 481,
+   "y": 21,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#3/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#4",
+   "x": 638,
+   "y": 21,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#4/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#5",
+   "x": 10,
+   "y": 216,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#5/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#6",
+   "x": 167,
+   "y": 216,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#6/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#7",
+   "x": 324,
+   "y": 216,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#7/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#8",
+   "x": 481,
+   "y": 216,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#8/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#9",
+   "x": 638,
+   "y": 216,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#9/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#10",
+   "x": 10,
+   "y": 411,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#10/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#11",
+   "x": 167,
+   "y": 411,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#11/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#12",
+   "x": 324,
+   "y": 411,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#12/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#13",
+   "x": 481,
+   "y": 411,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#13/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UISlotBmpButton",
+   "id": 200,
+   "path": "UINewSelectCharWnd/UISlotBmpButton#14",
+   "x": 638,
+   "y": 411,
+   "w": 161,
+   "h": 197,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\img_slot_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\img_slot_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\img_slot_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_slot_lock.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 157,
+     "h": 195,
+     "noTrans": 0
+    }
+   ],
+   "children": [
+    {
+     "class": "UIStaticBitmap",
+     "id": 584,
+     "path": "UINewSelectCharWnd/UISlotBmpButton#14/UIStaticBitmap#0",
+     "x": 118,
+     "y": 14,
+     "w": 25,
+     "h": 25,
+     "show": 0,
+     "ownerField": "+0x130",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "icon_jobs_0": [
+        "유저인터페이스\\renewalparty\\icon_jobs_0.bmp"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticBitmap",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticBitmap#15",
+   "x": 809,
+   "y": 26,
+   "w": 173,
+   "h": 575,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "img_info": [
+      "유저인터페이스\\select_character_ver3\\img_info.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\img_info.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 173,
+     "h": 575,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 181,
+   "path": "UINewSelectCharWnd/UIBitmapButton#16",
+   "x": 945,
+   "y": 5,
+   "w": 17,
+   "h": 18,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_close2_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_close2_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_close2_press.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\bt_close2_normal.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 17,
+     "h": 18,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBmpTextButton",
+   "id": 282,
+   "path": "UINewSelectCharWnd/UIBmpTextButton#17",
+   "x": 830,
+   "y": 351,
+   "w": 131,
+   "h": 24,
+   "show": 0,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_info_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_info_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_info_press.bmp"
+     ]
+    },
+    "strings": [
+     "Notice"
+    ]
+   }
+  },
+  {
+   "class": "UIBmpTextButton",
+   "id": 403,
+   "path": "UINewSelectCharWnd/UIBmpTextButton#18",
+   "x": 830,
+   "y": 322,
+   "w": 131,
+   "h": 24,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_info_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_info_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_info_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\bt_info_normal.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff",
+     "#909090"
+    ],
+    "font": "f1",
+    "text": "Delete Character",
+    "strings": [
+     "Delete Character"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\bt_info_normal.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 131,
+     "h": 24,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 20,
+     "y": 5,
+     "t": "Delete Character",
+     "font": "f1",
+     "color": "#909090",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBmpTextButton",
+   "id": 404,
+   "path": "UINewSelectCharWnd/UIBmpTextButton#19",
+   "x": 830,
+   "y": 322,
+   "w": 131,
+   "h": 24,
+   "show": 0,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_info_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_info_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_info_press.bmp"
+     ]
+    },
+    "strings": [
+     "Cancel Deletion"
+    ]
+   }
+  },
+  {
+   "class": "UIBmpTextButton",
+   "id": 180,
+   "path": "UINewSelectCharWnd/UIBmpTextButton#20",
+   "x": 816,
+   "y": 407,
+   "w": 165,
+   "h": 110,
+   "ownerField": "+0xdc",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_gameStart_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_gameStart_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_gameStart_press.bmp"
+     ],
+     "field+0x104": [
+      "유저인터페이스\\select_character_ver3\\bt_gameStart_off.bmp"
+     ],
+     "off": [
+      "유저인터페이스\\select_character_ver3\\bt_gamestart_off.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff",
+     "#dc747f"
+    ],
+    "font": "f2",
+    "text": "Game Start",
+    "strings": [
+     "Game Start"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\bt_gamestart_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 165,
+     "h": 110,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 34,
+     "y": 58,
+     "t": "Game Start",
+     "font": "f2",
+     "color": "#dc747f",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 18
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBmpTextButton",
+   "id": 207,
+   "path": "UINewSelectCharWnd/UIBmpTextButton#21",
+   "x": 830,
+   "y": 351,
+   "w": 131,
+   "h": 24,
+   "show": 0,
+   "ownerField": "+0xe0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_info_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_info_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_info_press.bmp"
+     ]
+    },
+    "strings": [
+     "Delete"
+    ]
+   }
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 412,
+   "path": "UINewSelectCharWnd/UIBitmapButton#22",
+   "x": 200,
+   "y": 334,
+   "w": 42,
+   "h": 20,
+   "show": 0,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_make.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_make_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_make_b.bmp"
+     ]
+    }
+   }
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 413,
+   "path": "UINewSelectCharWnd/UIBitmapButton#23",
+   "x": 200,
+   "y": 334,
+   "w": 42,
+   "h": 20,
+   "show": 0,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_del.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_del_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_del_b.bmp"
+     ]
+    }
+   }
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 312,
+   "path": "UINewSelectCharWnd/UIBitmapButton#24",
+   "x": 830,
+   "y": 558,
+   "w": 21,
+   "h": 28,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_left_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_left_off.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_left_off.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\bt_left_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 21,
+     "h": 28,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 313,
+   "path": "UINewSelectCharWnd/UIBitmapButton#25",
+   "x": 939,
+   "y": 558,
+   "w": 21,
+   "h": 28,
+   "ownerField": "+0xd8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\select_character_ver3\\bt_right_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\select_character_ver3\\bt_right_off.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\select_character_ver3\\bt_right_off.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\select_character_ver3\\bt_right_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 21,
+     "h": 28,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#26",
+   "x": 856,
+   "y": 538,
+   "w": 81,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#576691"
+    ],
+    "font": "f1",
+    "text": "Character List",
+    "strings": [
+     "Character List"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Character List",
+     "font": "f1",
+     "color": "#576691",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#27",
+   "x": 879,
+   "y": 564,
+   "w": 35,
+   "h": 21,
+   "ownerField": "+0xe4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#ffffff"
+    ],
+    "font": "f2",
+    "text": "1 / 1",
+    "strings": [
+     "1 / 1"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "1 / 1",
+     "font": "f2",
+     "color": "#ffffff",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 18
+     },
+     "unseeded": 1
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#28",
+   "x": 868,
+   "y": 133,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#29",
+   "x": 868,
+   "y": 150,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#30",
+   "x": 868,
+   "y": 167,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#31",
+   "x": 868,
+   "y": 184,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#32",
+   "x": 868,
+   "y": 201,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#33",
+   "x": 868,
+   "y": 218,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#34",
+   "x": 868,
+   "y": 235,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#35",
+   "x": 868,
+   "y": 252,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#36",
+   "x": 868,
+   "y": 269,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#37",
+   "x": 868,
+   "y": 286,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#38",
+   "x": 868,
+   "y": 303,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#39",
+   "x": 868,
+   "y": 116,
+   "w": 107,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#40",
+   "x": 88,
+   "y": 21,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#41",
+   "x": 245,
+   "y": 21,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#42",
+   "x": 402,
+   "y": 21,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#43",
+   "x": 559,
+   "y": 21,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#44",
+   "x": 716,
+   "y": 21,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#45",
+   "x": 88,
+   "y": 216,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#46",
+   "x": 245,
+   "y": 216,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#47",
+   "x": 402,
+   "y": 216,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#48",
+   "x": 559,
+   "y": 216,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#49",
+   "x": 716,
+   "y": 216,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#50",
+   "x": 88,
+   "y": 411,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#51",
+   "x": 245,
+   "y": 411,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#52",
+   "x": 402,
+   "y": 411,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#53",
+   "x": 559,
+   "y": 411,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UINewSelectCharWnd/UIStaticText#54",
+   "x": 716,
+   "y": 411,
+   "w": 100,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/277_UINewSelectCharWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(277) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ },
+ "lossy": [
+  "static numbers (data the seeds do not cover)",
+  "placement rule not linear in the screen size"
+ ]
+}

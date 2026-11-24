@@ -1,0 +1,18 @@
+{
+    "name": "Ragnarok.Camera",
+    "rootNamespace": "Ragnarok.Camera",
+    "references": [
+        "Ragnarok.ROIO",
+        "Ragnarok.Sprites",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

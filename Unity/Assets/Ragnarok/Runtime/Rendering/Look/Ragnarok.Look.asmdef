@@ -1,0 +1,11 @@
+{
+  "name": "Ragnarok.Look",
+  "rootNamespace": "Ragnarok.Rendering",
+  "references": [
+    "Ragnarok.Runtime",
+    "Ragnarok.Camera",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.RenderPipelines.Universal.Runtime"
+  ],
+  "autoReferenced": true
+}

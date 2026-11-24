@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4809550ddb4d0da86752984d4e0c79, type: 3}
+  m_Name: DefaultRoModelFeatureDatabase
+  m_EditorClassIdentifier:
+  pointLights:
+  - displayName: Lamp glass
+    enabled: 1
+    match:
+      modelFile:
+      nodeName: Box04
+      textureName: d-side.bmp
+    color: {r: 1, g: 0.68, b: 0.35, a: 1}
+    range: 20
+    intensity: 10
+    verticalOffset: 0
+    dayIntensityScale: 0
+    nightIntensityScale: 1
+    castShadows: 1
+    shadowStrength: 0.18
+    shadowBias: 0.12
+    shadowNormalBias: 0.8
+    shadowNearPlane: 0.25
+    matchedSurfaceCastsShadows: 0

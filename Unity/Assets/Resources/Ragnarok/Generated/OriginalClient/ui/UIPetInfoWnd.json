@@ -1,0 +1,530 @@
+{
+ "format": 1,
+ "class": "UIPetInfoWnd",
+ "windowId": 88,
+ "state": "default",
+ "w": 280,
+ "h": 180,
+ "defaultPos": {
+  "x": 150,
+  "y": 100,
+  "screen": "1024x768",
+  "rule": "x = 150; y = 100"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\gze_bg_left.bmp",
+  "유저인터페이스\\basic_interface\\gze_bg_mid.bmp",
+  "유저인터페이스\\basic_interface\\gze_bg_right.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp",
+  "유저인터페이스\\basic_interface\\txtbox_btn_b.bmp",
+  "유저인터페이스\\basic_interface\\txtbox_btn_c.bmp",
+  "유저인터페이스\\btn_rewrite.bmp",
+  "유저인터페이스\\btn_rewrite_a.bmp",
+  "유저인터페이스\\btn_rewrite_b.bmp",
+  "유저인터페이스\\sysboxs_ld.bmp",
+  "유저인터페이스\\sysboxs_rd.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "color": "#ffffff",
+   "whole": 1
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "roundbox",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 163,
+   "color": "#c8c8c8",
+   "rects": [
+    [
+     3,
+     17,
+     274,
+     1
+    ],
+    [
+     3,
+     179,
+     274,
+     1
+    ],
+    [
+     0,
+     20,
+     1,
+     157
+    ],
+    [
+     279,
+     20,
+     1,
+     157
+    ],
+    [
+     1,
+     18,
+     2,
+     1
+    ],
+    [
+     1,
+     178,
+     2,
+     1
+    ],
+    [
+     277,
+     18,
+     2,
+     1
+    ],
+    [
+     277,
+     178,
+     2,
+     1
+    ],
+    [
+     1,
+     19,
+     1,
+     1
+    ],
+    [
+     1,
+     177,
+     1,
+     1
+    ],
+    [
+     278,
+     19,
+     1,
+     1
+    ],
+    [
+     278,
+     177,
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 5,
+   "color": "#c8c8c8"
+  },
+  {
+   "k": "fill",
+   "x": 1,
+   "y": 17,
+   "w": 278,
+   "h": 161,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 2,
+   "y": 178,
+   "w": 276,
+   "h": 1,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysboxs_ld.bmp",
+   "x": 0,
+   "y": 173,
+   "w": 7,
+   "h": 7,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysboxs_rd.bmp",
+   "x": 273,
+   "y": 173,
+   "w": 7,
+   "h": 7,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 5,
+   "y": 2,
+   "t": "Pet Info",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 24,
+   "t": "Name",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 44,
+   "t": "Level",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 69,
+   "t": "Hunger",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 100,
+   "y": 89,
+   "t": "Intimacy",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 135,
+   "y": 44,
+   "t": "0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   },
+   "unseeded": 1
+  },
+  {
+   "k": "text",
+   "x": 145,
+   "y": 69,
+   "t": " Very Hungry",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  },
+  {
+   "k": "text",
+   "x": 145,
+   "y": 89,
+   "t": " Awkward",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   }
+  }
+ ],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIPetInfoWnd/UIBitmapButton#0",
+   "x": 266,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrl2",
+   "id": 584,
+   "path": "UIPetInfoWnd/UIEditCtrl2#1",
+   "x": 135,
+   "y": 24,
+   "w": 80,
+   "h": 16,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#e8e8e8"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#e8e8e8",
+     "whole": 1
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIPetInfoWnd/UIBitmapButton#2",
+   "x": 230,
+   "y": 21,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_rewrite.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_rewrite_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_rewrite_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_rewrite.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UINoneVisibleButton",
+   "id": 264,
+   "path": "UIPetInfoWnd/UINoneVisibleButton#3",
+   "x": 150,
+   "y": 44,
+   "w": 120,
+   "h": 18,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 264,
+   "path": "UIPetInfoWnd/UIBitmapButton#4",
+   "x": 252,
+   "y": 44,
+   "w": 18,
+   "h": 18,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_c.bmp"
+     ]
+    },
+    "strings": [
+     "Pet Command"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 18,
+     "h": 18,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIPetInfoBarGraph",
+   "id": 584,
+   "path": "UIPetInfoWnd/UIPetInfoBarGraph#5",
+   "x": 145,
+   "y": 105,
+   "w": 120,
+   "h": 9,
+   "ownerField": "+0xa8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "left": [
+      "유저인터페이스\\basic_interface\\gze_bg_left.bmp"
+     ],
+     "mid": [
+      "유저인터페이스\\basic_interface\\gze_bg_mid.bmp"
+     ],
+     "right": [
+      "유저인터페이스\\basic_interface\\gze_bg_right.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_left.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 2,
+     "h": 9,
+     "noTrans": 0
+    },
+    {
+     "k": "bmpRow",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_mid.bmp",
+     "x": 2,
+     "y": 0,
+     "w": 1,
+     "h": 9,
+     "n": 114,
+     "step": 1,
+     "noTrans": 0
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\gze_bg_right.bmp",
+     "x": 116,
+     "y": 0,
+     "w": 4,
+     "h": 9,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/088_UIPetInfoWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(88) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ },
+ "lossy": [
+  "static numbers (data the seeds do not cover)"
+ ]
+}

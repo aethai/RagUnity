@@ -1,0 +1,991 @@
+{
+ "format": 1,
+ "class": "UIItemShopWnd",
+ "windowId": 22,
+ "state": "default",
+ "w": 280,
+ "h": 312,
+ "defaultPos": {
+  "x": 0,
+  "y": 120,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 120"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_resize.bmp",
+  "유저인터페이스\\checkbox_0.bmp",
+  "유저인터페이스\\checkbox_1.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 105,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 113,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 121,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 129,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 137,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 145,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 153,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 161,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 169,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 177,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 185,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 193,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 201,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 209,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 217,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 225,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 233,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 241,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 249,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 257,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 265,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 273,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 281,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 105,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 113,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 121,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 129,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 137,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 145,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 153,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 161,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 169,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 177,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 185,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 193,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 201,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 209,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 217,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 225,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 233,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 241,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 249,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 257,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 265,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 273,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 281,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 17,
+   "w": 28,
+   "h": 266,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 273,
+   "w": 256,
+   "h": 10,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 283,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 259,
+   "y": 283,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 283,
+   "w": 21,
+   "h": 29,
+   "n": 12,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 17,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 49,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 81,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 113,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 145,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 177,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 209,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 241,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 72,
+   "y": 17,
+   "w": 192,
+   "h": 256,
+   "color": "#ffffff"
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIItemShopWnd/UIStaticText#0",
+   "x": 16,
+   "y": 2,
+   "w": 70,
+   "h": 15,
+   "ownerField": "+0xd0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": [
+     "Item Shop",
+     "Item Shop"
+    ],
+    "strings": [
+     "Item Shop"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 1,
+     "t": "Item Shop",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Item Shop",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIResizer",
+   "id": 584,
+   "path": "UIItemShopWnd/UIResizer#1",
+   "x": 265,
+   "y": 297,
+   "w": 13,
+   "h": 13,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "btn_resize": [
+      "유저인터페이스\\btn_resize.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_resize.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 209,
+   "path": "UIItemShopWnd/UICheckBox#2",
+   "x": 12,
+   "y": 292,
+   "w": 126,
+   "h": 12,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "checkbox_1": [
+      "유저인터페이스\\checkbox_1.bmp"
+     ],
+     "checkbox_0": [
+      "유저인터페이스\\checkbox_0.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Toggle Item Amount.",
+    "strings": [
+     "Toggle Item Amount."
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\checkbox_0.bmp",
+     "x": 0,
+     "y": 1,
+     "w": 10,
+     "h": 10,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 13,
+     "y": 0,
+     "t": "Toggle Item Amount.",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIItemShopWnd/UIScrollBar#3",
+   "x": 265,
+   "y": 14,
+   "w": 13,
+   "h": 266,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 8,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/022_UIItemShopWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(22) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

@@ -1,0 +1,48 @@
+{
+  // Placeholder wind-sway catalog. Find real texture names by clicking a model surface
+  // in Play Mode and reading RoModelSurfaceInfo.textureName in the Inspector, or by
+  // checking RoMapSmokeTest's material audit under the "Two-sided cutout buckets" section.
+  // Use "axis" when a model's local hanging direction is not Y; Prontera lamp banners hang along Z.
+  // Catalog changes are loaded on map/domain reload.
+  "version": 3,
+  "entries": [
+    {
+      "textureContains": "rponsramp_08",
+      "mode": "Banner",
+      "amplitude": 0.35,
+      "frequency": 1.2,
+      "anchor": "Top",
+      "axis": "Z",
+      "anchorHold": 0.12
+    },
+    {
+      "textureContains": "newtree_02.bmp",
+      "mode": "Foliage",
+      "amplitude": 0.28,
+      "frequency": 0.95,
+      "anchor": "Radial",
+      "allowAnimatedNode": true
+    },
+    {
+      "textureContains": "pron-flo-f.bmp",
+      "mode": "Foliage",
+      "amplitude": 0.16,
+      "frequency": 1.05,
+      "anchor": "Bottom"
+    },
+    {
+      "textureContains": "__placeholder_banner_texture__",
+      "mode": "Banner",
+      "amplitude": 0.10,
+      "frequency": 1.2,
+      "anchor": "Top"
+    },
+    {
+      "textureContains": "__placeholder_foliage_texture__",
+      "mode": "Foliage",
+      "amplitude": 0.06,
+      "frequency": 0.5,
+      "anchor": "Radial"
+    }
+  ]
+}

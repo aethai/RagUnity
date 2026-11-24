@@ -1,0 +1,600 @@
+{
+ "format": 1,
+ "class": "UIMerchantItemMyShopWnd",
+ "windowId": 176,
+ "state": "default",
+ "w": 280,
+ "h": 120,
+ "defaultPos": {
+  "x": 200,
+  "y": 120,
+  "screen": "1024x768",
+  "rule": "x = 200; y = 120"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_close.bmp",
+  "유저인터페이스\\btn_close_a.bmp",
+  "유저인터페이스\\btn_close_b.bmp",
+  "유저인터페이스\\btn_resize.bmp",
+  "유저인터페이스\\checkbox_0.bmp",
+  "유저인터페이스\\checkbox_1.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 17,
+   "w": 28,
+   "h": 82,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 81,
+   "w": 256,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 91,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 259,
+   "y": 91,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 91,
+   "w": 21,
+   "h": 29,
+   "n": 12,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 17,
+   "w": 32,
+   "h": 32,
+   "n": 7,
+   "step": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 49,
+   "w": 32,
+   "h": 32,
+   "n": 7,
+   "step": 32,
+   "noTrans": 0
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIMerchantItemMyShopWnd/UIStaticText#0",
+   "x": 12,
+   "y": 94,
+   "w": 119,
+   "h": 15,
+   "ownerField": "+0xdc",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Price limit: (null) Zeny",
+    "strings": [
+     "Price limit: (null) Zeny"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Price limit: (null) Zeny",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIMerchantItemMyShopWnd/UIStaticText#1",
+   "x": 16,
+   "y": 2,
+   "w": 240,
+   "h": 15,
+   "ownerField": "+0xd4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": [
+     "Purchase list:",
+     "Purchase list:"
+    ],
+    "strings": [
+     "Purchase list:"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 1,
+     "t": "Purchase list:",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Purchase list:",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIResizer",
+   "id": 584,
+   "path": "UIMerchantItemMyShopWnd/UIResizer#2",
+   "x": 265,
+   "y": 105,
+   "w": 13,
+   "h": 13,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "btn_resize": [
+      "유저인터페이스\\btn_resize.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_resize.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIMerchantItemMyShopWnd/UIScrollBar#3",
+   "x": 265,
+   "y": 14,
+   "w": 13,
+   "h": 82,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 2,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 209,
+   "path": "UIMerchantItemMyShopWnd/UICheckBox#4",
+   "x": 12,
+   "y": 108,
+   "w": 165,
+   "h": 12,
+   "ownerField": "+0xe4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "checkbox_1": [
+      "유저인터페이스\\checkbox_1.bmp"
+     ],
+     "checkbox_0": [
+      "유저인터페이스\\checkbox_0.bmp"
+     ]
+    },
+    "colors": [
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Notify when item purchased",
+    "strings": [
+     "Notify when item purchased"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\checkbox_0.bmp",
+     "x": 0,
+     "y": 1,
+     "w": 10,
+     "h": 10,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 13,
+     "y": 0,
+     "t": "Notify when item purchased",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIMerchantItemMyShopWnd/UIBitmapButton#5",
+   "x": 219,
+   "y": 96,
+   "w": 42,
+   "h": 20,
+   "ownerField": "+0xa4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_close.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_close_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_close_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_close.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/176_UIMerchantItemMyShopWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(176) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

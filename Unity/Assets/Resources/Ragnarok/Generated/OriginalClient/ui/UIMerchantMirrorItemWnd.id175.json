@@ -1,0 +1,463 @@
+{
+ "format": 1,
+ "class": "UIMerchantMirrorItemWnd",
+ "windowId": 175,
+ "state": "default",
+ "w": 280,
+ "h": 120,
+ "defaultPos": {
+  "x": 0,
+  "y": 120,
+  "screen": "1024x768",
+  "rule": "x = 0; y = 120"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_resize.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 268,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 22,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_left.bmp",
+   "x": 0,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 17,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 25,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 33,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 41,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 49,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 57,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 65,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 73,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 81,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 89,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_right.bmp",
+   "x": 260,
+   "y": 97,
+   "w": 20,
+   "h": 8,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 17,
+   "w": 28,
+   "h": 82,
+   "color": "#ffffff"
+  },
+  {
+   "k": "fill",
+   "x": 20,
+   "y": 81,
+   "w": 256,
+   "h": 18,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left2.bmp",
+   "x": 0,
+   "y": 91,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right2.bmp",
+   "x": 259,
+   "y": 91,
+   "w": 21,
+   "h": 29,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid2.bmp",
+   "x": 21,
+   "y": 91,
+   "w": 21,
+   "h": 29,
+   "n": 12,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 17,
+   "w": 32,
+   "h": 32,
+   "n": 7,
+   "step": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 40,
+   "y": 49,
+   "w": 32,
+   "h": 32,
+   "n": 7,
+   "step": 32,
+   "noTrans": 0
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIMerchantMirrorItemWnd/UIStaticText#0",
+   "x": 16,
+   "y": 2,
+   "w": 150,
+   "h": 15,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": [
+     "Available items:",
+     "Available items:"
+    ],
+    "strings": [
+     "Available items:"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 1,
+     "t": "Available items:",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Available items:",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIResizer",
+   "id": 584,
+   "path": "UIMerchantMirrorItemWnd/UIResizer#1",
+   "x": 265,
+   "y": 105,
+   "w": 13,
+   "h": 13,
+   "ownerField": "+0x9c",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "btn_resize": [
+      "유저인터페이스\\btn_resize.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_resize.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIMerchantMirrorItemWnd/UIScrollBar#2",
+   "x": 265,
+   "y": 14,
+   "w": 13,
+   "h": 82,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 2,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/175_UIMerchantMirrorItemWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(175) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

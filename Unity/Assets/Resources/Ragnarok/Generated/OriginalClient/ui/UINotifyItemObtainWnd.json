@@ -1,0 +1,165 @@
+{
+ "format": 1,
+ "class": "UINotifyItemObtainWnd",
+ "windowId": 58,
+ "state": "default",
+ "w": 180,
+ "h": 32,
+ "defaultPos": {
+  "x": 412,
+  "y": 75,
+  "screen": "1024x768",
+  "rule": "x = W/2 - 100; y = 75"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\sysbox_ld.bmp",
+  "유저인터페이스\\sysbox_lm.bmp",
+  "유저인터페이스\\sysbox_lu.bmp",
+  "유저인터페이스\\sysbox_md.bmp",
+  "유저인터페이스\\sysbox_mu.bmp",
+  "유저인터페이스\\sysbox_rd.bmp",
+  "유저인터페이스\\sysbox_rm.bmp",
+  "유저인터페이스\\sysbox_ru.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\sysbox_mu.bmp",
+   "x": 14,
+   "y": 0,
+   "w": 14,
+   "h": 14,
+   "n": 11,
+   "step": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lu.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_ru.bmp",
+   "x": 166,
+   "y": 0,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_lm.bmp",
+   "x": 0,
+   "y": 14,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rm.bmp",
+   "x": 166,
+   "y": 14,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\sysbox_md.bmp",
+   "x": 14,
+   "y": 18,
+   "w": 14,
+   "h": 14,
+   "n": 11,
+   "step": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_ld.bmp",
+   "x": 0,
+   "y": 18,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\sysbox_rd.bmp",
+   "x": 166,
+   "y": 18,
+   "w": 14,
+   "h": 14,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 14,
+   "y": 14,
+   "w": 152,
+   "h": 4,
+   "color": "#ffffff"
+  },
+  {
+   "k": "text",
+   "x": 41,
+   "y": 10,
+   "t": " ",
+   "helper": "TextOut_9b69a0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "passes": [
+    {
+     "dx": 1,
+     "dy": 1,
+     "color": "#e0e0e0"
+    }
+   ]
+  },
+  {
+   "k": "text",
+   "x": 44,
+   "y": 10,
+   "t": " - 0 obtained.",
+   "helper": "TextOut_9b69a0",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "passes": [
+    {
+     "dx": 1,
+     "dy": 1,
+     "color": "#e0e0e0"
+    }
+   ]
+  }
+ ],
+ "children": [],
+ "source": {
+  "capture": "ui/captures/survey/058_UINotifyItemObtainWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(58) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

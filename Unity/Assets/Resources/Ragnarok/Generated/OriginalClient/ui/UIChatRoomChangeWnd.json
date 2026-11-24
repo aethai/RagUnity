@@ -1,0 +1,529 @@
+{
+ "format": 1,
+ "class": "UIChatRoomChangeWnd",
+ "windowId": 30,
+ "state": "default",
+ "w": 280,
+ "h": 120,
+ "defaultPos": {
+  "x": 377,
+  "y": 480,
+  "screen": "1024x768",
+  "rule": "x = W/2 - 135; y = H*5/8"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\chatwin0_bg.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+  "유저인터페이스\\basic_interface\\sys_close_on.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_fix.bmp",
+  "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp",
+  "유저인터페이스\\basic_interface\\txtbox_btn_b.bmp",
+  "유저인터페이스\\basic_interface\\txtbox_btn_c.bmp",
+  "유저인터페이스\\btn_cancel.bmp",
+  "유저인터페이스\\btn_cancel_a.bmp",
+  "유저인터페이스\\btn_cancel_b.bmp",
+  "유저인터페이스\\btn_ok.bmp",
+  "유저인터페이스\\btn_ok_a.bmp",
+  "유저인터페이스\\btn_ok_b.bmp",
+  "유저인터페이스\\radiobtn_off.bmp",
+  "유저인터페이스\\radiobtn_on.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_fix.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 280,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\chatwin0_bg.bmp",
+   "x": 0,
+   "y": 17,
+   "w": 280,
+   "h": 103,
+   "noTrans": 0
+  },
+  {
+   "k": "text",
+   "x": 8,
+   "y": 3,
+   "t": "Room Setup",
+   "font": "f0",
+   "color": "#000000",
+   "align": "left",
+   "req": {
+    "fontType": 0,
+    "height": 12
+   },
+   "passes": [
+    {
+     "dx": 1,
+     "dy": 1,
+     "color": "#ffffff"
+    }
+   ]
+  }
+ ],
+ "children": [
+  {
+   "class": "UIBitmapButton",
+   "id": 197,
+   "path": "UIChatRoomChangeWnd/UIBitmapButton#0",
+   "x": 266,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "ownerField": "+0xc4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\sys_close_off.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\sys_close_on.bmp"
+     ]
+    },
+    "strings": [
+     "Alt+C"
+    ]
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\sys_close_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 11,
+     "h": 11,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 180,
+   "path": "UIChatRoomChangeWnd/UIBitmapButton#1",
+   "x": 189,
+   "y": 96,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_ok.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_ok_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_ok_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_ok.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 181,
+   "path": "UIChatRoomChangeWnd/UIBitmapButton#2",
+   "x": 234,
+   "y": 96,
+   "w": 42,
+   "h": 20,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\btn_cancel.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\btn_cancel_a.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\btn_cancel_b.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_cancel.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 42,
+     "h": 20,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 224,
+   "path": "UIChatRoomChangeWnd/UIBitmapButton#3",
+   "x": 119,
+   "y": 46,
+   "w": 18,
+   "h": 18,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 18,
+     "h": 18,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 225,
+   "path": "UIChatRoomChangeWnd/UIBitmapButton#4",
+   "x": 256,
+   "y": 46,
+   "w": 18,
+   "h": 18,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_b.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\basic_interface\\txtbox_btn_c.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\basic_interface\\txtbox_btn_a.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 18,
+     "h": 18,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrl",
+   "id": 584,
+   "path": "UIChatRoomChangeWnd/UIEditCtrl#5",
+   "x": 45,
+   "y": 24,
+   "w": 228,
+   "h": 16,
+   "ownerField": "+0xac",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f2f2f2",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "|"
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f2f2f2",
+     "whole": 1
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 2,
+     "t": "|",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrl",
+   "id": 584,
+   "path": "UIChatRoomChangeWnd/UIEditCtrl#6",
+   "x": 182,
+   "y": 70,
+   "w": 90,
+   "h": 16,
+   "ownerField": "+0xb0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f2f2f2"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f2f2f2",
+     "whole": 1
+    }
+   ]
+  },
+  {
+   "class": "UIRadioBtn",
+   "id": 211,
+   "path": "UIChatRoomChangeWnd/UIRadioBtn#7",
+   "x": 44,
+   "y": 70,
+   "w": 40,
+   "h": 12,
+   "ownerField": "+0xb4",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "on": [
+      "유저인터페이스\\radiobtn_on.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Public",
+    "strings": [
+     "Public"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\radiobtn_on.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 12,
+     "h": 12,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 13,
+     "y": 0,
+     "t": "Public",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIRadioBtn",
+   "id": 211,
+   "path": "UIChatRoomChangeWnd/UIRadioBtn#8",
+   "x": 96,
+   "y": 70,
+   "w": 52,
+   "h": 12,
+   "ownerField": "+0xb8",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "off": [
+      "유저인터페이스\\radiobtn_off.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Private",
+    "strings": [
+     "Private"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\radiobtn_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 12,
+     "h": 12,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 13,
+     "y": 0,
+     "t": "Private",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIChatRoomChangeWnd/UIStaticText#9",
+   "x": 48,
+   "y": 49,
+   "w": 68,
+   "h": 14,
+   "ownerField": "+0xbc",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f2f2f2",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "20 Ppl",
+    "strings": [
+     "20 Ppl"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f2f2f2",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "20 Ppl",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIChatRoomChangeWnd/UIStaticText#10",
+   "x": 187,
+   "y": 49,
+   "w": 68,
+   "h": 14,
+   "ownerField": "+0xc0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#f2f2f2",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": "Chat Room",
+    "strings": [
+     "Chat Room"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#f2f2f2",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Chat Room",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/030_UIChatRoomChangeWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(30) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

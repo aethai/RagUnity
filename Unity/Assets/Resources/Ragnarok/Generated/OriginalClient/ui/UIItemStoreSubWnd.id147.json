@@ -1,0 +1,279 @@
+{
+ "format": 1,
+ "class": "UIItemStoreSubWnd",
+ "windowId": 147,
+ "state": "default",
+ "w": 140,
+ "h": 145,
+ "defaultPos": {
+  "x": 60,
+  "y": 50,
+  "screen": "1024x768",
+  "rule": "x = 60; y = 50"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\basic_interface\\btnbar_left.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_mid.bmp",
+  "유저인터페이스\\basic_interface\\btnbar_right.bmp",
+  "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+  "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+  "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+  "유저인터페이스\\btn_resize.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_left.bmp",
+   "x": 0,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\titlebar_right.bmp",
+   "x": 128,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\titlebar_mid.bmp",
+   "x": 12,
+   "y": 0,
+   "w": 12,
+   "h": 17,
+   "n": 10,
+   "step": 12,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\sys_base_off.bmp",
+   "x": 3,
+   "y": 3,
+   "w": 11,
+   "h": 11,
+   "noTrans": 1
+  },
+  {
+   "k": "fill",
+   "x": 0,
+   "y": 17,
+   "w": 140,
+   "h": 107,
+   "color": "#ffffff"
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_left.bmp",
+   "x": 0,
+   "y": 124,
+   "w": 21,
+   "h": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\btnbar_right.bmp",
+   "x": 119,
+   "y": 124,
+   "w": 21,
+   "h": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmpRow",
+   "path": "유저인터페이스\\basic_interface\\btnbar_mid.bmp",
+   "x": 21,
+   "y": 124,
+   "w": 21,
+   "h": 21,
+   "n": 5,
+   "step": 21,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 10,
+   "y": 17,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 10,
+   "y": 49,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "bmp",
+   "path": "유저인터페이스\\basic_interface\\itemwin_mid.bmp",
+   "x": 10,
+   "y": 81,
+   "w": 32,
+   "h": 32,
+   "noTrans": 0
+  },
+  {
+   "k": "fill",
+   "x": 72,
+   "y": 17,
+   "w": 64,
+   "h": 96,
+   "color": "#ffffff"
+  }
+ ],
+ "children": [
+  {
+   "class": "UIScrollBar",
+   "id": 584,
+   "path": "UIItemStoreSubWnd/UIScrollBar#0",
+   "x": 125,
+   "y": 14,
+   "w": 13,
+   "h": 107,
+   "ownerField": "+0xa0",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ],
+    "range": 0,
+    "pos": 0,
+    "orientation": 1,
+    "total": 0,
+    "visible": 0,
+    "arrow": 13,
+    "minThumb": 1
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ]
+  },
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UIItemStoreSubWnd/UIStaticText#1",
+   "x": 16,
+   "y": 2,
+   "w": 108,
+   "h": 15,
+   "ownerField": "+0xf4",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#ffffff",
+     "#000000"
+    ],
+    "font": "f0",
+    "text": [
+     "Cash",
+     "Cash"
+    ],
+    "strings": [
+     "Cash"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 1,
+     "y": 1,
+     "t": "Cash",
+     "font": "f0",
+     "color": "#ffffff",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Cash",
+     "font": "f0",
+     "color": "#000000",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIResizer",
+   "id": 584,
+   "path": "UIItemStoreSubWnd/UIResizer#2",
+   "x": 125,
+   "y": 130,
+   "w": 13,
+   "h": 13,
+   "ownerField": "+0xf0",
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "btn_resize": [
+      "유저인터페이스\\btn_resize.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\btn_resize.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 13,
+     "h": 13,
+     "noTrans": 0
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/147_UIItemStoreSubWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(147) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}

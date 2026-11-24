@@ -1,0 +1,680 @@
+{
+ "format": 1,
+ "class": "UILoginWnd",
+ "windowId": 3,
+ "state": "default",
+ "w": 301,
+ "h": 132,
+ "defaultPos": {
+  "x": 377,
+  "y": 480,
+  "screen": "1024x768",
+  "rule": "x = W/2 - 135; y = H*5/8"
+ },
+ "fonts": {
+  "f0": {
+   "face": "Arial",
+   "lfHeight": 14,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  },
+  "f1": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 700,
+   "charset": 0,
+   "quality": 3
+  },
+  "f2": {
+   "face": "Arial",
+   "lfHeight": 15,
+   "weight": 400,
+   "charset": 0,
+   "quality": 3
+  }
+ },
+ "bitmaps": [
+  "유저인터페이스\\login_interface\\bt_close2_normal.bmp",
+  "유저인터페이스\\login_interface\\bt_close2_over.bmp",
+  "유저인터페이스\\login_interface\\bt_close2_press.bmp",
+  "유저인터페이스\\login_interface\\bt_close_normal.bmp",
+  "유저인터페이스\\login_interface\\bt_close_over.bmp",
+  "유저인터페이스\\login_interface\\bt_close_press.bmp",
+  "유저인터페이스\\login_interface\\bt_join_normal.bmp",
+  "유저인터페이스\\login_interface\\bt_join_over.bmp",
+  "유저인터페이스\\login_interface\\bt_join_press.bmp",
+  "유저인터페이스\\login_interface\\bt_start_normal.bmp",
+  "유저인터페이스\\login_interface\\bt_start_over.bmp",
+  "유저인터페이스\\login_interface\\bt_start_press.bmp",
+  "유저인터페이스\\login_interface\\btn_dropdown_out.bmp",
+  "유저인터페이스\\login_interface\\btn_dropdown_over.bmp",
+  "유저인터페이스\\login_interface\\btn_dropdown_press.bmp",
+  "유저인터페이스\\login_interface\\checkbox_off.bmp",
+  "유저인터페이스\\login_interface\\checkbox_on.bmp"
+ ],
+ "slots": {},
+ "ops": [
+  {
+   "k": "fill",
+   "color": "#ff00ff",
+   "whole": 1,
+   "alpha": 255
+  }
+ ],
+ "children": [
+  {
+   "class": "UIStaticText",
+   "id": 584,
+   "path": "UILoginWnd/UIStaticText#0",
+   "x": 73,
+   "y": 87,
+   "w": 72,
+   "h": 22,
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff",
+     "#333333"
+    ],
+    "font": "f0",
+    "text": "Save ID",
+    "strings": [
+     "Save ID"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "text",
+     "x": 0,
+     "y": 0,
+     "t": "Save ID",
+     "font": "f0",
+     "color": "#333333",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 11
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBmpTextButton",
+   "id": 281,
+   "path": "UILoginWnd/UIBmpTextButton#1",
+   "x": 13,
+   "y": 104,
+   "w": 67,
+   "h": 23,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\login_interface\\bt_close_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\login_interface\\bt_close_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\login_interface\\bt_close_press.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff",
+     "#d7d7d7",
+     "#313131"
+    ],
+    "font": "f1",
+    "text": [
+     "Opening",
+     "Opening"
+    ],
+    "strings": [
+     "Opening"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\login_interface\\bt_close_normal.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 67,
+     "h": 21,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 11,
+     "y": 5,
+     "t": "Opening",
+     "font": "f1",
+     "color": "#d7d7d7",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 10,
+     "y": 4,
+     "t": "Opening",
+     "font": "f1",
+     "color": "#313131",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBmpTextButton",
+   "id": 263,
+   "path": "UILoginWnd/UIBmpTextButton#2",
+   "x": 87,
+   "y": 104,
+   "w": 84,
+   "h": 23,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\login_interface\\bt_join_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\login_interface\\bt_join_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\login_interface\\bt_join_press.bmp"
+     ]
+    },
+    "colors": [
+     "#ff00ff",
+     "#d7d7d7",
+     "#313131"
+    ],
+    "font": "f1",
+    "text": [
+     "Sign Up",
+     "Sign Up"
+    ],
+    "strings": [
+     "Sign Up"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    },
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\login_interface\\bt_join_normal.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 84,
+     "h": 21,
+     "noTrans": 0
+    },
+    {
+     "k": "text",
+     "x": 21,
+     "y": 5,
+     "t": "Sign Up",
+     "font": "f1",
+     "color": "#d7d7d7",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    },
+    {
+     "k": "text",
+     "x": 20,
+     "y": 4,
+     "t": "Sign Up",
+     "font": "f1",
+     "color": "#313131",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 182,
+   "path": "UILoginWnd/UIBitmapButton#3",
+   "x": 192,
+   "y": 32,
+   "w": 84,
+   "h": 84,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\login_interface\\bt_start_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\login_interface\\bt_start_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\login_interface\\bt_start_press.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\login_interface\\bt_start_normal.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 84,
+     "h": 84,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIBitmapButton",
+   "id": 217,
+   "path": "UILoginWnd/UIBitmapButton#4",
+   "x": 273,
+   "y": 15,
+   "w": 19,
+   "h": 19,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "normal": [
+      "유저인터페이스\\login_interface\\bt_close2_normal.bmp"
+     ],
+     "hover": [
+      "유저인터페이스\\login_interface\\bt_close2_over.bmp"
+     ],
+     "pressed": [
+      "유저인터페이스\\login_interface\\bt_close2_press.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\login_interface\\bt_close2_normal.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 19,
+     "h": 19,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrl_Custom",
+   "id": 584,
+   "path": "UILoginWnd/UIEditCtrl_Custom#5",
+   "x": 15,
+   "y": 64,
+   "w": 153,
+   "h": 16,
+   "ownerField": "+0x98",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ffffff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ffffff",
+     "whole": 1
+    }
+   ]
+  },
+  {
+   "class": "UIEditCtrl_Custom",
+   "id": 584,
+   "path": "UILoginWnd/UIEditCtrl_Custom#6",
+   "x": 15,
+   "y": 40,
+   "w": 153,
+   "h": 16,
+   "ownerField": "+0x94",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ffffff",
+     "#9c9c9c"
+    ],
+    "font": "f2",
+    "text": "|"
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ffffff",
+     "whole": 1
+    },
+    {
+     "k": "text",
+     "x": 74,
+     "y": 2,
+     "t": "|",
+     "font": "f2",
+     "color": "#9c9c9c",
+     "align": "left",
+     "req": {
+      "fontType": 0,
+      "height": 12
+     }
+    }
+   ]
+  },
+  {
+   "class": "UICheckBox",
+   "id": 209,
+   "path": "UILoginWnd/UICheckBox#7",
+   "x": 56,
+   "y": 85,
+   "w": 12,
+   "h": 12,
+   "kind": "control",
+   "props": {
+    "bitmaps": {
+     "on": [
+      "유저인터페이스\\login_interface\\checkbox_on.bmp"
+     ],
+     "off": [
+      "유저인터페이스\\login_interface\\checkbox_off.bmp"
+     ]
+    }
+   },
+   "ops": [
+    {
+     "k": "bmp",
+     "path": "유저인터페이스\\login_interface\\checkbox_off.bmp",
+     "x": 0,
+     "y": 0,
+     "w": 12,
+     "h": 12,
+     "noTrans": 0
+    }
+   ]
+  },
+  {
+   "class": "UIComboBoxDef2Wnd",
+   "id": 584,
+   "path": "UILoginWnd/UIComboBoxDef2Wnd#8",
+   "x": 13,
+   "y": 10,
+   "w": 160,
+   "h": 22,
+   "ownerField": "+0xc8",
+   "kind": "control",
+   "props": {
+    "colors": [
+     "#ff00ff"
+    ]
+   },
+   "ops": [
+    {
+     "k": "fill",
+     "color": "#ff00ff",
+     "whole": 1,
+     "alpha": 255
+    }
+   ],
+   "children": [
+    {
+     "class": "UIBitmapButton",
+     "id": 269,
+     "path": "UILoginWnd/UIComboBoxDef2Wnd#8/UIBitmapButton#0",
+     "x": 138,
+     "y": 0,
+     "w": 22,
+     "h": 22,
+     "ownerField": "+0x7c",
+     "kind": "control",
+     "props": {
+      "bitmaps": {
+       "normal": [
+        "유저인터페이스\\login_interface\\btn_dropdown_out.bmp"
+       ],
+       "hover": [
+        "유저인터페이스\\login_interface\\btn_dropdown_over.bmp"
+       ],
+       "pressed": [
+        "유저인터페이스\\login_interface\\btn_dropdown_press.bmp"
+       ]
+      }
+     },
+     "ops": [
+      {
+       "k": "bmp",
+       "path": "유저인터페이스\\login_interface\\btn_dropdown_out.bmp",
+       "x": 0,
+       "y": 0,
+       "w": 22,
+       "h": 22,
+       "noTrans": 0
+      }
+     ]
+    },
+    {
+     "class": "UIComboBoxEx2",
+     "id": 584,
+     "path": "UILoginWnd/UIComboBoxDef2Wnd#8/UIComboBoxEx2#1",
+     "x": 0,
+     "y": 22,
+     "w": 160,
+     "h": 20,
+     "ownerField": "+0x80",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#8295c5",
+       "#f0f4fc",
+       "#c4d5f8",
+       "#000000"
+      ],
+      "font": "f2",
+      "text": "Custom"
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#8295c5",
+       "whole": 1
+      },
+      {
+       "k": "fill",
+       "x": 1,
+       "y": 1,
+       "w": 158,
+       "h": 18,
+       "color": "#f0f4fc"
+      },
+      {
+       "k": "fill",
+       "x": 3,
+       "y": 1,
+       "w": 154,
+       "h": 16,
+       "color": "#c4d5f8"
+      },
+      {
+       "k": "text",
+       "x": 54,
+       "y": 2,
+       "t": "Custom",
+       "font": "f2",
+       "color": "#000000",
+       "align": "left",
+       "req": {
+        "fontType": 0,
+        "height": 12
+       }
+      }
+     ],
+     "children": [
+      {
+       "class": "UIScrollBar_Navi",
+       "id": 584,
+       "path": "UILoginWnd/UIComboBoxDef2Wnd#8/UIComboBoxEx2#1/UIScrollBar_Navi#0",
+       "x": 153,
+       "y": 0,
+       "w": 7,
+       "h": 20,
+       "ownerField": "+0xa8",
+       "kind": "control",
+       "props": {
+        "colors": [
+         "#ff00ff"
+        ],
+        "range": 0,
+        "pos": 0,
+        "orientation": 1,
+        "total": 1,
+        "visible": 1,
+        "arrow": 7,
+        "minThumb": 1
+       },
+       "ops": [
+        {
+         "k": "fill",
+         "color": "#ff00ff",
+         "whole": 1,
+         "alpha": 255
+        }
+       ]
+      },
+      {
+       "class": "UIScrollBar",
+       "id": 584,
+       "path": "UILoginWnd/UIComboBoxDef2Wnd#8/UIComboBoxEx2#1/UIScrollBar#1",
+       "x": 0,
+       "y": 13,
+       "w": 153,
+       "h": 13,
+       "ownerField": "+0xac",
+       "kind": "control",
+       "props": {
+        "colors": [
+         "#ff00ff"
+        ],
+        "range": 0,
+        "pos": 0,
+        "orientation": 0,
+        "total": 0,
+        "visible": 0,
+        "arrow": 13,
+        "minThumb": 1
+       },
+       "ops": [
+        {
+         "k": "fill",
+         "color": "#ff00ff",
+         "whole": 1,
+         "alpha": 255
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "class": "UIStaticText",
+     "id": 584,
+     "path": "UILoginWnd/UIComboBoxDef2Wnd#8/UIStaticText#2",
+     "x": 80,
+     "y": 6,
+     "w": 138,
+     "h": 16,
+     "ownerField": "+0x84",
+     "kind": "control",
+     "props": {
+      "colors": [
+       "#ff00ff",
+       "#ffffff",
+       "#000000"
+      ],
+      "font": "f2",
+      "text": [
+       "Custom",
+       "Custom"
+      ],
+      "strings": [
+       "Custom"
+      ]
+     },
+     "ops": [
+      {
+       "k": "fill",
+       "color": "#ff00ff",
+       "whole": 1,
+       "alpha": 255
+      },
+      {
+       "k": "text",
+       "x": 1,
+       "y": 1,
+       "t": "Custom",
+       "font": "f2",
+       "color": "#ffffff",
+       "align": "left",
+       "req": {
+        "fontType": 0,
+        "height": 12
+       }
+      },
+      {
+       "k": "text",
+       "x": 0,
+       "y": 0,
+       "t": "Custom",
+       "font": "f2",
+       "color": "#000000",
+       "align": "left",
+       "req": {
+        "fontType": 0,
+        "height": 12
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "source": {
+  "capture": "ui/captures/survey/003_UILoginWnd.json",
+  "createdBy": "UIWindowMgr::MakeWindow(3) (0x9c8020) run to completion, DoDraw(1)",
+  "language": {
+   "DAT_014ef114": 1,
+   "languageId": 1,
+   "textCodePage": 1252
+  },
+  "hostFontSubstitutions": []
+ }
+}
