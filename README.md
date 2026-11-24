@@ -2,15 +2,6 @@
 
 RagUnity is a Unity client for Ragnarok Online on Windows. It reads maps, models, sprites, and effects from the game archives you already use, then connects to your Hercules server for login, character selection, and map play.
 
-## Known gaps
-
-| Area | Current behavior |
-| --- | --- |
-| Skill visuals | Some third-job and later skill effects have no renderer. When the client encounters one of those effect IDs, it skips the visual. [Effect dispatcher](Unity/Assets/Ragnarok/Runtime/Effects/RoEffectManager.cs) |
-| Navigation | Search and route guidance are implemented. The external navigation-data button has no action, so it cannot load a custom navigation text file. [Navigation controls](Unity/Assets/Ragnarok/Runtime/UI/RoClassicNavigation.cs) |
-| Quest log | For hunt objectives that use the special monster-group ID (31999), the log displays the name sent by the server. It does not resolve the group into its monster types. [Quest labels](Unity/Assets/Ragnarok/Runtime/UI/RoClassicQuestData.cs) |
-| Chat | Megaphone broadcasts are decoded, but their block-list and message-filter behavior is unfinished. [Broadcast handling](Unity/Assets/Ragnarok/Runtime/UI/RoClassicBroadcast.cs) |
-
 ## Run in the Unity Editor
 
 You need Windows, Unity **6000.3.14f1**, your own `data.grf`, and an account on a compatible Hercules server. The supplied server profile targets **PACKETVER 20240619**.
