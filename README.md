@@ -1,16 +1,17 @@
-# RagnarokUnity
+# Ragnarok Online client for Unity
 
-Klient Ragnarok Online w Unity dla Windows.
+A Windows client for Ragnarok Online. To run it, you need Unity **6000.3.14f1**, your own `data.grf` archive, and an account on a compatible Hercules server (PACKETVER 20240619).
 
-1. Zainstaluj Unity **6000.3.14f1** i sklonuj repozytorium.
-2. Przygotuj własne archiwum `data.grf` i konto na zgodnym serwerze Hercules (PACKETVER 20240619).
-3. W `Unity/Assets/StreamingAssets/Ragnarok/server-profile.cfg` wpisz nazwę hosta i porty swojego serwera.
-4. W katalogu repozytorium uruchom PowerShell. Podaj katalog swoich danych gry i uruchom edytor.
+1. Clone this repository.
+2. Open `Unity/Assets/StreamingAssets/Ragnarok/server-profile.cfg` and enter your server's hostname and ports.
+3. Open PowerShell in the repository root and run the commands below. When prompted, enter the folder containing `data.grf`.
 
 ```powershell
-$env:RO_CONTENT_ROOT = Read-Host 'Katalog zawierający data.grf'
+$env:RO_CONTENT_ROOT = Read-Host 'Folder containing data.grf'
 $env:RO_GRF_FILES = 'data.grf'
 & "$env:ProgramFiles/Unity/Hub/Editor/6000.3.14f1/Editor/Unity.exe" -projectPath (Resolve-Path Unity).Path
 ```
 
-Po zaimportowaniu projektu otwórz scenę `Assets/Scenes/RORuntimeMap.unity`, kliknij **Play** i zaloguj się. Jeśli Twój serwer wymaga dodatkowego archiwum GRF, wpisz je przed `data.grf` w `RO_GRF_FILES`, oddzielając nazwy średnikiem.
+If your server requires an additional GRF archive, list it before `data.grf` in `RO_GRF_FILES`, separating the filenames with a semicolon.
+
+Once Unity finishes importing the project, open `Assets/Scenes/RORuntimeMap.unity`, click **Play**, and sign in.
