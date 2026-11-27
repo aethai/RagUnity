@@ -58,12 +58,14 @@ namespace Ragnarok.Network {
 
         public const float FalconAltitudeOffset = 5f;
         public const int FalconRenderOrderOffset = 1000;
-        public const float FalconFollowDelaySeconds = 1f;
-        public const float FalconFollowRangeCells = 1f;
-        public const float FalconFollowStartDistanceCells = 2f;
+        /// <summary>
+        /// How fast the falcon closes on its hunter, per second (exponential follow, applied every frame). Measured live
+        /// against the 2024 client (28.11): it leaves with the hunter at once, trails about one cell behind a walking hunter
+        /// and settles over a stopped one within ~0.3 s; 6/s gives a 1.1-cell trail at 150 ms per cell.
+        /// </summary>
+        public const float FalconFollowRate = 6f;
         public const float FalconDashSpeedMilliseconds = 35f;
         public const float FalconDashActionSeconds = 0.432f;
-        public const float FalconFallbackOwnerSpeedMilliseconds = 150f;
 
         private const short JobWedding = 22;
         private const short JobXmas = 26;
@@ -571,13 +573,6 @@ namespace Ragnarok.Network {
 
         public static bool CanUseFalconAttachmentVisual(short baseJob) {
             return FalconVisualJobs.Contains(baseJob);
-        }
-
-        public static float ResolveFalconFollowSpeedMilliseconds(float ownerSpeedMilliseconds) {
-            float resolvedOwnerSpeed = ownerSpeedMilliseconds > 0f
-                ? ownerSpeedMilliseconds
-                : FalconFallbackOwnerSpeedMilliseconds;
-            return Math.Max(resolvedOwnerSpeed - 50f, 1f);
         }
 
         private static string BuildWugBasePath(short baseJob) {

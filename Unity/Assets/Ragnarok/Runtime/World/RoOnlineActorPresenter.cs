@@ -59,8 +59,9 @@ namespace Ragnarok.World {
         private uint ownerId;
         private Vector3 ownerWorldPosition;
         private RoActorDirection ownerFacing = RoActorDirection.South;
-        private float followSpeedMilliseconds = RoMapRentalVisualSemantics.ResolveFalconFollowSpeedMilliseconds(0f);
         private float nextFollowCheckTime;
+        private float lastFollowTime = -1f;
+        private Vector3 passiveVelocity;
         private float dashActionUntilTime;
         private bool hasOwnerPosition;
         private bool hasMove;
@@ -120,7 +121,6 @@ namespace Ragnarok.World {
             this.ownerTransform = ownerTransform;
             this.ownerWorldPosition = ownerWorldPosition;
             this.ownerFacing = ownerFacing == RoActorDirection.None ? RoActorDirection.South : ownerFacing;
-            followSpeedMilliseconds = RoMapRentalVisualSemantics.ResolveFalconFollowSpeedMilliseconds(ownerSpeedMilliseconds);
 
             if (!EnsureVisual(assets, basePath)) {
                 return false;
@@ -165,11 +165,16 @@ namespace Ragnarok.World {
             float now = RoPresentationClock.NowSeconds;
             if (hasMove) {
                 AdvanceMove(now);
+                lastFollowTime = now;   // the follow after a long dash starts from now, not from before the dash
+                passiveVelocity = Vector3.zero;
                 return;
             }
 
             if (hasOwnerPosition && now >= nextFollowCheckTime) {
-                TryBeginPassiveFollow(now);
+                FollowOwner(now);
+            } else {
+                lastFollowTime = now;
+                passiveVelocity = Vector3.zero;
             }
 
             ApplyMotionState();
@@ -216,24 +221,37 @@ namespace Ragnarok.World {
 
             RoActorDirection facing = hasMove
                 ? RoSpriteActionMap.GetDirectionFromWorldDelta(moveEndWorld - ResolveCurrentBaseWorldPosition(), ownerFacing)
-                : ownerFacing;
+                : passiveVelocity.sqrMagnitude > PassiveFacingSpeedSqr
+                    ? RoSpriteActionMap.GetDirectionFromWorldDelta(passiveVelocity, ownerFacing)
+                    : ownerFacing;
             RoSpriteMotion motion = ResolveFalconMotion(RoPresentationClock.NowSeconds < dashActionUntilTime);
             visual.SetMotionAndFacing(motion, facing, restart: false);
         }
 
-        private void TryBeginPassiveFollow(float now) {
+        /// <summary>Above this flat speed (cells per second, squared) the falcon faces where it flies, else its hunter's way.</summary>
+        private const float PassiveFacingSpeedSqr = 0.5f * 0.5f;
+
+        /// <summary>
+        /// The passive follow: every frame the falcon closes a share of the flat gap to its hunter (FalconFollowRate), so it
+        /// leaves at once, trails about a cell behind a walking hunter and settles over a stopped one, like the 2024 client.
+        /// It used to wait for a 2-cell gap, hop to a fixed point one cell from the hunter and then sleep a second, so it
+        /// hung behind for most of a walk.
+        /// </summary>
+        private void FollowOwner(float now) {
+            float dt = lastFollowTime < 0f ? 0f : Mathf.Clamp(now - lastFollowTime, 0f, 0.1f);
+            lastFollowTime = now;
             Vector3 current = ResolveCurrentBaseWorldPosition();
             Vector3 delta = Flatten(ownerWorldPosition - current);
-            if (delta.sqrMagnitude <
-                RoMapRentalVisualSemantics.FalconFollowStartDistanceCells *
-                RoMapRentalVisualSemantics.FalconFollowStartDistanceCells) {
+            if (dt <= 0f || delta.sqrMagnitude < 1e-6f) {
+                passiveVelocity = Vector3.zero;
                 return;
             }
 
-            Vector3 target = ResolveFollowTarget(current, ownerWorldPosition);
-            if (BeginMove(current, target, followSpeedMilliseconds, now, isDash: false)) {
-                nextFollowCheckTime = now + RoMapRentalVisualSemantics.FalconFollowDelaySeconds;
-            }
+            Vector3 step = delta * (1f - Mathf.Exp(-RoMapRentalVisualSemantics.FalconFollowRate * dt));
+            Vector3 baseWorld = current + step;
+            baseWorld.y = ownerWorldPosition.y;
+            transform.position = ResolveFalconWorldPosition(baseWorld);
+            passiveVelocity = step / dt;
         }
 
         private bool BeginMove(Vector3 startWorld, Vector3 endWorld, float speedMilliseconds, float now, bool isDash) {
@@ -269,7 +287,7 @@ namespace Ragnarok.World {
                 isDashMove = false;
                 nextFollowCheckTime = completedDash
                     ? Math.Max(now, dashActionUntilTime)
-                    : now + RoMapRentalVisualSemantics.FalconFollowDelaySeconds;
+                    : now;
             }
 
             ApplyMotionState();
@@ -281,21 +299,12 @@ namespace Ragnarok.World {
             dashActionUntilTime = 0f;
             transform.position = ResolveFalconWorldPosition(ownerPosition);
             nextFollowCheckTime = RoPresentationClock.NowSeconds;
+            lastFollowTime = -1f;
+            passiveVelocity = Vector3.zero;
         }
 
         private Vector3 ResolveCurrentBaseWorldPosition() {
             return transform.position - Vector3.up * RoMapRentalVisualSemantics.FalconAltitudeOffset;
-        }
-
-        private static Vector3 ResolveFollowTarget(Vector3 currentWorld, Vector3 ownerWorld) {
-            Vector3 delta = Flatten(currentWorld - ownerWorld);
-            if (delta.sqrMagnitude <=
-                RoMapRentalVisualSemantics.FalconFollowRangeCells *
-                RoMapRentalVisualSemantics.FalconFollowRangeCells) {
-                return currentWorld;
-            }
-
-            return ownerWorld + delta.normalized * RoMapRentalVisualSemantics.FalconFollowRangeCells;
         }
 
         private static Vector3 Flatten(Vector3 value) {
