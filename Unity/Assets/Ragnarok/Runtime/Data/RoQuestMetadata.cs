@@ -336,8 +336,13 @@ namespace Ragnarok.Data {
             }
 
             if (bytes[0] == 0x1b) {
-                errors?.Add(path + ": compiled Lua is not readable");
-                return new QuestSource(path, fingerprint, bytes, false);
+                byte[] source = RoLuaBytecodeSource.ToSource(assets, path, bytes, out string luaError);
+                if (source == null) {
+                    errors?.Add(path + ": " + luaError);
+                    return new QuestSource(path, fingerprint, bytes, false);
+                }
+
+                return new QuestSource(path, fingerprint, source, true);
             }
 
             return new QuestSource(path, fingerprint, bytes, true);

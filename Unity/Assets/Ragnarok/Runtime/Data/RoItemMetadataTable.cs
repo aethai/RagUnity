@@ -102,8 +102,11 @@ namespace Ragnarok.Data {
                 }
 
                 if (bytes[0] == 0x1B) {
-                    error = "compiled Lua bytecode is not parsed in this Phase 7 text slice";
-                    continue;
+                    bytes = RoLuaBytecodeSource.ToSource(assets, candidate, bytes, out string luaError);
+                    if (bytes == null) {
+                        error = luaError;
+                        continue;
+                    }
                 }
 
                 string sourceBytesCacheKey = BuildParsedSourceCacheKey("item-info", sourcePath, bytes);

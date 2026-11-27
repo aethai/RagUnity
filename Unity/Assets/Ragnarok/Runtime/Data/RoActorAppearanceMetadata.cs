@@ -1415,13 +1415,21 @@ namespace Ragnarok.Data {
                 }
 
                 byte[] bytes = assets.ReadBytes(candidate);
-                if (bytes == null || bytes.Length == 0 || bytes[0] == 0x1B) {
+                if (bytes == null || bytes.Length == 0) {
                     continue;
+                }
+
+                byte[] text = bytes;
+                if (bytes[0] == 0x1B) {
+                    text = RoLuaBytecodeSource.ToSource(assets, candidate, bytes, out _);
+                    if (text == null) {
+                        continue;
+                    }
                 }
 
                 sourcePath = candidate;
                 sourceBytes = bytes;
-                return RoTextEncoding.Decode(bytes);
+                return RoTextEncoding.Decode(text);
             }
 
             return null;

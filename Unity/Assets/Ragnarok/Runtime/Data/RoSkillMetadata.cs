@@ -1215,14 +1215,18 @@ namespace Ragnarok.Data {
                     continue;
                 }
 
+                byte[] text = bytes;
                 if (bytes[0] == 0x1B) {
-                    pendingError = "compiled Lua bytecode is not parsed in this Phase 7 text slice";
-                    continue;
+                    text = RoLuaBytecodeSource.ToSource(assets, candidate, bytes, out string luaError);
+                    if (text == null) {
+                        pendingError = luaError;
+                        continue;
+                    }
                 }
 
                 sourcePath = candidate;
                 sourceBytes = bytes;
-                return RoTextEncoding.Decode(bytes);
+                return RoTextEncoding.Decode(text);
             }
 
             if (!string.IsNullOrEmpty(pendingError)) {
