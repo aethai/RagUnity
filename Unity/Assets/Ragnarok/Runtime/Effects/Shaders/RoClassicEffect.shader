@@ -58,6 +58,8 @@ Shader "Ragnarok/RO Classic Effect" {
                 float _RoAlphaOp;
                 float _SrcBlend;
                 float _DstBlend;
+                float _RoBlendSrc;
+                float _RoBlendDst;
             CBUFFER_END
 
             struct Attributes {
@@ -95,16 +97,32 @@ Shader "Ragnarok/RO Classic Effect" {
 
             // the linear output whose hardware blend equals the original's gamma blend of this colour over the opaque scene
             bool RoGammaBlend(float4 positionHCS, inout half4 color) {
+                // the draw's own factors (the bridge sets them; another material falls back to its hardware blend)
+                bool own = _RoBlendSrc != 0.0 || _RoBlendDst != 0.0;
+                float srcMode = own ? _RoBlendSrc : _SrcBlend;
+                float dstMode = own ? _RoBlendDst : _DstBlend;
                 float a = saturate(color.a);
-                float fs = RoBlendFactor(_SrcBlend, a);
-                float fd = RoBlendFactor(_DstBlend, a);
+                float fs = RoBlendFactor(srcMode, a);
+                float fd = RoBlendFactor(dstMode, a);
+                if (_DstBlend == 6.0 && fs <= 1e-4) {
+                    color = half4(0.0, 0.0, 0.0, 1.0);   // a transparent additive layer adds nothing
+                    return true;
+                }
+
                 if (fs <= 1e-4 || fd < 0.0) return false;
                 float2 uv = positionHCS.xy / _ScaledScreenParams.xy;
                 float3 dstLinear = SampleSceneColor(uv);
                 float3 dstGamma = LinearToSRGB(saturate(dstLinear));
                 float3 srcGamma = LinearToSRGB(saturate(color.rgb));
                 float3 target = SRGBToLinear(saturate(srcGamma * fs + dstGamma * fd));
-                color.rgb = clamp((target - dstLinear * fd) / fs, 0.0, 32.0);
+                if (_DstBlend == 6.0) {
+                    // additive draw blended as a screen (One, OneMinusSrcColor): out = s + dst (1 - s), never past white
+                    float3 room = max(1.0 - dstLinear, 1e-3);
+                    color.rgb = saturate((target - dstLinear) / room);
+                    color.a = 1.0;
+                } else {
+                    color.rgb = clamp((target - dstLinear * fd) / fs, 0.0, 32.0);
+                }
                 return true;
             }
 

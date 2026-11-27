@@ -306,6 +306,9 @@ namespace Ragnarok.Effects.Classic {
         static readonly int BaseColorId = Shader.PropertyToID("_BaseColor");
         static readonly int SrcBlendId = Shader.PropertyToID("_SrcBlend");
         static readonly int DstBlendId = Shader.PropertyToID("_DstBlend");
+        static readonly int BlendSrcId = Shader.PropertyToID("_RoBlendSrc");
+        static readonly int BlendDstId = Shader.PropertyToID("_RoBlendDst");
+        static readonly int LookFxGammaBlendId = Shader.PropertyToID("_RoLookFxGammaBlend");
         static readonly int ZWriteId = Shader.PropertyToID("_ZWrite");
         static readonly int CullId = Shader.PropertyToID("_Cull");
         static readonly int ZTestId = Shader.PropertyToID("_ZTest");
@@ -2694,6 +2697,17 @@ namespace Ragnarok.Effects.Classic {
                 material.SetTexture(MainTexId, b.Texture);
             }
             material.SetColor(BaseColorId, Color.white);
+            // the draw's own blend for the gamma-blend emulation (RoClassicEffect.shader); an additive draw blends as a
+            // screen (One, OneMinusSrcColor) there, so that stacked layers saturate at white like the original's clamped
+            // add instead of summing past it in the HDR target
+            material.SetFloat(BlendSrcId, (float) srcBlend);
+            material.SetFloat(BlendDstId, (float) dstBlend);
+            if (Shader.GetGlobalFloat(LookFxGammaBlendId) > 0.5f && !blend.MultiplyAlpha && dstBlend == BlendMode.One &&
+                (srcBlend == BlendMode.One || srcBlend == BlendMode.SrcAlpha)) {
+                srcBlend = BlendMode.One;
+                dstBlend = BlendMode.OneMinusSrcColor;
+            }
+
             material.SetFloat(SrcBlendId, (float) srcBlend);
             material.SetFloat(DstBlendId, (float) dstBlend);
             material.SetFloat(ColorOpId, d.ColorOp);
