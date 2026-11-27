@@ -101,6 +101,9 @@ namespace Ragnarok.UI {
         /// <summary>Custom's /range (0x233a920): toggles its skill-range flag and returns 0x7fff, a type nothing runs.</summary>
         public const int TypeRange = 0x7fff;
 
+        /// <summary>RagUnity's /swing (no original command): a type nothing runs, like /range.</summary>
+        public const int TypeSwing = 0x7ffe;
+
         /// <summary>The colours of the lines the commands print (COLORREF 0x64ffff, 0xffff64, 0xffff, 0xffff00, 0xff, 0xff00).</summary>
         public const string OptionColor = "#FFFF64";
         public const string ListColor = "#64FFFF";
@@ -212,6 +215,7 @@ namespace Ragnarok.UI {
             ["/changedress"] = 0xed, ["/nocosplay"] = 0xed, ["/showshop"] = 0xf8,
             ["/accountlimitedtool"] = 0xfa, ["/agency"] = 0xeb, ["/macrochecker"] = 0x102,
             ["/range"] = TypeRange,
+            ["/swing"] = TypeSwing,
         };
 
         /// <summary>
@@ -361,6 +365,8 @@ namespace Ragnarok.UI {
             new Option("/roulette", TypeRoulette, true, -2, null, -2, null),
             // Custom's /range (0x233a920): "Skill range [ON]" / "Skill range [OFF]" in green
             new Option("/range", TypeRange, false, -1, "Skill range [ON]", -1, "Skill range [OFF]"),
+            // RagUnity's /swing: multi-hit skills swing on every hit as in the older clients (RoClassicCommandFlags.MultiHitSwing)
+            new Option("/swing", TypeSwing, true, -1, "Multi-hit skill swings [ON]", -1, "Multi-hit skill swings [OFF]"),
         };
 
         private static Dictionary<int, Option> optionsByType;

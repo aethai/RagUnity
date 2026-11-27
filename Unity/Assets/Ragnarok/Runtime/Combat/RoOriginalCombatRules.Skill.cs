@@ -86,6 +86,26 @@ namespace Ragnarok.Combat {
             }
         }
 
+        /// <summary>
+        /// RagUnity's /swing (not the 2024 client): the skills the older clients drew with the attack motion, as roBrowser's
+        /// SkillAction.js lists them (RagUnity's skill motions until 2.10). With /swing on, their casters swing again on every
+        /// hit of a multi-hit series (Sonic Blow's eight). The 2024 client plays one skill action for attackMT instead
+        /// (FUN_00d15360, compared live on 27.11) and stands through the hits.
+        /// </summary>
+        static readonly HashSet<int> ClassicSwingSkills = new HashSet<int> {
+            5, 7, 47, 8208, 56, 57, 58, 61, 62, 110, 136, 148, 212, 214, 219, 250, 253, 271, 272, 273, 316,
+            324, 338, 366, 368, 370, 371, 372, 394, 397, 398, 399, 406, 413, 415, 417, 419, 421, 490, 502,
+            503, 512, 513, 514, 515, 516, 518, 519, 520, 521, 525, 528, 530, 544, 2002, 2004, 2005, 2006,
+            2008, 2022, 2023, 2029, 2030, 2031, 2034, 2036, 2037, 2257, 2258, 2259, 2260, 2261, 2279, 2280,
+            2284, 2307, 2308, 2309, 2310, 2312, 2314, 2317, 2320, 2321, 2323, 2326, 2327, 2329, 2330, 2333,
+            2343, 5004, 8214
+        };
+
+        /// <summary>/swing applies: a listed skill whose damage type queues more than one hit (8, 9, 13).</summary>
+        public static bool UsesClassicMultiHitSwing(int skillId, int damageType, int count) =>
+            count > 1 && count <= MaxHitCount && (damageType == 8 || damageType == 9 || damageType == 13) &&
+            ClassicSwingSkills.Contains(skillId);
+
         /// <summary>The first hit's delay after attackMT (0xbee990..): Turn Undead and 0x8ab +500, 0x8ac +1000, 0x8ad +1500,
         /// Down Kick, Turn Kick and 0xa20 / 0xa21 +300.</summary>
         public static int SkillFirstHitExtraMs(int skillId) {

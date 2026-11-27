@@ -21,6 +21,7 @@ namespace Ragnarok.UI {
         private static bool emblemFrame;
         private static bool skillRange;
         private static bool showName = true;
+        private static bool multiHitSwing = true;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void ResetStatics() => loaded = false;
@@ -103,6 +104,18 @@ namespace Ragnarok.UI {
             }
         }
 
+        /// <summary>
+        /// RagUnity's /swing (on by default): the caster of a multi-hit skill the older clients drew with the attack motion
+        /// (Sonic Blow, the Monk combos ...) swings again on every hit of the series. Off, the 2024 client's behaviour: one
+        /// skill action for the packet's attackMT (FUN_00d15360), then standing through the hits.
+        /// </summary>
+        public static bool MultiHitSwing {
+            get {
+                EnsureLoaded();
+                return multiHitSwing;
+            }
+        }
+
         /// <summary>Reads the flags the first time anything asks (RoClassicGameUi asks every frame: a bool test).</summary>
         public static void EnsureLoaded() {
             if (!loaded) Reload();
@@ -120,6 +133,7 @@ namespace Ragnarok.UI {
             emblemFrame = Get("/frame");
             skillRange = Get("/range");
             showName = Get("/showname");
+            multiHitSwing = Get("/swing");
 
             RoCameraController.FixedFollow = Get("/camera");
             RoCameraController.QuickSpellRightClick = Get("/q1");

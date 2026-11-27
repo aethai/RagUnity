@@ -1313,9 +1313,33 @@ namespace Ragnarok.World {
                 ApplyDamageToActor(target, skill.Damage);
             }
 
-            ApplyTransientAction(source, ResolveSkillActorMotion(source, skill.SkillId), skill.ServerTick, ResolveSkillSourceActionDurationMilliseconds(source, skill),
+            // /swing: the older clients' attack motion, again on every further hit (ReplayMultiHitSwing)
+            bool swing = Ragnarok.UI.RoClassicCommandFlags.MultiHitSwing &&
+                Ragnarok.Combat.RoOriginalCombatRules.UsesClassicMultiHitSwing(skill.SkillId, skill.ActionRaw, skill.HitCount);
+            RoOnlineActorMotion motion = swing ? ResolveOriginalAttackMotion(source, skill.ServerTick) : ResolveSkillActorMotion(source, skill.SkillId);
+            ApplyTransientAction(source, motion, skill.ServerTick, ResolveSkillSourceActionDurationMilliseconds(source, skill),
                 skill.SourceDelay);
+            source.MultiHitSwingRevision = swing ? source.ActionRevision : -1;
             TouchPresentationRevision();
+        }
+
+        /// <summary>
+        /// /swing: the caster's next swing of a multi-hit series (<paramref name="durationMilliseconds"/> long, from now),
+        /// unless it did something else since the series' last swing. False when nothing was played.
+        /// </summary>
+        public bool ReplayMultiHitSwing(uint sourceId, int durationMilliseconds) {
+            if (!TryGetActorStateByServerOrAccountId(sourceId, out RoOnlineActorState source) ||
+                source.MultiHitSwingRevision < 0 ||
+                source.ActionRevision != source.MultiHitSwingRevision ||
+                source.SpawnState == RoMapActorSpawnState.Dead ||
+                source.IsPlayingDead) {
+                return false;
+            }
+
+            ApplyTransientAction(source, ResolveOriginalAttackMotion(source, 0), LatestServerTimeMilliseconds, durationMilliseconds,
+                durationMilliseconds);   // the whole attack motion within the swing
+            source.MultiHitSwingRevision = source.ActionRevision;
+            return true;
         }
 
         public void ApplySkillResult(RoZcUseSkillResult skill) {
@@ -2874,6 +2898,7 @@ namespace Ragnarok.World {
             PendingSkillAttackMotionSkillId = 0;
             PendingSkillAttackMotionTargetId = 0;
             PendingSkillAttackMotionMilliseconds = 0;
+            MultiHitSwingRevision = -1;
             PreserveBackSlideCastingOnNextStopMove = false;
             Speed = 0;
             BaseLevel = 0;
@@ -2955,6 +2980,8 @@ namespace Ragnarok.World {
         public ushort PendingSkillAttackMotionSkillId { get; set; }
         public uint PendingSkillAttackMotionTargetId { get; set; }
         public int PendingSkillAttackMotionMilliseconds { get; set; }
+        /// <summary>/swing: the action revision of the series' last swing, −1 when no series runs.</summary>
+        public int MultiHitSwingRevision { get; set; } = -1;
         public bool PreserveBackSlideCastingOnNextStopMove { get; set; }
         public short Speed { get; set; }
         public short BaseLevel { get; set; }

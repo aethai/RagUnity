@@ -159,6 +159,9 @@ namespace Ragnarok.World {
         private int appliedServerTimeRevision = -1;
         private RoHitPresenter hitPresenter;
         /// <summary>Monster death vanishes held until the hits queued on the monster have played (due time, event).</summary>
+        /// <summary>/swing: the further swings of multi-hit series (caster, swing length in ms) on the presentation clock.</summary>
+        private readonly RoTimeline<KeyValuePair<uint, int>> multiHitSwings = new RoTimeline<KeyValuePair<uint, int>>();
+        private readonly List<uint> multiHitSwingSyncIds = new List<uint>(2);
         private readonly List<KeyValuePair<float, RoMapEntryDrainEvent>> deferredDeathVanishes =
             new List<KeyValuePair<float, RoMapEntryDrainEvent>>();
         /// <summary>Warp NPC actor id → its classic EF 321 handle (launched once per warp, ended when it leaves).</summary>
@@ -302,6 +305,7 @@ namespace Ragnarok.World {
                 using (HitsMarker.Auto()) {
                     EnsureHitPresenter().ProcessDue(presentationNowSeconds, this);
                     ApplyDueDeferredDeathVanishes(presentationNowSeconds);
+                    ApplyDueMultiHitSwings(presentationNowSeconds);
                 }
                 SyncSelectedTargetLockIndicator();
             } finally {
@@ -607,6 +611,7 @@ namespace Ragnarok.World {
             movementTrace.Clear();
             hitPresenter?.Clear();
             deferredDeathVanishes.Clear();
+            multiHitSwings.Clear();
             recentFeedbackAnchors.Clear();
             Ragnarok.UI.RoClassicChatBalloons.ClearAll();
             ClearWarpPortalEffects();
@@ -727,6 +732,7 @@ namespace Ragnarok.World {
             Ragnarok.UI.RoClassicChatBalloons.ClearAll();
             hitPresenter?.Clear();
             deferredDeathVanishes.Clear();
+            multiHitSwings.Clear();
             recentFeedbackAnchors.Clear();
             worldState.Clear();
             ClearWarpPortalEffects();
@@ -2263,6 +2269,55 @@ namespace Ragnarok.World {
         private void QueueSkillHits(in RoSkillEvent skill, int attackedMT) {
             bool fromUnit = EnsureSkillPresenter().IsUnitSource(skill.SourceActorId, skill.SkillId, this);
             EnsureHitPresenter().OnSkillDamage(in skill, attackedMT, fromUnit, RoPresentationClock.NowSeconds, this);
+            QueueMultiHitSwings(in skill);
+        }
+
+        /// <summary>
+        /// /swing: a listed multi-hit skill's caster starts one more swing before each further hit (the hits come at attackMT
+        /// plus the skill's extra delay, then every 200 ms, Pierce 280); the first swing is the attack motion the world state
+        /// gave it for the packet.
+        /// </summary>
+        private void QueueMultiHitSwings(in RoSkillEvent skill) {
+            if (!Ragnarok.UI.RoClassicCommandFlags.MultiHitSwing ||
+                !RoOriginalCombatRules.UsesClassicMultiHitSwing(skill.SkillId, skill.ActionRaw, skill.HitCount)) {
+                return;
+            }
+
+            int step = skill.SkillId == RoOriginalCombatRules.PierceSkillId ? 280 : RoOriginalCombatRules.MultiHitMs;
+            int firstHit = (int) Math.Min(int.MaxValue, skill.DelayMilliseconds) + RoOriginalCombatRules.SkillFirstHitExtraMs(skill.SkillId);
+            float now = RoPresentationClock.NowSeconds;
+            for (int k = 1; k < skill.HitCount; k++) {
+                float due = now + (firstHit + (k - 1) * step) / 1000f;
+                multiHitSwings.Add(due, new KeyValuePair<uint, int>(skill.SourceActorId, step));
+            }
+        }
+
+        private void ApplyDueMultiHitSwings(float now) {
+            if (multiHitSwings.Count == 0) {
+                return;
+            }
+
+            multiHitSwingSyncIds.Clear();
+            bool own = false;
+            while (multiHitSwings.TryTakeDue(now, out KeyValuePair<uint, int> swing)) {
+                if (!worldState.ReplayMultiHitSwing(swing.Key, swing.Value)) {
+                    continue;
+                }
+
+                if (IsOwnActorId(swing.Key)) {
+                    own = true;
+                } else if (!multiHitSwingSyncIds.Contains(swing.Key)) {
+                    multiHitSwingSyncIds.Add(swing.Key);
+                }
+            }
+
+            if (own) {
+                SyncLocalPlayerAppearanceFromWorldState();
+            }
+
+            if (multiHitSwingSyncIds.Count > 0 && createActorPresenter) {
+                EnsureActorPresenter().SyncActorIds(multiHitSwingSyncIds);
+            }
         }
 
         int IRoHitContext.OwnJob => TryGetHitSnapshot(OwnActorId, out RoOnlineActorSnapshot own) ? DisplayJob(own) : -1;
@@ -2651,6 +2706,7 @@ namespace Ragnarok.World {
             ClearSkillVisualPresentation();
             hitPresenter?.Clear();
             deferredDeathVanishes.Clear();
+            multiHitSwings.Clear();
             recentFeedbackAnchors?.Clear();
 
             if (actorPresenter != null) {
