@@ -24,6 +24,7 @@ namespace Ragnarok.Rendering {
         static readonly int FxBoostId = Shader.PropertyToID("_RoLookFxBoost");
         static readonly int IndoorId = Shader.PropertyToID("_RoLookIndoor");
         static readonly int FxAlphaGammaId = Shader.PropertyToID("_RoLookFxAlphaGamma");
+        static readonly int FxGammaBlendId = Shader.PropertyToID("_RoLookFxGammaBlend");
         static readonly int WaterId = Shader.PropertyToID("_RoLookWater");
         static readonly int ReliefId = Shader.PropertyToID("_RoLookRelief");
         static readonly int WaterDeepId = Shader.PropertyToID("_RoLookWaterDeep");
@@ -53,6 +54,8 @@ namespace Ragnarok.Rendering {
         public float FxBoost = 1.0f;
         // effect translucency as the original's gamma blending (see RoClassicEffect.shader)
         public float FxAlphaGamma = 2.2f;
+        // linear project: effects blend as the original's gamma frame buffer (RoClassicEffect.shader); 0 = the alpha curve above
+        public float FxGammaBlend = 1f;
         // water: on, depth absorption, refraction strength, foam width (world units)
         public Vector4 Water = new Vector4(1f, 0.55f, 0.03f, 0.7f);
         // relief from texture luminance: ground, models
@@ -171,6 +174,7 @@ namespace Ragnarok.Rendering {
             Shader.SetGlobalVector(RimId, Rim);
             Shader.SetGlobalVector(WaterDeepId, WaterDeep);
             Shader.SetGlobalFloat(FxAlphaGammaId, QualitySettings.activeColorSpace == ColorSpace.Linear ? FxAlphaGamma : 1f);
+            Shader.SetGlobalFloat(FxGammaBlendId, QualitySettings.activeColorSpace == ColorSpace.Linear ? FxGammaBlend : 0f);
             Shader.SetGlobalVector(IndoorId, new Vector4(indoor, IndoorSpriteAmbient, IndoorBakedAdd, IndoorAlbedoLight));
         }
 
@@ -253,6 +257,7 @@ namespace Ragnarok.Rendering {
                 case "waterdeep": WaterDeep = V(WaterDeep); break;
                 case "shadow": ShadowStrength = F(1, ShadowStrength); break;
                 case "fx": FxBoost = F(1, FxBoost); FxAlphaGamma = F(2, FxAlphaGamma); break;
+                case "fxblend": FxGammaBlend = F(1, FxGammaBlend); break;
                 case "fire":
                     RoLookLampGlow.FireGlow = F(1, RoLookLampGlow.FireGlow);
                     RoLookLampGlow.FireIntensityScale = F(2, RoLookLampGlow.FireIntensityScale);

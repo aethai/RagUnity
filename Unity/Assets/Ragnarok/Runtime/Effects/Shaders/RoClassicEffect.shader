@@ -42,6 +42,7 @@ Shader "Ragnarok/RO Classic Effect" {
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareOpaqueTexture.hlsl"
             #include "Assets/Ragnarok/Runtime/Rendering/Shaders/RoFog.hlsl"
 
             TEXTURE2D(_BaseMap);
@@ -55,6 +56,8 @@ Shader "Ragnarok/RO Classic Effect" {
                 float _RoFogEnabled;
                 float _RoColorOp;
                 float _RoAlphaOp;
+                float _SrcBlend;
+                float _DstBlend;
             CBUFFER_END
 
             struct Attributes {
@@ -80,6 +83,30 @@ Shader "Ragnarok/RO Classic Effect" {
             // the colour in linear; blended in linear the same layer came out far brighter and denser (the torch glow of
             // Payon Cave as a solid orange slab). alpha^g restores the gamma look over dark backgrounds (1 = off)
             float _RoLookFxAlphaGamma;
+            // 1 = blend as the original's gamma frame buffer (RoLookRig, linear projects): the scene colour under the pixel
+            // (the opaque copy) gives the gamma result of the draw's blend, and the output is chosen so that the linear
+            // blend lands on it. Exact over the opaque scene, approximate over earlier transparent layers.
+            float _RoLookFxGammaBlend;
+
+            // the draw's blend factors with alpha a, for the factors the client's lists use (-1 = another factor)
+            float RoBlendFactor(float mode, float a) {
+                return mode == 1.0 ? 1.0 : mode == 5.0 ? a : mode == 10.0 ? 1.0 - a : mode == 0.0 ? 0.0 : -1.0;
+            }
+
+            // the linear output whose hardware blend equals the original's gamma blend of this colour over the opaque scene
+            bool RoGammaBlend(float4 positionHCS, inout half4 color) {
+                float a = saturate(color.a);
+                float fs = RoBlendFactor(_SrcBlend, a);
+                float fd = RoBlendFactor(_DstBlend, a);
+                if (fs <= 1e-4 || fd < 0.0) return false;
+                float2 uv = positionHCS.xy / _ScaledScreenParams.xy;
+                float3 dstLinear = SampleSceneColor(uv);
+                float3 dstGamma = LinearToSRGB(saturate(dstLinear));
+                float3 srcGamma = LinearToSRGB(saturate(color.rgb));
+                float3 target = SRGBToLinear(saturate(srcGamma * fs + dstGamma * fd));
+                color.rgb = clamp((target - dstLinear * fd) / fs, 0.0, 32.0);
+                return true;
+            }
 
             Varyings vert(Attributes input) {
                 Varyings output;
@@ -132,18 +159,25 @@ Shader "Ragnarok/RO Classic Effect" {
                     discard;
                 }
 
-                float alphaGamma = max(_RoLookFxAlphaGamma, 1.0);
-                color.a = pow(saturate(color.a), alphaGamma);
-
-                #if defined(_RO_MULTIPLY_ALPHA)
-                    color *= pow(saturate(input.color.a * _BaseColor.a), alphaGamma);
-                #endif
-
-                color.rgb *= max(_RoLookFxBoost, 1.0);
-
                 if (_RoFogEnabled > 0.5h) {
                     color.rgb = RoApplyFog(color.rgb, input.fogDepth);
                 }
+
+                bool gammaBlended = false;
+                #if !defined(_RO_MULTIPLY_ALPHA)
+                    if (_RoLookFxGammaBlend > 0.5) gammaBlended = RoGammaBlend(input.positionHCS, color);
+                #endif
+
+                if (!gammaBlended) {
+                    float alphaGamma = max(_RoLookFxAlphaGamma, 1.0);
+                    color.a = pow(saturate(color.a), alphaGamma);
+
+                    #if defined(_RO_MULTIPLY_ALPHA)
+                        color *= pow(saturate(input.color.a * _BaseColor.a), alphaGamma);
+                    #endif
+                }
+
+                color.rgb *= max(_RoLookFxBoost, 1.0);
                 return color;
             }
             ENDHLSL
