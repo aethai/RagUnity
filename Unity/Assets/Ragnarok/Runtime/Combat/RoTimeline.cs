@@ -88,6 +88,22 @@ namespace Ragnarok.Combat {
             return removed;
         }
 
+        /// <summary>The latest-due item <paramref name="match"/> accepts and its due time; false when none matches.</summary>
+        public bool TryGetLatest(Predicate<T> match, out float due, out T item) {
+            due = float.NegativeInfinity;
+            item = default;
+            bool found = false;
+            for (int i = 0; i < count; i++) {
+                if (heap[i].Due >= due && match(heap[i].Item)) {
+                    due = heap[i].Due;
+                    item = heap[i].Item;
+                    found = true;
+                }
+            }
+
+            return found;
+        }
+
         public void Clear() {
             Array.Clear(heap, 0, count);
             count = 0;

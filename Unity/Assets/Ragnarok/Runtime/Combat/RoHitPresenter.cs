@@ -219,6 +219,20 @@ namespace Ragnarok.Combat {
 
         public void Clear() => hits.Clear();
 
+        /// <summary>
+        /// When the hurt motion of the last hit queued on <paramref name="targetId"/> ends: its due time plus its damage
+        /// motion (attackedMT ms). False when no hit on the target is queued.
+        /// </summary>
+        public bool TryGetPendingHitsEnd(uint targetId, out float endSeconds) {
+            if (targetId == 0 || !hits.TryGetLatest(h => h.Target == targetId, out float due, out QueuedHit last)) {
+                endSeconds = 0f;
+                return false;
+            }
+
+            endSeconds = due + System.Math.Max(0, last.AttackedMT) / 1000f;
+            return true;
+        }
+
         /// <summary>The hit handler (0xbd9af6) on the target at the hit's due time.</summary>
         void RunHit(in QueuedHit hit, IRoHitContext context) {
             if (!context.TryGetHitActor(hit.Target, out RoHitActor target)) {

@@ -158,6 +158,9 @@ namespace Ragnarok.World {
         private Func<RoItemMetadataTable> ammunitionItemMetadataProvider;
         private int appliedServerTimeRevision = -1;
         private RoHitPresenter hitPresenter;
+        /// <summary>Monster death vanishes held until the hits queued on the monster have played (due time, event).</summary>
+        private readonly List<KeyValuePair<float, RoMapEntryDrainEvent>> deferredDeathVanishes =
+            new List<KeyValuePair<float, RoMapEntryDrainEvent>>();
         /// <summary>Warp NPC actor id → its classic EF 321 handle (launched once per warp, ended when it leaves).</summary>
         private readonly Dictionary<uint, uint> activeWarpPortalEffects = new Dictionary<uint, uint>();
         private readonly Dictionary<uint, RoRecentFeedbackAnchor> recentFeedbackAnchors =
@@ -298,6 +301,7 @@ namespace Ragnarok.World {
 
                 using (HitsMarker.Auto()) {
                     EnsureHitPresenter().ProcessDue(presentationNowSeconds, this);
+                    ApplyDueDeferredDeathVanishes(presentationNowSeconds);
                 }
                 SyncSelectedTargetLockIndicator();
             } finally {
@@ -602,6 +606,7 @@ namespace Ragnarok.World {
             combatTrace.Clear();
             movementTrace.Clear();
             hitPresenter?.Clear();
+            deferredDeathVanishes.Clear();
             recentFeedbackAnchors.Clear();
             Ragnarok.UI.RoClassicChatBalloons.ClearAll();
             ClearWarpPortalEffects();
@@ -721,6 +726,7 @@ namespace Ragnarok.World {
             movementTrace.Clear();
             Ragnarok.UI.RoClassicChatBalloons.ClearAll();
             hitPresenter?.Clear();
+            deferredDeathVanishes.Clear();
             recentFeedbackAnchors.Clear();
             worldState.Clear();
             ClearWarpPortalEffects();
@@ -981,6 +987,10 @@ namespace Ragnarok.World {
             using (ApplyOrderedDrainEventsMarker.Auto()) {
                 for (int i = 0; i < orderedEvents.Length; i++) {
                     RoMapEntryDrainEvent drainEvent = orderedEvents[i];
+                    if (syncPresentation && TryDeferDeathVanish(drainEvent, localSeconds)) {
+                        continue;
+                    }
+
                     RememberFeedbackPositionsBeforeWorldState(drainEvent, localSeconds);
                     PresentActorDeathBeforeVanish(drainEvent);
                     PresentActorTeleportBeforeVanish(drainEvent);
@@ -1615,6 +1625,65 @@ namespace Ragnarok.World {
 
             for (int i = 0; i < drain.ActorVanishes.Length; i++) {
                 PresentActorDeathBeforeVanish(drain.ActorVanishes[i]);
+            }
+        }
+
+        /// <summary>
+        /// The original lets the hits queued on a monster play before it dies: a Sonic Blow's eight hits run out over
+        /// 1.4 s on a standing target that falls after the last hurt motion, although the server sends the death right
+        /// after the damage. A monster's death vanish waits here until its queued hits and their hurt motion are over;
+        /// before, the target left at once and the rest of the series showed nothing.
+        /// </summary>
+        private bool TryDeferDeathVanish(RoMapEntryDrainEvent drainEvent, float now) {
+            if (drainEvent.Kind == RoMapEntryDrainEventKind.ActorEntry && deferredDeathVanishes.Count > 0) {
+                // the same unit enters again (respawn) while its death is held: the death goes first
+                uint entryId = drainEvent.ActorEntry.Aid;
+                for (int i = 0; i < deferredDeathVanishes.Count; i++) {
+                    if (deferredDeathVanishes[i].Value.ActorVanish.Gid == entryId) {
+                        ApplyDeferredDeathVanishes(float.PositiveInfinity);
+                        break;
+                    }
+                }
+
+                return false;
+            }
+
+            if (drainEvent.Kind != RoMapEntryDrainEventKind.ActorVanish || hitPresenter == null) {
+                return false;
+            }
+
+            RoZcNotifyVanish vanish = drainEvent.ActorVanish;
+            if (vanish.Type != RoMapActorVanishType.Died || IsOwnActorId(vanish.Gid) ||
+                !worldState.TryGetActor(vanish.Gid, out RoOnlineActorSnapshot actor) ||
+                actor.ObjectType == RoMapActorObjectType.Player ||
+                !hitPresenter.TryGetPendingHitsEnd(vanish.Gid, out float end) || end <= now) {
+                return false;
+            }
+
+            deferredDeathVanishes.Add(new KeyValuePair<float, RoMapEntryDrainEvent>(end, drainEvent));
+            return true;
+        }
+
+        private void ApplyDueDeferredDeathVanishes(float now) {
+            if (deferredDeathVanishes.Count > 0) {
+                ApplyDeferredDeathVanishes(now);
+            }
+        }
+
+        private void ApplyDeferredDeathVanishes(float now) {
+            List<RoMapEntryDrainEvent> due = null;
+            for (int i = 0; i < deferredDeathVanishes.Count; ) {
+                if (deferredDeathVanishes[i].Key <= now) {
+                    (due ??= new List<RoMapEntryDrainEvent>()).Add(deferredDeathVanishes[i].Value);
+                    deferredDeathVanishes.RemoveAt(i);
+                } else {
+                    i++;
+                }
+            }
+
+            if (due != null) {
+                ApplyDrainInternal(new RoMapEntryDrainResult(
+                    null, null, null, null, null, null, null, null, due.ToArray(), false, null), syncPresentation: true);
             }
         }
 
@@ -2581,6 +2650,7 @@ namespace Ragnarok.World {
             HideSelectedTargetLockIndicator();
             ClearSkillVisualPresentation();
             hitPresenter?.Clear();
+            deferredDeathVanishes.Clear();
             recentFeedbackAnchors?.Clear();
 
             if (actorPresenter != null) {
