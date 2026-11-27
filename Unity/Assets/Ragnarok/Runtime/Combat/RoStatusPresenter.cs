@@ -336,8 +336,10 @@ namespace Ragnarok.Combat {
             foreach (RoStatusAction action in actions) {
                 if (action.Kind == RoStatusActionKind.MsgEffect) {
                     // SI_ON_PUSH_CART's cart (the CMsgEffect type 3 in actor +0x380) is the actor's Cart layer, which follows
-                    // the owner behind it (RoActorLayeredVisual); an overlay here drew a second cart standing at the feet
-                    if (heldSlot != null && heldSlot.Contains("cartOrWug")) {
+                    // the owner behind it (RoActorLayeredVisual); an overlay here drew a second cart standing at the feet.
+                    // The falcon option's CMsgEffect (actor +0x37c) is the flying falcon the presenters already keep as a
+                    // rental companion (RoRentalCompanionVisual): an overlay here drew a second falcon at the hunter's feet
+                    if (heldSlot != null && (heldSlot.Contains("cartOrWug") || heldSlot.Contains("falcon"))) {
                         heldSlot = null;
                         continue;
                     }
