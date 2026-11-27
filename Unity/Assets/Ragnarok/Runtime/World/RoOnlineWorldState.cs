@@ -165,6 +165,7 @@ namespace Ragnarok.World {
             ActionDurationMilliseconds = state.ActionDurationMilliseconds;
             ActionMotionTimeMilliseconds = state.ActionMotionTimeMilliseconds;
             ActionRevision = state.ActionRevision;
+            RelocationRevision = state.RelocationRevision;
             CompletesActionToStandby = state.CompletesActionToStandby;
             Speed = state.Speed;
             BaseLevel = state.BaseLevel;
@@ -237,6 +238,8 @@ namespace Ragnarok.World {
         /// <summary>The action's attackMT (basic attack, ZC_NOTIFY_SKILL): its speed factor; 0 = plain ACT speed.</summary>
         public int ActionMotionTimeMilliseconds { get; }
         public int ActionRevision { get; }
+        /// <summary>Changes when the server moved the actor to another cell while it kept its action (a skill's slide).</summary>
+        public int RelocationRevision { get; }
         public bool CompletesActionToStandby { get; }
         public short Speed { get; }
         public short BaseLevel { get; }
@@ -1506,7 +1509,7 @@ namespace Ragnarok.World {
                 return;
             }
 
-            if (TryApplyStopMovePreservingBackSlideCasting(actor, stop)) {
+            if (TryApplyStopMovePreservingBackSlideCasting(actor, stop) || TryApplyStopMoveKeepingAction(actor, stop)) {
                 TouchPresentationRevision();
                 return;
             }
@@ -1881,6 +1884,10 @@ namespace Ragnarok.World {
             }
 
             movingActorServerIds.Remove(actor.ServerId);
+            if (actor.CellX != stop.X || actor.CellY != stop.Y) {
+                actor.RelocationRevision++;
+            }
+
             actor.CellX = stop.X;
             actor.CellY = stop.Y;
             actor.Direction = NormalizeInternalDirection(actor.Direction);
@@ -1890,6 +1897,55 @@ namespace Ragnarok.World {
             actor.PreserveBackSlideCastingOnNextStopMove = false;
             return true;
         }
+
+        /// <summary>
+        /// A skill that moves its caster ends with a slide (ZC_HIGHJUMP) and a fixpos (ZC_STOPMOVE) right after its damage:
+        /// Asura Strike lands the monk next to the target. The original keeps the caster's action through that fixpos (the
+        /// monk plays its Asura poses after the slide, compared live 27.11); here the stop turned it into Idle at once and
+        /// Asura showed no caster motion. A stop on an actor that is not walking and still plays an attack, skill, cast,
+        /// throw or pickup action sets its cell and keeps the action.
+        /// </summary>
+        private bool TryApplyStopMoveKeepingAction(RoOnlineActorState actor, RoZcStopMove stop) {
+            if (!KeepsActionOnStop(actor)) {
+                return false;
+            }
+
+            movingActorServerIds.Remove(actor.ServerId);
+            bool moved = actor.CellX != stop.X || actor.CellY != stop.Y;
+            actor.CellX = stop.X;
+            actor.CellY = stop.Y;
+            actor.Direction = NormalizeInternalDirection(actor.Direction);
+            actor.MoveStartTime = 0;
+            if (moved) {
+                actor.RelocationRevision++;   // the presenters move the sprite there without ending the action
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Whether a ZC_STOPMOVE now keeps the actor's action (see TryApplyStopMoveKeepingAction). The own character's
+        /// presentation asks the same question before or after the world state applies the stop, so both agree.
+        /// </summary>
+        public bool KeepsActionOnStop(uint actorId) =>
+            TryGetActorStateByServerOrAccountId(actorId, out RoOnlineActorState actor) && KeepsActionOnStop(actor);
+
+        // an action without a server start time (the pickup's 0) has no end to compare with
+        private bool KeepsActionOnStop(RoOnlineActorState actor) =>
+            actor != null &&
+            !actor.HasMovePath &&
+            actor.SpawnState != RoMapActorSpawnState.Dead &&
+            !actor.IsPlayingDead &&
+            IsStopKeepableAction(actor.Motion) &&
+            actor.ActionStartTime != 0 &&
+            actor.ActionDurationMilliseconds > 0 &&
+            HasServerTime &&
+            !HasServerTimeReached(LatestServerTimeMilliseconds, unchecked(actor.ActionStartTime + (uint) actor.ActionDurationMilliseconds));
+
+        private static bool IsStopKeepableAction(RoOnlineActorMotion motion) =>
+            motion == RoOnlineActorMotion.Attack || motion == RoOnlineActorMotion.Attack2 || motion == RoOnlineActorMotion.Attack3 ||
+            motion == RoOnlineActorMotion.Skill || motion == RoOnlineActorMotion.Casting || motion == RoOnlineActorMotion.Throwing ||
+            motion == RoOnlineActorMotion.Pickup;
 
         private void ApplyFailedSkillStandby(RoOnlineActorState actor) {
             if (actor.ObjectType != RoMapActorObjectType.Player ||
@@ -2892,6 +2948,7 @@ namespace Ragnarok.World {
             ActionStartTime = 0;
             ActionDurationMilliseconds = 0;
             ActionRevision = 0;
+            RelocationRevision = 0;
             CompletesActionToStandby = false;
             PendingSafetyWallCastX = 0;
             PendingSafetyWallCastY = 0;
@@ -2974,6 +3031,7 @@ namespace Ragnarok.World {
         public int ActionDurationMilliseconds { get; set; }
         public int ActionMotionTimeMilliseconds { get; set; }
         public int ActionRevision { get; set; }
+        public int RelocationRevision { get; set; }
         public bool CompletesActionToStandby { get; set; }
         public int PendingSafetyWallCastX { get; set; }
         public int PendingSafetyWallCastY { get; set; }

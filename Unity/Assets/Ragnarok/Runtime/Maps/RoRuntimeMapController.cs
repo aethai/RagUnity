@@ -1456,7 +1456,8 @@ namespace Ragnarok.Maps {
             int x,
             int y,
             RoActorDirection? facing,
-            uint placementServerTime = 0
+            uint placementServerTime = 0,
+            bool keepAction = false
         ) {
             if (localPlayer == null) {
                 return false;
@@ -1464,7 +1465,11 @@ namespace Ragnarok.Maps {
 
             var cell = new Vector2Int(x, y);
             if (localPlayer.TryGetComponent(out RoClickToMoveController clickToMove)) {
-                clickToMove.ApplyAuthoritativeStopCell(cell, facing, placementServerTime);
+                if (keepAction) {
+                    clickToMove.ApplyAuthoritativeStopCellKeepingAction(cell);
+                } else {
+                    clickToMove.ApplyAuthoritativeStopCell(cell, facing, placementServerTime);
+                }
             } else if (gridSelector != null && gridSelector.IsCellAvailable(cell)) {
                 localPlayer.position = gridSelector.GetCellWorldCenter(cell, ActorGroundOffset);
             } else {

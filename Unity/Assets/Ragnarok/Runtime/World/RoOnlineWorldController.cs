@@ -1126,10 +1126,14 @@ namespace Ragnarok.World {
                 return;
             }
 
+            // a stop that keeps the action (a skill's slide) moves the own character without ending its action, even
+            // when the skill's damage came in an earlier drain; the world state answers with the rule it applies to the
+            // stop (the same before and after it applied it)
             ResolveRuntimeMapController(forceLookup: true)?.TryApplyLocalPlayerStopCell(
                 drainEvent.StopMove.X,
                 drainEvent.StopMove.Y,
-                null);
+                null,
+                keepAction: worldState.KeepsActionOnStop(drainEvent.StopMove.Aid));
         }
 
         // The server signals night with the EFST_SKE status (id 160) on the local player: active on a

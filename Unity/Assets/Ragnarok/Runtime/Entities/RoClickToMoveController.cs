@@ -580,6 +580,46 @@ namespace Ragnarok.Entities {
                 VisualStopSettleReasonStopMove);
         }
 
+        /// <summary>
+        /// ZC_STOPMOVE after a skill's slide (Asura Strike) while its action still plays: the character glides to the cell and
+        /// keeps the skill's action; the ordinary stop settles to Idle and dropped it. (Back Slide keeps its own path.)
+        /// </summary>
+        public void ApplyAuthoritativeStopCellKeepingAction(Vector2Int cell) {
+            Vector3 worldPosition = ResolveCellWorldPosition(cell, groundOffset);
+            RecordLocalMovementTrace(
+                RoMovementTraceEventType.StopMove,
+                $"STOPMOVE keep action cell={FormatCell(cell)}");
+            float distance = IsFinite(transform.position) && IsFinite(worldPosition)
+                ? RoMovePresentation.FlatDistance(transform.position, worldPosition)
+                : float.PositiveInfinity;
+            Vector3 startWorld = transform.position;
+            ClearPendingTargetAction();
+            ClearLocalMovement();
+            ClearObservedOwnServerMove();
+            lastMovementTraceSegmentIndex = -1;
+            hasSubmittedHeldGridCell = false;
+            hasSubmittedHeldHeadLookDirection = false;
+            targetPosition = worldPosition;
+            stepStartPosition = worldPosition;
+            stepEndPosition = worldPosition;
+            if (float.IsInfinity(distance) || distance < 0.001f) {
+                if (!float.IsInfinity(distance)) {
+                    transform.position = worldPosition;
+                }
+
+                return;
+            }
+
+            hasVisualStopSettle = true;
+            visualStopSettleStartWorld = startWorld;
+            visualStopSettleTargetWorld = worldPosition;
+            visualStopSettleDuration = 0.12f;
+            visualStopSettleStartedAt = GetPresentationTimeSeconds();
+            visualStopSettleReason = "KeepAction";
+            hasVisualStopSettleFacing = false;
+            visualStopSettleFacing = facingDirection;
+        }
+
         public void SnapToAuthoritativeWorldPosition(
             Vector3 worldPosition,
             RoActorDirection? facing,

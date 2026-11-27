@@ -1041,6 +1041,8 @@ namespace Ragnarok.World {
                 !actor.HasIncrementalSnapshotState ||
                 actor.PendingDeathRelease ||
                 actor.HasMove ||
+                actor.HasRelocationGlide ||
+                actor.RelocationRevision != snapshot.RelocationRevision ||
                 IsFinitePresentationMotion(actor.LastMotion) ||
                 snapshot.HasMovePath ||
                 snapshot.Motion == RoOnlineActorMotion.Moving ||
@@ -2530,8 +2532,14 @@ namespace Ragnarok.World {
             if (interpolateMovement &&
                 TryResolveInterpolatedMovePosition(actor, presentedActor, nowSeconds, out Vector3 interpolatedPosition)) {
                 presentedActor.ClearInterruptedMoveActionVisualState();
+                presentedActor.HasRelocationGlide = false;   // a walk replaces the slide's glide
+                presentedActor.RelocationRevision = actor.RelocationRevision;
                 presentedActor.HasPosition = true;
                 return interpolatedPosition;
+            }
+
+            if (TryResolveRelocationGlidePosition(actor, presentedActor, nowSeconds, out Vector3 relocatedPosition)) {
+                return relocatedPosition;
             }
 
             if (presentedActor.HasPosition && ShouldHoldCurrentVisualPosition(actor)) {
@@ -2567,6 +2575,49 @@ namespace Ragnarok.World {
 
             presentedActor.HasPosition = true;
             return position;
+        }
+
+        /// <summary>The glide of a skill's slide (Asura Strike, Back Slide, a knockback while attacking).</summary>
+        private const float RelocationGlideSeconds = 0.12f;
+
+        /// <summary>
+        /// The server moved the actor to another cell while it kept its action (ZC_STOPMOVE after a slide): the sprite glides
+        /// there and keeps the action. Without it the action's visual hold kept the sprite on the old cell until the next walk.
+        /// </summary>
+        private bool TryResolveRelocationGlidePosition(RoOnlineActorSnapshot actor, PresentedActor presentedActor, float nowSeconds, out Vector3 position) {
+            position = default;
+            if (presentedActor == null) {
+                return false;
+            }
+
+            if (!presentedActor.HasPosition || presentedActor.Root == null) {
+                presentedActor.RelocationRevision = actor.RelocationRevision;
+                presentedActor.HasRelocationGlide = false;
+                return false;
+            }
+
+            if (actor.RelocationRevision != presentedActor.RelocationRevision) {
+                presentedActor.RelocationRevision = actor.RelocationRevision;
+                Vector3 target = ResolveCellWorldPosition(GetDisplayCell(actor), ShouldUseWalkableGridPosition(actor));
+                presentedActor.HasRelocationGlide = true;
+                presentedActor.RelocationGlideStartWorld = presentedActor.Root.transform.position;
+                presentedActor.RelocationGlideTargetWorld = target;
+                presentedActor.RelocationGlideStartLocalTime = nowSeconds;
+                presentedActor.ClearMove();
+                presentedActor.ClearInterruptedMoveActionVisualState();
+            }
+
+            if (!presentedActor.HasRelocationGlide) {
+                return false;
+            }
+
+            float progress = Mathf.Clamp01((nowSeconds - presentedActor.RelocationGlideStartLocalTime) / RelocationGlideSeconds);
+            position = Vector3.Lerp(presentedActor.RelocationGlideStartWorld, presentedActor.RelocationGlideTargetWorld, Mathf.SmoothStep(0f, 1f, progress));
+            if (progress >= 1f) {
+                presentedActor.HasRelocationGlide = false;
+            }
+
+            return true;
         }
 
         // True when a frozen/stone actor's sprite is still visibly away from its authoritative cell,
@@ -3121,7 +3172,7 @@ namespace Ragnarok.World {
                 return false;
             }
 
-            if (actor.PendingDeathRelease || actor.HasMove || IsFinitePresentationMotion(actor.LastMotion)) {
+            if (actor.PendingDeathRelease || actor.HasMove || actor.HasRelocationGlide || IsFinitePresentationMotion(actor.LastMotion)) {
                 return true;
             }
 
@@ -4447,6 +4498,12 @@ namespace Ragnarok.World {
             public float LastMoveDistanceToAuthoritative { get; set; }
             public int LastMoveTraceSegmentIndex { get; set; }
             public bool HasInterruptedMoveActionVisualHold { get; set; }
+            /// <summary>The world state's relocation revision this actor was last placed for, and the glide to the new cell.</summary>
+            public int RelocationRevision { get; set; }
+            public bool HasRelocationGlide { get; set; }
+            public Vector3 RelocationGlideStartWorld { get; set; }
+            public Vector3 RelocationGlideTargetWorld { get; set; }
+            public float RelocationGlideStartLocalTime { get; set; }
             public int InterruptedMoveActionRevision { get; set; }
             public bool HasInterruptedMoveActionSettle { get; set; }
             public Vector3 InterruptedMoveActionSettleStartWorld { get; set; }
@@ -4535,6 +4592,8 @@ namespace Ragnarok.World {
 
             public void ResetTransientState() {
                 HasPosition = false;
+                RelocationRevision = 0;
+                HasRelocationGlide = false;
                 ActionRevision = 0;
                 ActionStartLocalTime = 0f;
                 PendingDeathRelease = false;
