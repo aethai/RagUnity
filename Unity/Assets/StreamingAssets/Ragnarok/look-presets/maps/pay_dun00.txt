@@ -1,10 +1,10 @@
 # Payon Cave: the approved look ("było", 10-05): no colour grading at all (no tonemap / split / vignette / DoF, bloom 0),
 # the cave's own light - warm torch islands in a soft grey-violet haze (volumetric air), dust, torch shadows
 preset base
-indoor 2 0.7 0.25
+indoor 4.5 2.2 1.6
 fire 0.9 5 1.5 0.25 3.2
 tonemap none
-exposure 0
+exposure -0.5
 contrast 0
 saturation 0
 temp 0 0
@@ -13,7 +13,7 @@ vignette 0
 split 0.5 0.5 0.5 0.5 0.5 0.5 0
 dof 0 200
 motes 120 6 0.12
-vol 0.045 0.15 -1 140
+vol 0.018 0.15 -1 140
 volamb 0.25 0.22 0.45 6
 volp 40 0.35 0 0
 lightshadows 4 0.85

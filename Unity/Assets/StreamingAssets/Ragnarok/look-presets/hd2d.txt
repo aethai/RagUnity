@@ -1,6 +1,6 @@
 # "remaster HD-2D": deep darkness, warm islands of torch light, violet shadows, depth of field, dust in the air
 preset base
-indoor 2 0.7 0.25
+indoor 4 1.8 1.2
 fire 0.9 5 1.5 0.25 3.2
 exposure -0.3
 contrast 24

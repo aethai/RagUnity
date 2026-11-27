@@ -41,7 +41,7 @@ namespace Ragnarok.Effects {
         public const float DefaultDayIntensity = 1f;
         public const float DefaultNightIntensity = 0.22f;
         public const float DefaultHorizonIntensity = 0.38f;
-        public const float DefaultActorNightStrength = 0.7f;
+        public const float DefaultActorNightStrength = 0.35f;
         public static readonly Color DefaultDawnLightColor = new Color(1f, 0.55f, 0.32f, 1f);
         public static readonly Color DefaultDayLightColor = new Color(1f, 1f, 0.98f, 1f);
         public static readonly Color DefaultDuskLightColor = new Color(1f, 0.43f, 0.28f, 1f);
@@ -49,7 +49,7 @@ namespace Ragnarok.Effects {
         public static readonly Color DefaultDawnAmbientColor = new Color(0.28f, 0.22f, 0.2f, 1f);
         public static readonly Color DefaultDayAmbientColor = new Color(0.36f, 0.37f, 0.36f, 1f);
         public static readonly Color DefaultDuskAmbientColor = new Color(0.27f, 0.19f, 0.2f, 1f);
-        public static readonly Color DefaultNightAmbientColor = new Color(0.045f, 0.055f, 0.11f, 1f);
+        public static readonly Color DefaultNightAmbientColor = new Color(0.22f, 0.25f, 0.40f, 1f);
 
         [SerializeField, HideInInspector] private int serializedVersion;
 

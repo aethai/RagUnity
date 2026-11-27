@@ -35,7 +35,7 @@ namespace Ragnarok.Rendering {
         public Vector4 Sky = new Vector4(0.75f, 0.88f, 1.15f, 0.5f);
         // the sky tint and scale at night (lerped by the day / night controller's daylight factor): a deep blue night
         // with the lamps as warm islands
-        public Vector4 NightSky = new Vector4(0.45f, 0.62f, 1.45f, 0.75f);
+        public Vector4 NightSky = new Vector4(0.55f, 0.7f, 1.4f, 1.6f);
         // ground bounce tint, and how far the hemisphere leans to it on surfaces facing down
         public Vector4 Ground = new Vector4(1.04f, 0.96f, 0.86f, 0.6f);
         // sun tint and intensity (on top of the URP main light the map sets up)
@@ -77,6 +77,9 @@ namespace Ragnarok.Rendering {
         public string ActiveProfile { get; private set; } = "none";
         // with no sky: how strongly the albedo is lit (the rest is the bake's colour, as in the original)
         public float IndoorAlbedoLight = 1.0f;
+        // with no sky: stops added to the exposure (a dungeon gets no sun or sky fill, the grading alone would leave it murky)
+        public float IndoorExposure = 0f;
+        float exposureBase = -0.55f;
         // depth of field: 0 = off, else the aperture (f-stop, lower = blurrier); focus on the camera's target
         public float DofAperture = 0f;
         public float DofFocalLength = 120f;
@@ -214,6 +217,7 @@ namespace Ragnarok.Rendering {
                 : mapController != null && mapController.CloudShadows != null && mapController.CloudShadows.IsSkylessMap ? 1f : 0f;
             if (currentIndoor != indoor) {
                 indoor = currentIndoor;
+                ApplyExposure();
                 PushGlobals();
             }
 
@@ -286,7 +290,8 @@ namespace Ragnarok.Rendering {
                     RoLookLampGlow.RangeScale = F(4, RoLookLampGlow.RangeScale);
                     RoLookLampGlow.IntensityScale = F(5, RoLookLampGlow.IntensityScale);
                     break;
-                case "exposure": color.postExposure.value = F(1, color.postExposure.value); break;
+                case "exposure": exposureBase = F(1, exposureBase); ApplyExposure(); break;
+                case "indoorexposure": IndoorExposure = F(1, IndoorExposure); ApplyExposure(); break;
                 case "contrast": color.contrast.value = F(1, color.contrast.value); break;
                 case "saturation": color.saturation.value = F(1, color.saturation.value); break;
                 case "temp": whiteBalance.temperature.value = F(1, whiteBalance.temperature.value); whiteBalance.tint.value = F(2, whiteBalance.tint.value); break;
@@ -392,6 +397,10 @@ namespace Ragnarok.Rendering {
         /// A look variant: every line of the preset (<see cref="ResolvePreset"/>) is one !lookset command (a preset lists
         /// every value it relies on, so switching variants never leaves one behind).
         /// </summary>
+        void ApplyExposure() {
+            if (color != null) color.postExposure.value = exposureBase + indoor * IndoorExposure;
+        }
+
         string ApplyPreset(string name) {
             string path = ResolvePreset(name);
             if (path == null) return "no preset " + name;
