@@ -361,6 +361,8 @@ namespace Ragnarok.Network {
         public const ushort ZcMsgStateChange = 0x0196;
         public const ushort ZcNotifyEffect = 0x019b;
         public const ushort ZcDispel = 0x01b9;
+        public const ushort ZcSpirits = 0x01d0;
+        public const ushort ZcSpirits2 = 0x01e1;
         public const ushort ZcNotifyEffect2 = 0x01f3;
         public const ushort ZcNotifyEffect3 = 0x0284;
         public const ushort ZcNpcShowEfstUpdate = 0x028a;

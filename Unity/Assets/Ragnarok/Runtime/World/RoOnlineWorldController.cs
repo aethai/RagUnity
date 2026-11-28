@@ -161,6 +161,16 @@ namespace Ragnarok.World {
         /// <summary>Monster death vanishes held until the hits queued on the monster have played (due time, event).</summary>
         /// <summary>/swing: the further swings of multi-hit series (caster, swing length in ms) on the presentation clock.</summary>
         private readonly RoTimeline<KeyValuePair<uint, int>> multiHitSwings = new RoTimeline<KeyValuePair<uint, int>>();
+        private readonly Dictionary<uint, SpiritSphereVisual> spiritSphereVisuals = new Dictionary<uint, SpiritSphereVisual>();
+        private readonly List<RoOnlineActorSpiritSnapshot> spiritSphereSnapshots = new List<RoOnlineActorSpiritSnapshot>();
+        private readonly List<uint> spiritSphereRemovals = new List<uint>();
+        private int spiritSphereSyncStamp;
+        private int spiritSphereSyncedRevision = -1;
+        private int spiritSphereSyncedPresentationRevision = -1;
+        private bool spiritSpherePending;
+        private float spiritSphereNextAliveCheckTime;
+        private Transform spiritSphereLocalPlayer;
+        private const float SpiritSphereAliveCheckSeconds = 1f;
         private readonly List<uint> multiHitSwingSyncIds = new List<uint>(2);
         private readonly List<KeyValuePair<float, RoMapEntryDrainEvent>> deferredDeathVanishes =
             new List<KeyValuePair<float, RoMapEntryDrainEvent>>();
@@ -300,6 +310,7 @@ namespace Ragnarok.World {
 
                 using (StatusesMarker.Auto()) {
                     SyncActorStatuses(Time.deltaTime);
+                    SyncSpiritSpheres();
                 }
 
                 using (HitsMarker.Auto()) {
@@ -433,6 +444,7 @@ namespace Ragnarok.World {
             }
 
             if (expectedEffectManager != null && ReferenceEquals(effectManager, expectedEffectManager)) {
+                ClearSpiritSphereVisuals();   // the handles belong to the manager going away
                 SetEffectManager(null);
             }
         }
@@ -612,6 +624,7 @@ namespace Ragnarok.World {
             hitPresenter?.Clear();
             deferredDeathVanishes.Clear();
             multiHitSwings.Clear();
+            ClearSpiritSphereVisuals();
             recentFeedbackAnchors.Clear();
             Ragnarok.UI.RoClassicChatBalloons.ClearAll();
             ClearWarpPortalEffects();
@@ -733,6 +746,7 @@ namespace Ragnarok.World {
             hitPresenter?.Clear();
             deferredDeathVanishes.Clear();
             multiHitSwings.Clear();
+            ClearSpiritSphereVisuals();
             recentFeedbackAnchors.Clear();
             worldState.Clear();
             ClearWarpPortalEffects();
@@ -2711,6 +2725,7 @@ namespace Ragnarok.World {
             hitPresenter?.Clear();
             deferredDeathVanishes.Clear();
             multiHitSwings.Clear();
+            ClearSpiritSphereVisuals();
             recentFeedbackAnchors?.Clear();
 
             if (actorPresenter != null) {
@@ -2862,6 +2877,207 @@ namespace Ragnarok.World {
             using (StatusTickMarker.Auto()) {
                 handler.Tick(deltaSeconds, this);
             }
+        }
+
+        private sealed class SpiritSphereVisual {
+            public int Count;
+            public int EffectId;
+            public Transform Follow;
+            public uint Handle;
+            public int Stamp;
+        }
+
+        /// <summary>
+        /// Keeps one classic sphere effect on every actor that holds spirit spheres (ZC_SPIRITS): launched once the actor
+        /// is presented and drawn (not hidden / cloaked / invisible), relaunched when the count, the sphere kind or the
+        /// actor's transform changes, ended when the spheres go or the actor leaves. Only its own handle is ended, so a
+        /// status effect on the same id stays. The pass runs only when something it depends on changed; whether the
+        /// effects are still alive (asking joins the classic render job) is checked once a second.
+        /// </summary>
+        private void SyncSpiritSpheres() {
+            worldState.DrainRemovedSpiritActors(spiritSphereRemovals);
+            if (spiritSphereRemovals.Count > 0) {
+                RoEffectManager removalManager = ResolveEffectManager(forceLookup: false);
+                foreach (uint actorId in spiritSphereRemovals) {
+                    EndSpiritSphereVisual(removalManager, actorId);
+                }
+            }
+
+            if (spiritSphereVisuals.Count == 0 && !worldState.HasSpiritActors) {
+                return;
+            }
+
+            float now = Time.unscaledTime;
+            bool aliveCheck = spiritSphereVisuals.Count > 0 && now >= spiritSphereNextAliveCheckTime;
+            if (!spiritSpherePending && !aliveCheck &&
+                worldState.SpiritRevision == spiritSphereSyncedRevision &&
+                worldState.PresentationRevision == spiritSphereSyncedPresentationRevision &&
+                !SpiritSphereFollowChanged()) {
+                return;
+            }
+
+            spiritSphereSyncedRevision = worldState.SpiritRevision;
+            spiritSphereSyncedPresentationRevision = worldState.PresentationRevision;
+            spiritSpherePending = false;
+            if (aliveCheck) {
+                spiritSphereNextAliveCheckTime = now + SpiritSphereAliveCheckSeconds;
+            }
+
+            RoEffectManager manager = ResolveEffectManager(forceLookup: false);
+            bool canSpawn = manager != null && manager.HasAssetDatabase && Ragnarok.Effects.Classic.RoClassicEffectBridge.Enabled;
+            int stamp = ++spiritSphereSyncStamp;
+            worldState.SnapshotActorSpirits(spiritSphereSnapshots);
+            foreach (RoOnlineActorSpiritSnapshot snapshot in spiritSphereSnapshots) {
+                int effectId = RoOriginalCombatRules.ResolveSpiritSphereEffectId(snapshot.BaseJob);
+                if (effectId < 0 || IsSpiritSphereHolderHidden(snapshot)) {
+                    continue;   // ends a shown visual; the count stays, so it comes back when the actor shows again
+                }
+
+                if (!TryResolveSpiritSphereFollow(snapshot.ServerId, out Transform follow)) {
+                    spiritSpherePending = true;   // not presented yet: try again next frame
+                    continue;
+                }
+
+                // unclamped: the effect draws at most 5 orbs but reads past 5 for the bigger orbs (6..15 spheres)
+                int count = snapshot.Count;
+                spiritSphereVisuals.TryGetValue(snapshot.ServerId, out SpiritSphereVisual visual);
+                if (visual != null && visual.Count == count && visual.EffectId == effectId && visual.Follow == follow &&
+                    (!aliveCheck || manager == null || manager.IsClassicEffectAlive(visual.Handle))) {
+                    visual.Stamp = stamp;
+                    continue;
+                }
+
+                if (!canSpawn) {
+                    if (visual != null) {
+                        visual.Stamp = stamp;   // keep what is shown until the engine can relaunch it
+                    }
+
+                    spiritSpherePending = true;
+                    continue;
+                }
+
+                if (visual == null) {
+                    if (spiritSphereVisuals.Count == 0) {
+                        spiritSphereNextAliveCheckTime = now + SpiritSphereAliveCheckSeconds;
+                    }
+
+                    visual = new SpiritSphereVisual();
+                    spiritSphereVisuals[snapshot.ServerId] = visual;
+                } else if (visual.Handle != 0) {
+                    manager.EndClassicEffect(visual.Handle);
+                }
+
+                visual.Count = count;
+                visual.EffectId = effectId;
+                visual.Follow = follow;
+                visual.Handle = SpawnSpiritSpheres(manager, snapshot.ServerId, effectId, count, follow);
+                if (visual.Handle != 0) {
+                    visual.Stamp = stamp;
+                } else {
+                    spiritSpherePending = true;   // dropped below; retried next frame
+                }
+            }
+
+            spiritSphereRemovals.Clear();
+            foreach (KeyValuePair<uint, SpiritSphereVisual> entry in spiritSphereVisuals) {
+                if (entry.Value.Stamp != stamp) {
+                    spiritSphereRemovals.Add(entry.Key);
+                }
+            }
+
+            foreach (uint actorId in spiritSphereRemovals) {
+                EndSpiritSphereVisual(manager, actorId);
+            }
+
+            spiritSphereLocalPlayer = ResolveSpiritSphereLocalPlayer();
+        }
+
+        /// <summary>A shown visual lost its transform (destroyed, or the own player object was replaced).</summary>
+        private bool SpiritSphereFollowChanged() {
+            foreach (SpiritSphereVisual visual in spiritSphereVisuals.Values) {
+                if (visual.Follow == null) {
+                    return true;
+                }
+            }
+
+            return OwnActorId != 0 && ResolveSpiritSphereLocalPlayer() != spiritSphereLocalPlayer;
+        }
+
+        private Transform ResolveSpiritSphereLocalPlayer() {
+            RoRuntimeMapController mapController = ResolveRuntimeMapController();
+            return mapController != null ? mapController.LocalPlayer : null;
+        }
+
+        /// <summary>Hiding, Cloaking and GM invisibility hide the spheres with the body, as they do the level aura.</summary>
+        private bool IsSpiritSphereHolderHidden(RoOnlineActorSpiritSnapshot snapshot) {
+            return RoOriginalCombatRules.LevelAuraBlocked(snapshot.EffectState) ||
+                (statusPresenter != null && !statusPresenter.ResolveLook(snapshot.ServerId).IsDrawn);
+        }
+
+        private void EndSpiritSphereVisual(RoEffectManager manager, uint actorId) {
+            if (!spiritSphereVisuals.TryGetValue(actorId, out SpiritSphereVisual visual)) {
+                return;
+            }
+
+            if (visual.Handle != 0) {
+                manager?.EndClassicEffect(visual.Handle);
+            }
+
+            spiritSphereVisuals.Remove(actorId);
+        }
+
+        private static uint SpawnSpiritSpheres(RoEffectManager manager, uint actorId, int effectId, int count, Transform follow) {
+            var options = new RoEffectSpawnOptions {
+                FollowTarget = follow,
+                SourceTarget = follow,
+                SourceWorldPosition = follow.position,
+                HasSourceWorldPosition = true,
+                SourceActorId = actorId,
+                TargetActorId = actorId,
+                OnActorId = actorId,
+                // the client's effect msg 0xe(num, 0, 0): the sphere count at CRagEffect +0x180
+                ClassicParam180 = count,
+                HasClassicParam180 = true,
+            };
+
+            return manager.TrySpawnClassicEffect(effectId, follow.position, options, out uint handle) ? handle : 0;
+        }
+
+        /// <summary>The presented transform of the actor; none yet (not built, or not in sight) waits for a later frame.</summary>
+        private bool TryResolveSpiritSphereFollow(uint actorId, out Transform follow) {
+            follow = null;
+            if (OwnActorId != 0 && actorId == OwnActorId) {
+                RoRuntimeMapController mapController = ResolveRuntimeMapController();
+                Transform localPlayer = mapController != null ? mapController.LocalPlayer : null;
+                if (localPlayer != null && localPlayer.gameObject.activeInHierarchy) {
+                    follow = localPlayer;
+                }
+
+                return follow != null;
+            }
+
+            return actorPresenter != null && actorPresenter.TryGetPresentedActorTransform(actorId, out follow) && follow != null;
+        }
+
+        private void ClearSpiritSphereVisuals() {
+            spiritSphereSyncedRevision = -1;
+            spiritSphereSyncedPresentationRevision = -1;
+            spiritSpherePending = false;
+            spiritSphereLocalPlayer = null;
+            spiritSphereNextAliveCheckTime = 0f;
+            if (spiritSphereVisuals.Count == 0) {
+                return;
+            }
+
+            // the cached manager only: a lookup here would find the map controller that is being cleared
+            RoEffectManager manager = effectManager;
+            foreach (SpiritSphereVisual visual in spiritSphereVisuals.Values) {
+                if (visual.Handle != 0) {
+                    manager?.EndClassicEffect(visual.Handle);
+                }
+            }
+
+            spiritSphereVisuals.Clear();
         }
 
         private void ClearSkillVisualPresentation() {

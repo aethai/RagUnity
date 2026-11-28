@@ -168,6 +168,12 @@ namespace Ragnarok.Network {
                 case 0x01b9:
                     info = new RoPacketSemanticInfo(0x01b9, "ZcDispel", "ZC_DISPEL", RoPacketSemanticStatus.Decoded, "ParseZcDispel", "CastCancel");
                     return true;
+                case 0x01d0:
+                    info = new RoPacketSemanticInfo(0x01d0, "ZcSpirits", "ZC_SPIRITS", RoPacketSemanticStatus.Decoded, "ParseZcSpirits", "ActorSpirits");
+                    return true;
+                case 0x01e1:
+                    info = new RoPacketSemanticInfo(0x01e1, "ZcSpirits2", "ZC_SPIRITS2", RoPacketSemanticStatus.Decoded, "ParseZcSpirits", "ActorSpirits");
+                    return true;
                 case 0x01f3:
                     info = new RoPacketSemanticInfo(0x01f3, "ZcNotifyEffect2", "ZC_NOTIFY_EFFECT2", RoPacketSemanticStatus.Decoded, "ParseZcNotifyEffect2", "NotifyEffectById");
                     return true;

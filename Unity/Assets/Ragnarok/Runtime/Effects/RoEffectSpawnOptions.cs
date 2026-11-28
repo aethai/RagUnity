@@ -41,6 +41,10 @@ namespace Ragnarok.Effects {
         /// <summary>SPR effects: the ACT action the sprite starts on (the client's CMsgEffect picks one, e.g. the
         /// freeze overlay's action 1 = the ice breaking).</summary>
         public int SpriteActionIndex;
+        /// <summary>Classic engine: a value the client's effect msg 0xe writes to CRagEffect +0x180 right after launch
+        /// (e.g. the spirit sphere count), replacing the aim coordinates there and clearing +0x184/+0x188.</summary>
+        public float ClassicParam180;
+        public bool HasClassicParam180;
 
         public float EffectiveSkillVisualScale => SkillVisualScale > 0f ? SkillVisualScale : 1f;
         public bool FaceCamera => !DisableFaceCamera;

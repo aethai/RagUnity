@@ -2965,6 +2965,17 @@ namespace Ragnarok.Network {
         public uint ActorId { get; }
     }
 
+    /// <summary>ZC_SPIRITS (0x01d0) / ZC_SPIRITS2 (0x01e1): how many spirit spheres (or coins) the actor holds now.</summary>
+    public readonly struct RoZcSpirits {
+        public RoZcSpirits(uint actorId, int count) {
+            ActorId = actorId;
+            Count = count;
+        }
+
+        public uint ActorId { get; }
+        public int Count { get; }
+    }
+
     public readonly struct RoZcAttackRange {
         public RoZcAttackRange(short currentAttackRange) {
             CurrentAttackRange = currentAttackRange;
@@ -5303,6 +5314,7 @@ namespace Ragnarok.Network {
         private const int ZcNotifyWeightPercentageLength = 6;
         private const int ZcAttackRangeLength = 4;
         private const int ZcDispelLength = 6;
+        private const int ZcSpiritsLength = 8;
         private const int ZcNotifyEffect2Length = 10;
         private const int ZcNotifyEffect3Length = 14;
         private const int ZcNpcShowEfstUpdateLength = 18;
@@ -7071,6 +7083,14 @@ namespace Ragnarok.Network {
             int option = reader.ReadInt32();
             int level = reader.ReadInt32();
             return new RoZcOptionChange2(actorId, option, level, reader.ReadInt32());
+        }
+
+        /// <summary>ZC_SPIRITS / ZC_SPIRITS2 {u16 cmd, u32 aid, u16 num}: both carry the same layout.</summary>
+        public static RoZcSpirits ParseZcSpirits(byte[] frame) {
+            ushort packetId = frame != null && frame.Length >= 2 ? (ushort) (frame[0] | (frame[1] << 8)) : RoPacketIds.ZcSpirits;
+            var reader = CreateFixedFrameReader(frame, packetId == RoPacketIds.ZcSpirits2 ? RoPacketIds.ZcSpirits2 : RoPacketIds.ZcSpirits, ZcSpiritsLength);
+            uint actorId = reader.ReadUInt32();
+            return new RoZcSpirits(actorId, reader.ReadInt16());   // short num (negative = none)
         }
 
         public static RoZcDispel ParseZcDispel(byte[] frame) {

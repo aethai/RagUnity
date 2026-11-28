@@ -145,6 +145,23 @@ namespace Ragnarok.World {
         public int Opt3 { get; }
     }
 
+    /// <summary>An actor that holds spirit spheres (see <see cref="RoOnlineWorldState.SnapshotActorSpirits"/>).</summary>
+    public readonly struct RoOnlineActorSpiritSnapshot {
+        public RoOnlineActorSpiritSnapshot(uint serverId, int count, short baseJob, int effectState) {
+            ServerId = serverId;
+            Count = count;
+            BaseJob = baseJob;
+            EffectState = effectState;
+        }
+
+        public uint ServerId { get; }
+        public int Count { get; }
+        /// <summary>The actor's job without mount / costume (what picks the sphere effect).</summary>
+        public short BaseJob { get; }
+        /// <summary>The actor's option bits (hiding / cloaking / GM invisible hide the spheres).</summary>
+        public int EffectState { get; }
+    }
+
     public readonly struct RoOnlineActorSnapshot {
         internal RoOnlineActorSnapshot(RoOnlineActorState state) {
             ServerId = state.ServerId;
@@ -353,6 +370,9 @@ namespace Ragnarok.World {
         private readonly List<byte> expiredMinimapMarkerIds = new List<byte>(8);
         private readonly Dictionary<uint, uint> serverIdByAccountId = new Dictionary<uint, uint>();
         private readonly HashSet<uint> movingActorServerIds = new HashSet<uint>();
+        private readonly HashSet<uint> spiritActorServerIds = new HashSet<uint>();
+        private readonly List<uint> spiritActorScanBuffer = new List<uint>();
+        private readonly List<uint> removedSpiritActorIds = new List<uint>();
         private readonly List<uint> movingActorScanBuffer = new List<uint>(64);
         private readonly Stack<RoOnlineActorState> actorStatePool;
         private readonly int maxPooledActorStates;
@@ -420,6 +440,10 @@ namespace Ragnarok.World {
             expiredMinimapMarkerIds.Clear();
             movingActorServerIds.Clear();
             movingActorScanBuffer.Clear();
+            spiritActorServerIds.Clear();
+            spiritActorScanBuffer.Clear();
+            removedSpiritActorIds.Clear();
+            SpiritRevision++;
             OwnActorId = 0;
             HasServerTime = false;
             LatestServerTimeMilliseconds = 0;
@@ -682,6 +706,9 @@ namespace Ragnarok.World {
                     break;
                 case RoMapEntryDrainEventKind.CastCancel:
                     ApplyCastCancel(drainEvent.CastCancel);
+                    break;
+                case RoMapEntryDrainEventKind.ActorSpirits:
+                    ApplyActorSpirits(drainEvent.ActorSpirits);
                     break;
                 case RoMapEntryDrainEventKind.StatusChange:
                     ApplyStatusChange(drainEvent.StatusChange);
@@ -1001,6 +1028,75 @@ namespace Ragnarok.World {
             actor.Opt3 = change.Opt3;
             actor.EffectState = change.Option;
             TouchPresentationRevision();
+        }
+
+        /// <summary>True while some actor may hold spirit spheres (the sphere visual sync can skip its pass otherwise).</summary>
+        public bool HasSpiritActors => spiritActorServerIds.Count > 0;
+
+        /// <summary>Bumped when a sphere count changes, a holder leaves or the world is cleared.</summary>
+        public int SpiritRevision { get; private set; }
+
+        /// <summary>
+        /// Hands over (and forgets) the holders removed since the last call, so their visuals end even when the same
+        /// actor id comes back within one frame (a re-entry must relaunch, not keep the old effect).
+        /// </summary>
+        public void DrainRemovedSpiritActors(List<uint> actorIds) {
+            if (actorIds == null) {
+                throw new ArgumentNullException(nameof(actorIds));
+            }
+
+            actorIds.Clear();
+            if (removedSpiritActorIds.Count == 0) {
+                return;
+            }
+
+            actorIds.AddRange(removedSpiritActorIds);
+            removedSpiritActorIds.Clear();
+        }
+
+        /// <summary>
+        /// ZC_SPIRITS / ZC_SPIRITS2: the actor now holds <c>num</c> spirit spheres (or coins); 0 takes them away. The
+        /// server resends it when the actor comes into sight and after a map load, so the count lives with the actor.
+        /// </summary>
+        public void ApplyActorSpirits(RoZcSpirits spirits) {
+            if (spirits.ActorId == 0 || !TryGetActorStateByServerOrAccountId(spirits.ActorId, out RoOnlineActorState actor)) {
+                return;
+            }
+
+            actor.SpiritCount = Math.Max(0, spirits.Count);
+            SpiritRevision++;
+            if (actor.SpiritCount > 0) {
+                spiritActorServerIds.Add(actor.ServerId);
+            } else {
+                spiritActorServerIds.Remove(actor.ServerId);
+            }
+        }
+
+        /// <summary>Every actor holding spirit spheres; actors that left the world are dropped from the set.</summary>
+        public void SnapshotActorSpirits(List<RoOnlineActorSpiritSnapshot> snapshots) {
+            if (snapshots == null) {
+                throw new ArgumentNullException(nameof(snapshots));
+            }
+
+            snapshots.Clear();
+            if (spiritActorServerIds.Count == 0) {
+                return;
+            }
+
+            spiritActorScanBuffer.Clear();
+            foreach (uint serverId in spiritActorServerIds) {
+                if (!actorsByServerId.TryGetValue(serverId, out RoOnlineActorState actor) || actor.SpiritCount <= 0) {
+                    spiritActorScanBuffer.Add(serverId);
+                    continue;
+                }
+
+                snapshots.Add(new RoOnlineActorSpiritSnapshot(
+                    serverId, actor.SpiritCount, ResolveActorBaseJob(actor), actor.EffectState));
+            }
+
+            foreach (uint serverId in spiritActorScanBuffer) {
+                spiritActorServerIds.Remove(serverId);
+            }
         }
 
         /// <summary>The status fields of every actor (opt1 / opt2 / option / opt3), for the status visual sync.</summary>
@@ -1701,6 +1797,12 @@ namespace Ragnarok.World {
             }
 
             movingActorServerIds.Remove(actor.ServerId);
+            if (actor.SpiritCount > 0) {
+                spiritActorServerIds.Remove(actor.ServerId);
+                removedSpiritActorIds.Add(actor.ServerId);
+                SpiritRevision++;
+            }
+
             RoRuntimePerfCounters.IncrementDespawnedObjects();
             if (actorStatePool.Count >= maxPooledActorStates) {
                 TouchPresentationRevision();
@@ -2956,6 +3058,7 @@ namespace Ragnarok.World {
             PendingSkillAttackMotionTargetId = 0;
             PendingSkillAttackMotionMilliseconds = 0;
             MultiHitSwingRevision = -1;
+            SpiritCount = 0;
             PreserveBackSlideCastingOnNextStopMove = false;
             Speed = 0;
             BaseLevel = 0;
@@ -3040,6 +3143,8 @@ namespace Ragnarok.World {
         public int PendingSkillAttackMotionMilliseconds { get; set; }
         /// <summary>/swing: the action revision of the series' last swing, −1 when no series runs.</summary>
         public int MultiHitSwingRevision { get; set; } = -1;
+        /// <summary>Spirit spheres (or coins) the actor holds, from ZC_SPIRITS / ZC_SPIRITS2.</summary>
+        public int SpiritCount { get; set; }
         public bool PreserveBackSlideCastingOnNextStopMove { get; set; }
         public short Speed { get; set; }
         public short BaseLevel { get; set; }

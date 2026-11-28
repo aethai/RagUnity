@@ -852,6 +852,11 @@ namespace Ragnarok.Effects.Classic {
             effect.f_180 = roAim.x;
             effect.f_184 = roAim.y;
             effect.f_188 = roAim.z;
+            if (options.HasClassicParam180) {
+                effect.f_180 = options.ClassicParam180;   // effect msg 0xe (value, 0, 0)
+                effect.f_184 = 0f;
+                effect.f_188 = 0f;
+            }
 
             if (options.ClassicDurationTicks > 0) {
                 effect.f_17c = options.ClassicDurationTicks;   // vf18 SetDuration

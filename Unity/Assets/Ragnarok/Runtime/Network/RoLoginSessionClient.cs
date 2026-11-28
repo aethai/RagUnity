@@ -457,6 +457,7 @@ namespace Ragnarok.Network {
         PlayerShopPurchaseResult = 175,
         VendingClosed = 176,
         CastCancel = 177,
+        ActorSpirits = 224,
         NotifyEffectById = 178,
         OptionChange2 = 179,
         CharacterNameByGid = 180,
@@ -861,6 +862,10 @@ namespace Ragnarok.Network {
 
         public RoMapEntryDrainEvent(RoZcDispel castCancel) : this(RoMapEntryDrainEventKind.CastCancel) {
             payload = castCancel;
+        }
+
+        public RoMapEntryDrainEvent(RoZcSpirits spirits) : this(RoMapEntryDrainEventKind.ActorSpirits) {
+            payload = spirits;
         }
 
         public RoMapEntryDrainEvent(RoZcAttackRange attackRange) : this(RoMapEntryDrainEventKind.AttackRange) {
@@ -1359,6 +1364,7 @@ namespace Ragnarok.Network {
         public RoZcNotifyWeightPercentage WeightPercentage => Kind == RoMapEntryDrainEventKind.WeightPercentage ? (RoZcNotifyWeightPercentage) payload : default;
         public RoZcAttackRange AttackRange => Kind == RoMapEntryDrainEventKind.AttackRange ? (RoZcAttackRange) payload : default;
         public RoZcDispel CastCancel => Kind == RoMapEntryDrainEventKind.CastCancel ? (RoZcDispel) payload : default;
+        public RoZcSpirits ActorSpirits => Kind == RoMapEntryDrainEventKind.ActorSpirits ? (RoZcSpirits) payload : default;
         public RoZcNotifyEffectById NotifyEffectById => Kind == RoMapEntryDrainEventKind.NotifyEffectById ? (RoZcNotifyEffectById) payload : default;
         public RoZcOptionChange2 OptionChange2 => Kind == RoMapEntryDrainEventKind.OptionChange2 ? (RoZcOptionChange2) payload : default;
         public RoZcSkillInfoList SkillInfoList => Kind == RoMapEntryDrainEventKind.SkillInfoList ? (RoZcSkillInfoList) payload : default;

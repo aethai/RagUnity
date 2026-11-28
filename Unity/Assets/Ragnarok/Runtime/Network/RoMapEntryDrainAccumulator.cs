@@ -908,6 +908,10 @@ namespace Ragnarok.Network {
                 case RoPacketIds.ZcDispel:
                     orderedEvents.Add(new RoMapEntryDrainEvent(RoMapPacketParser.ParseZcDispel(frame.Bytes)));
                     break;
+                case RoPacketIds.ZcSpirits:
+                case RoPacketIds.ZcSpirits2:
+                    orderedEvents.Add(new RoMapEntryDrainEvent(RoMapPacketParser.ParseZcSpirits(frame.Bytes)));
+                    break;
                 case RoPacketIds.ZcNotifyEffect2:
                     orderedEvents.Add(new RoMapEntryDrainEvent(RoMapPacketParser.ParseZcNotifyEffect2(frame.Bytes)));
                     break;

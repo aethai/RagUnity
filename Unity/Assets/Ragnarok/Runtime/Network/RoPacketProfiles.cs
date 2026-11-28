@@ -807,6 +807,8 @@ namespace Ragnarok.Network {
             AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01b3, 67);
             AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01b6, 114);
             AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01b9, 6);
+            AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01d0, 8);
+            AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01e1, 8);
             AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01c3, RoPacketDefinition.VariableLength);
             AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01c4, 32);
             AddCustom20240619FramingDefinition(definitions, knownPacketIds, 0x01c8, 15);

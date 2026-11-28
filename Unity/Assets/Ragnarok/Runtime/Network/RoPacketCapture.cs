@@ -777,6 +777,12 @@ namespace Ragnarok.Network {
                     case RoPacketIds.ZcDispel:
                         summary = $"actor={RoMapPacketParser.ParseZcDispel(frame.Bytes).ActorId}";
                         return RoPacketCaptureDecodeStatus.Decoded;
+                    case RoPacketIds.ZcSpirits:
+                    case RoPacketIds.ZcSpirits2: {
+                        RoZcSpirits spirits = RoMapPacketParser.ParseZcSpirits(frame.Bytes);
+                        summary = $"actor={spirits.ActorId} count={spirits.Count}";
+                        return RoPacketCaptureDecodeStatus.Decoded;
+                    }
                     case RoPacketIds.ZcNotifyEffect2:
                     case RoPacketIds.ZcNotifyEffect3:
                         RoZcNotifyEffectById effectById = frame.PacketId == RoPacketIds.ZcNotifyEffect2
@@ -2221,6 +2227,10 @@ namespace Ragnarok.Network {
                         break;
                     case RoPacketIds.ZcDispel:
                         orderedEvents.Add(new RoMapEntryDrainEvent(RoMapPacketParser.ParseZcDispel(frame.Bytes)));
+                        break;
+                    case RoPacketIds.ZcSpirits:
+                    case RoPacketIds.ZcSpirits2:
+                        orderedEvents.Add(new RoMapEntryDrainEvent(RoMapPacketParser.ParseZcSpirits(frame.Bytes)));
                         break;
                     case RoPacketIds.ZcNotifyEffect2:
                         orderedEvents.Add(new RoMapEntryDrainEvent(RoMapPacketParser.ParseZcNotifyEffect2(frame.Bytes)));

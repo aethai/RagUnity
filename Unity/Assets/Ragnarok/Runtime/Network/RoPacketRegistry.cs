@@ -601,6 +601,8 @@ namespace Ragnarok.Network {
                 new RoPacketDefinition(RoPacketIds.ZcActionFailure, "ZC_ACTION_FAILURE", 4, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
                 new RoPacketDefinition(RoPacketIds.ZcAttackRange, "ZC_ATTACK_RANGE", 4, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
                 new RoPacketDefinition(RoPacketIds.ZcDispel, "ZC_DISPEL", 6, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
+                new RoPacketDefinition(RoPacketIds.ZcSpirits, "ZC_SPIRITS", 8, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
+                new RoPacketDefinition(RoPacketIds.ZcSpirits2, "ZC_SPIRITS2", 8, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
                 new RoPacketDefinition(RoPacketIds.ZcNotifyEffect2, "ZC_NOTIFY_EFFECT2", 10, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
                 new RoPacketDefinition(RoPacketIds.ZcNotifyEffect3, "ZC_NOTIFY_EFFECT3", 14, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
                 new RoPacketDefinition(RoPacketIds.ZcNpcShowEfstUpdate, "ZC_NPC_SHOWEFST_UPDATE", 18, RoPacketDirection.ServerToClient, RoPacketFamily.Zc),
